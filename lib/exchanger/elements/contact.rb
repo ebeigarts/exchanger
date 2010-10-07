@@ -40,5 +40,10 @@ module Exchanger
     def private?
       sensitivity == "Private"
     end
+
+    def self.search(name)
+      response = Exchanger::ResolveNames.run(:name => name)
+      response.contacts
+    end
   end
 end

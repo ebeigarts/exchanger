@@ -19,5 +19,16 @@ module Exchanger
     element :routing_type
     element :mailbox_type # Mailbox, PublicDL, PrivateDL, Contact, PublicFolder
     element :item_id, :type => Identifier
+
+    def self.search(name)
+      response = Exchanger::ResolveNames.run(:name => name)
+      response.mailboxes
+    end
+
+    def members
+      return [] unless mailbox_type == "PublicDL"
+      response = Exchanger::ExpandDL.run(:mailbox => self)
+      response.mailboxes
+    end
   end
 end
