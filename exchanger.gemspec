@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Edgars Beigarts"]
-  s.date = %q{2010-08-30}
+  s.date = %q{2010-10-07}
   s.description = %q{Ruby library for accessing Microsoft Exchange using Exchange Web Services}
   s.email = %q{1@wb4.lv}
   s.extra_rdoc_files = [
@@ -55,10 +55,12 @@ Gem::Specification.new do |s|
      "lib/exchanger/field.rb",
      "lib/exchanger/operation.rb",
      "lib/exchanger/operations/create_item.rb",
+     "lib/exchanger/operations/expand_dl.rb",
      "lib/exchanger/operations/find_folder.rb",
      "lib/exchanger/operations/find_item.rb",
      "lib/exchanger/operations/get_folder.rb",
      "lib/exchanger/operations/get_item.rb",
+     "lib/exchanger/operations/resolve_names.rb",
      "lib/exchanger/operations/update_item.rb",
      "lib/exchanger/persistence.rb"
   ]
@@ -74,6 +76,7 @@ Gem::Specification.new do |s|
      "spec/element_spec.rb",
      "spec/field_spec.rb",
      "spec/folder_spec.rb",
+     "spec/mailbox_spec.rb",
      "spec/spec_helper.rb"
   ]
 
