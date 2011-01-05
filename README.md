@@ -10,7 +10,7 @@ Supported operations
 
 * FindItem, GetItem, CreateItem, UpdateItem
 * FindFolder, GetFolder
-
+* ResolveNames, ExpandDL
 
 Installing
 ==========
@@ -45,6 +45,11 @@ Creating and updating contacts
     contact.save # CreateItem operation
     contact.company_name = "Tieto"
     contact.save # UpdateItem operation
+
+Searching in Global Address Book
+--------------------------------
+
+    mailboxes = Exchanger::Mailbox.search("John")
 
 Alternatives
 ============
