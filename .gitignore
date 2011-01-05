@@ -1,3 +1,6 @@
 coverage
 spec/config.yml
 pkg
+.yardoc
+doc
+*.gem

@@ -7,6 +7,7 @@ require "nokogiri"
 require "httpclient"
 require "net/ntlm"
 
+require "exchanger/version"
 require "exchanger/config"
 require "exchanger/client"
 require "exchanger/boolean"
