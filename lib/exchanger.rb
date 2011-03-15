@@ -56,6 +56,7 @@ require "exchanger/operations/get_item"
 require "exchanger/operations/find_item"
 require "exchanger/operations/create_item"
 require "exchanger/operations/update_item"
+require "exchanger/operations/delete_item"
 require "exchanger/operations/resolve_names"
 require "exchanger/operations/expand_dl"
 

@@ -2,7 +2,7 @@ require "spec/spec_helper"
 
 describe Exchanger::CalendarFolder do
   before do
-    @folder = Exchanger::Folder.find(:calendar, "edgars.beigarts@tieto.com")
+    @folder = Exchanger::Folder.find(:calendar)
   end
 
   it "should return calendar folder" do
@@ -16,7 +16,7 @@ end
 
 describe Exchanger::CalendarItem do
   before do
-    @folder = Exchanger::Folder.find(:calendar, "edgars.beigarts@tieto.com")
+    @folder = Exchanger::Folder.find(:calendar)
     @item = @folder.items.first
   end
 

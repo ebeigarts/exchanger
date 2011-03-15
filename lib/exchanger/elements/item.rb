@@ -82,5 +82,13 @@ module Exchanger
         true
       end
     end
+
+    def delete
+      if DeleteItem.run(:item_ids => [id])
+        true
+      else
+        false
+      end
+    end
   end
 end

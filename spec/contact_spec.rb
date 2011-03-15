@@ -2,7 +2,7 @@ require "spec/spec_helper"
 
 describe Exchanger::Contact do
   before do
-    @folder = Exchanger::Folder.find(:contacts, "edgars.beigarts@tieto.com")
+    @folder = Exchanger::Folder.find(:contacts)
   end
 
   it "should return calendar folder" do
@@ -13,7 +13,7 @@ describe Exchanger::Contact do
     @folder.items.size.should > 0
   end
 
-  it "should create a new contact and update it" do
+  it "should create a new contact, update it and destroy it" do
     prev_items_size = @folder.items.size
     @contact = @folder.new_contact(:given_name => "Edgars", :surname => "Beigarts", :nickname => "EBEI")
     @contact.complete_name = \
@@ -46,6 +46,7 @@ describe Exchanger::Contact do
     @contact.save
     @contact.should_not be_changed
     @contact.physical_addresses.size.should == 1
+    @contact.destroy.should be_true
   end
 
   it "should find a contact by id" do

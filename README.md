@@ -8,7 +8,7 @@ It will keep track of changed properties and will update only them.
 Supported operations
 ====================
 
-* FindItem, GetItem, CreateItem, UpdateItem
+* FindItem, GetItem, CreateItem, UpdateItem, DeleteItem
 * FindFolder, GetFolder
 * ResolveNames, ExpandDL
 
@@ -45,6 +45,7 @@ Creating and updating contacts
     contact.save # CreateItem operation
     contact.company_name = "Tieto"
     contact.save # UpdateItem operation
+    contact.destroy # DeleteItem operation
 
 Searching in Global Address Book
 --------------------------------

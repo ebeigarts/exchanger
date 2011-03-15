@@ -12,6 +12,14 @@ module Exchanger
       end
     end
 
+    def destroy
+      if new_record?
+        false
+      else
+        delete
+      end
+    end
+
     # Reloads the +Element+ attributes from Exchanger.
     def reload
       if new_record?
