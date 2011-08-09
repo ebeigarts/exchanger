@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    exchanger (0.1.0)
+    exchanger (0.1.1)
       activesupport (>= 2.2.2)
       httpclient (>= 2.1.5.2)
       nokogiri (>= 1.3.0)
