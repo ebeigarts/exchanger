@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rake"
   s.add_development_dependency "i18n" # required by activesupport
-  s.add_development_dependency "rspec", ["~> 1.3.1"]
+  s.add_development_dependency "rspec", ["~> 2.6.0"]
   s.add_development_dependency "rcov"
   s.add_development_dependency "yard"
   s.add_development_dependency "BlueCloth" # required by yard

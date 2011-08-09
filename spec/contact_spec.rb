@@ -1,4 +1,4 @@
-require "spec/spec_helper"
+require "spec_helper"
 
 describe Exchanger::Contact do
   before do
@@ -7,10 +7,6 @@ describe Exchanger::Contact do
 
   it "should return calendar folder" do
     @folder.class.should == Exchanger::ContactsFolder
-  end
-
-  it "should have contacts" do
-    @folder.items.size.should > 0
   end
 
   it "should create a new contact, update it and destroy it" do
@@ -51,11 +47,13 @@ describe Exchanger::Contact do
 
   it "should find a contact by id" do
     @contact = @folder.items.first
+    pending "Folder is empty" unless @contact
     Exchanger::Item.find(@contact.id).should be_an_instance_of(Exchanger::Contact)
   end
 
   it "should have parent folder" do
     @contact = @folder.items.first
+    pending "Folder is empty" unless @contact
     @contact.parent_folder.should == @folder
     @contact = Exchanger::Item.find(@contact.id)
     @contact.parent_folder.should == @folder
