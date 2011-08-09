@@ -1,7 +1,7 @@
 module Exchanger
   # Abstract class for operations.
   #
-  # Exchanger Web Services provides many operations that enable you to access
+  # Exchange Web Services provides many operations that enable you to access
   # information from the Exchanger store.
   # 
   # http://msdn.microsoft.com/en-us/library/bb409286.aspx

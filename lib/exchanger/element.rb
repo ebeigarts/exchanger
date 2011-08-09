@@ -10,7 +10,7 @@ module Exchanger
     class_inheritable_accessor :field_uri_namespace
     class_inheritable_accessor :identifier_name
 
-    # Exchanger expects elements to be in the same order as defined in types.xsd
+    # Exchange expects elements to be in the same order as defined in types.xsd
     self.elements = ActiveSupport::OrderedHash.new
     self.keys = []
 
@@ -131,7 +131,7 @@ module Exchanger
         # Create or update existing fields
         if changes.include?(name.to_s)
           field.to_xml_updates(value) do |field_uri_xml, element_xml|
-            # Exchanger does not like updating to nil, so delete those.
+            # Exchange does not like updating to nil, so delete those.
             if element_xml.text.present?
               set_item_field = doc.create_element("SetItemField")
               set_item_field << field_uri_xml

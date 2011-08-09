@@ -15,20 +15,26 @@ Supported operations
 Installing
 ==========
 
-    gem install exchanger
+```bash
+gem install exchanger
+```
 
 Configuration
 =============
 
-    Exchanger.configure do |config|
-      config.endpoint = "https://domain.com/EWS/Exchanger.asmx"
-      config.username = "username"
-      config.password = "password"
-    end
+```ruby
+Exchanger.configure do |config|
+  config.endpoint = "https://domain.com/EWS/Exchanger.asmx"
+  config.username = "username"
+  config.password = "password"
+end
+```
 
 or configure from YAML
 
-    Exchanger::Config.instance.from_hash(YAML.load_file("#{Rails.root}/config/exchanger.yml")[Rails.env])
+```ruby
+Exchanger::Config.instance.from_hash(YAML.load_file("#{Rails.root}/config/exchanger.yml")[Rails.env])
+```
 
 Examples
 ========
@@ -36,21 +42,25 @@ Examples
 Creating and updating contacts
 ------------------------------
 
-    folder = Exchanger::Folder.find(:contacts)
-    contact = folder.new_contact
-    contact.given_name = "Edgars"
-    contact.surname = "Beigarts"
-    contact.email_addresses = [ Exchanger::EmailAddress.new(:key => "EmailAddress1", :text => "me@domain.com") ]
-    contact.phone_numbers = [ Exchanger::PhoneNumber.new(:key => "MobilePhone", :text => "+371 80000000") ]
-    contact.save # CreateItem operation
-    contact.company_name = "Tieto"
-    contact.save # UpdateItem operation
-    contact.destroy # DeleteItem operation
+```ruby
+folder = Exchanger::Folder.find(:contacts)
+contact = folder.new_contact
+contact.given_name = "Edgars"
+contact.surname = "Beigarts"
+contact.email_addresses = [ Exchanger::EmailAddress.new(:key => "EmailAddress1", :text => "me@example.com") ]
+contact.phone_numbers = [ Exchanger::PhoneNumber.new(:key => "MobilePhone", :text => "+371 80000000") ]
+contact.save # CreateItem operation
+contact.company_name = "Example Inc."
+contact.save # UpdateItem operation
+contact.destroy # DeleteItem operation
+```
 
 Searching in Global Address Book
 --------------------------------
 
-    mailboxes = Exchanger::Mailbox.search("John")
+```ruby
+mailboxes = Exchanger::Mailbox.search("John")
+```
 
 Alternatives
 ============
