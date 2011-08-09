@@ -135,7 +135,9 @@ module Exchanger
             if element_xml.text.present?
               set_item_field = doc.create_element("SetItemField")
               set_item_field << field_uri_xml
-              set_item_field << doc.create_element(tag_name) << element_xml
+              element_wrapper = doc.create_element(tag_name)
+              element_wrapper << element_xml
+              set_item_field << element_wrapper
               root << set_item_field
             else
               delete_item_field = doc.create_element("DeleteItemField")
