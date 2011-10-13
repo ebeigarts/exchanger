@@ -65,5 +65,4 @@ mailboxes = Exchanger::Mailbox.search("John")
 Alternatives
 ============
 
-* [github.com/jrun/ews-api](http://github.com/jrun/ews-api)
-* [github.com/zenchild/Viewpoint](http://github.com/zenchild/Viewpoint)
+* [Exchenge Client in Ruby Toolbox](https://www.ruby-toolbox.com/categories/Exchange_Clients)
