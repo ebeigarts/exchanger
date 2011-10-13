@@ -65,4 +65,4 @@ mailboxes = Exchanger::Mailbox.search("John")
 Alternatives
 ============
 
-* [Exchange Client in Ruby Toolbox](https://www.ruby-toolbox.com/categories/Exchange_Clients)
+* [Exchange Clients in Ruby Toolbox](https://www.ruby-toolbox.com/categories/Exchange_Clients)
