@@ -5,10 +5,10 @@ module Exchanger
     include Exchanger::Dirty
     include Exchanger::Persistence
 
-    class_inheritable_accessor :elements
-    class_inheritable_accessor :keys
-    class_inheritable_accessor :field_uri_namespace
-    class_inheritable_accessor :identifier_name
+    class_attribute :elements
+    class_attribute :keys
+    class_attribute :field_uri_namespace
+    class_attribute :identifier_name
 
     # Exchange expects elements to be in the same order as defined in types.xsd
     self.elements = ActiveSupport::OrderedHash.new
@@ -17,14 +17,16 @@ module Exchanger
     # Define a new child element.
     def self.element(name, options = {})
       options[:field_uri_namespace] ||= self.field_uri_namespace
-      elements[name] = Field.new(name, options)
+      self.elements = self.elements.dup
+      self.elements[name] = Field.new(name, options)
       create_element_accessors(name)
       add_dirty_methods(name)
     end
 
     # Defina a new element attribute.
     def self.key(name, options = {})
-      keys << name
+      self.keys = self.keys.dup
+      self.keys << name
       create_element_accessors(name)
       add_dirty_methods(name)
     end
