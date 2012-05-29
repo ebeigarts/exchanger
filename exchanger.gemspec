@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rcov"
   s.add_development_dependency "yard"
   s.add_development_dependency "BlueCloth" # required by yard
+  s.add_development_dependency "tzinfo"
 
   s.files          = Dir.glob("{lib,spec}/**/*") + %w(README.md LICENSE)
   s.require_paths  = ["lib"]

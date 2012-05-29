@@ -1,0 +1,4 @@
+email_address: test.test@test.com
+time_zone: EET
+start_time: '2012-05-31 00:00:01'
+end_time: '2012-05-31 23:59:59'
