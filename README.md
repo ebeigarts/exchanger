@@ -11,6 +11,7 @@ Supported operations
 * FindItem, GetItem, CreateItem, UpdateItem, DeleteItem
 * FindFolder, GetFolder
 * ResolveNames, ExpandDL
+* GetUserAvailability
 
 Installing
 ==========
