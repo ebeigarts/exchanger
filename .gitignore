@@ -1,5 +1,6 @@
 coverage
 spec/config.yml
+spec/fixtures/get_user_availability.yml
 pkg
 .yardoc
 doc

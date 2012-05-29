@@ -1,6 +1,8 @@
 require "singleton"
 require "delegate"
 require "base64"
+require 'kconv' # Need for rubyntlm on Ruby 1.9
+require 'tzinfo'
 
 require "active_support/core_ext"
 require "nokogiri"
@@ -47,6 +49,8 @@ require "exchanger/elements/meeting_response"
 require "exchanger/elements/meeting_cancellation"
 require "exchanger/elements/task"
 require "exchanger/elements/distribution_list"
+require "exchanger/elements/calendar_event_details"
+require "exchanger/elements/calendar_event"
 
 # Operations
 require "exchanger/operation"
@@ -59,6 +63,7 @@ require "exchanger/operations/update_item"
 require "exchanger/operations/delete_item"
 require "exchanger/operations/resolve_names"
 require "exchanger/operations/expand_dl"
+require "exchanger/operations/get_user_availability"
 
 module Exchanger
   NS = {
