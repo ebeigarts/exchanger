@@ -29,6 +29,7 @@ GEM
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.6.0)
     rubyntlm (0.1.1)
+    tzinfo (0.3.33)
     yard (0.6.4)
 
 PLATFORMS
@@ -41,4 +42,5 @@ DEPENDENCIES
   rake
   rcov
   rspec (~> 2.6.0)
+  tzinfo
   yard
