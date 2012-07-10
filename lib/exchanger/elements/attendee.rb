@@ -6,5 +6,9 @@ module Exchanger
     element :mailbox, :type => Mailbox
     element :response_type # Unknown Organizer Tentative Accept Decline NoResponseReceived
     element :last_response_time, :type => Time
+
+    def tag_name
+      "Attendee"
+    end
   end
 end
