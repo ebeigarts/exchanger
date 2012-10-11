@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
+        \ <soap:Body>\n    <ResolveNames xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"
+        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" ReturnFullContactData=\"true\">\n
+        \     <UnresolvedEntry>test</UnresolvedEntry>\n    </ResolveNames>\n  </soap:Body>\n</soap:Envelope>\n"
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/ResolveNames
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Requestid:
+      - cdb57036-f54d-425e-9c5f-b250b6ec9b03
+      Set-Cookie:
+      - exchangecookie=bb7d6333d15c4304a021f3518b6604ed; expires=Fri, 11-Oct-2013
+        19:30:41 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      X-Diaginfo:
+      - AMSPRD0710CA016
+      Date:
+      - Thu, 11 Oct 2012 19:30:40 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:ResolveNamesResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:ResolveNamesResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:ResolutionSet
+        TotalItemsInView="1" IncludesLastItemInRange="true"><t:Resolution><t:Mailbox><t:Name>Test</t:Name><t:EmailAddress>test@ebeigarts.onmicrosoft.com</t:EmailAddress><t:RoutingType>SMTP</t:RoutingType><t:MailboxType>PublicDL</t:MailboxType></t:Mailbox><t:Contact><t:DisplayName>Test</t:DisplayName><t:EmailAddresses><t:Entry
+        Key="EmailAddress1">SMTP:test@ebeigarts.onmicrosoft.com</t:Entry></t:EmailAddresses><t:ContactSource>ActiveDirectory</t:ContactSource></t:Contact></t:Resolution></m:ResolutionSet></m:ResolveNamesResponseMessage></m:ResponseMessages></m:ResolveNamesResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Thu, 11 Oct 2012 19:30:41 GMT
+recorded_with: VCR 2.2.5

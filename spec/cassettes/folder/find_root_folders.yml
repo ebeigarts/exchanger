@@ -1,0 +1,108 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
+        \ <soap:Body>\n    <FindFolder xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"
+        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" Traversal=\"Shallow\">\n
+        \     <FolderShape>\n        <t:BaseShape>AllProperties</t:BaseShape>\n      </FolderShape>\n
+        \     <ParentFolderIds>\n        <t:FolderId Id=\"AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA\"/>\n
+        \     </ParentFolderIds>\n    </FindFolder>\n  </soap:Body>\n</soap:Envelope>\n"
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/FindFolder
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Requestid:
+      - 332c92f4-f44d-4667-a091-7d2d95623487
+      Set-Cookie:
+      - exchangecookie=5a75e3d2891d4618b640c00a625332d5; expires=Fri, 11-Oct-2013
+        19:33:16 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      X-Diaginfo:
+      - AMSPRD0710CA017
+      Date:
+      - Thu, 11 Oct 2012 19:33:16 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:FindFolderResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:FindFolderResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:RootFolder
+        TotalItemsInView="16" IncludesLastItemInRange="true"><t:Folders><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2eAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe21"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>Common Views</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2WAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe24"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>Deferred Action</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRkRfAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARkRh"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>ExchangeSyncData</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2cAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe2z"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>Finder</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>1</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe3MAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe3O"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>Freebusy Data</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe3hAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe3k"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>Recoverable Items</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>4</t:ChildFolderCount><t:ManagedFolderInformation><t:CanDelete>true</t:CanDelete><t:CanRenameOrMove>true</t:CanRenameOrMove><t:MustDisplayComment>false</t:MustDisplayComment><t:HasQuota>false</t:HasQuota><t:IsManagedFoldersRoot>false</t:IsManagedFoldersRoot></t:ManagedFolderInformation><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRkRJAAAA"
+        ChangeKey="BwAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARkRM"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:FolderClass>Outlook.Reminder</t:FolderClass><t:DisplayName>Reminders</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2fAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe22"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>Schedule</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe3HAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe3K"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>Sharing</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2gAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe23"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>Shortcuts</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2XAAAA"
+        ChangeKey="BwAAAA=="/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>Spooler Queue</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe3QAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe3T"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>System</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRhkWAAAA"
+        ChangeKey="BwAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARhkZ"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Task</t:FolderClass><t:DisplayName>To-Do
+        Search</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2VAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe28"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>Top of Information Store</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>12</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2nAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe26"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>Transport Queue</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2dAAAA"
+        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe20"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName>Views</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder></t:Folders></m:RootFolder></m:FindFolderResponseMessage></m:ResponseMessages></m:FindFolderResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Thu, 11 Oct 2012 19:33:17 GMT
+recorded_with: VCR 2.2.5

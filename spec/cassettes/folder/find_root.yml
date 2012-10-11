@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
+        \ <soap:Body>\n    <GetFolder xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"
+        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\">\n      <FolderShape>\n
+        \       <t:BaseShape>Default</t:BaseShape>\n      </FolderShape>\n      <FolderIds>\n
+        \       <t:DistinguishedFolderId Id=\"root\"/>\n      </FolderIds>\n    </GetFolder>\n
+        \ </soap:Body>\n</soap:Envelope>\n"
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/GetFolder
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Requestid:
+      - 860270cb-bc40-47cd-9020-c826b72a98d0
+      Set-Cookie:
+      - exchangecookie=fb8d8d5616d948398d7e3c637aea0025; expires=Fri, 11-Oct-2013
+        19:33:16 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      X-Diaginfo:
+      - AMSPRD0710CA017
+      Date:
+      - Thu, 11 Oct 2012 19:33:15 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:GetFolderResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetFolderResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Folders><t:Folder><t:FolderId
+        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        ChangeKey="AQAAAA=="/><t:DisplayName/><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>16</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder></m:Folders></m:GetFolderResponseMessage></m:ResponseMessages></m:GetFolderResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Thu, 11 Oct 2012 19:33:16 GMT
+recorded_with: VCR 2.2.5

@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
+        \ <soap:Body>\n    <ExpandDL xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"
+        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\">\n      <Mailbox>\n
+        \       <t:EmailAddress>test@ebeigarts.onmicrosoft.com</t:EmailAddress>\n
+        \     </Mailbox>\n    </ExpandDL>\n  </soap:Body>\n</soap:Envelope>\n"
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/ExpandDL
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Requestid:
+      - 07e73549-a5eb-4f7c-9710-b0f866ca8fef
+      Set-Cookie:
+      - exchangecookie=e40c63c5baf54c49abe8502dae797546; expires=Fri, 11-Oct-2013
+        19:30:41 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      X-Diaginfo:
+      - AMSPRD0710CA001
+      Date:
+      - Thu, 11 Oct 2012 19:30:41 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:ExpandDLResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:ExpandDLResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:DLExpansion
+        TotalItemsInView="1" IncludesLastItemInRange="true"><t:Mailbox><t:Name>ebeigarts</t:Name><t:EmailAddress>ebeigarts@ebeigarts.onmicrosoft.com</t:EmailAddress><t:RoutingType>SMTP</t:RoutingType><t:MailboxType>Mailbox</t:MailboxType></t:Mailbox></m:DLExpansion></m:ExpandDLResponseMessage></m:ResponseMessages></m:ExpandDLResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Thu, 11 Oct 2012 19:30:41 GMT
+recorded_with: VCR 2.2.5

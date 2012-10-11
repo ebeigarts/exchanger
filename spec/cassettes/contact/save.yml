@@ -1,0 +1,399 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
+        \ <soap:Body>\n    <FindItem xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"
+        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" Traversal=\"Shallow\">\n
+        \     <ItemShape>\n        <t:BaseShape>AllProperties</t:BaseShape>\n      </ItemShape>\n
+        \     <ParentFolderIds>\n        <t:FolderId Id=\"AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA\"/>\n
+        \     </ParentFolderIds>\n    </FindItem>\n  </soap:Body>\n</soap:Envelope>\n"
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/FindItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Requestid:
+      - bec55c2b-a862-4485-8a5b-31f64eca442e
+      Set-Cookie:
+      - exchangecookie=52597437df324701869ab491e290435a; expires=Fri, 11-Oct-2013
+        19:19:43 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      X-Diaginfo:
+      - AMSPRD0710CA013
+      Date:
+      - Thu, 11 Oct 2012 19:19:42 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:FindItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:FindItemResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:RootFolder
+        TotalItemsInView="7" IncludesLastItemInRange="true"><t:Items><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4UAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+z"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:19:33Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:19:33Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:19:33Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4MAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+t"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:12:06Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:12:06Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:12:06Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4AAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+i"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:03:22Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:03:22Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:03:22Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa38AAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+g"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:03:21Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:03:21Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:03:21Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa34AAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+e"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:01:56Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:01:56Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:01:56Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa3oAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+Q"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject>Edgars
+        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T18:57:35Z</t:DateTimeReceived><t:Size>527</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T18:57:35Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T18:57:35Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
+        Beigarts</t:DisplayName><t:GivenName>Edgars</t:GivenName><t:Nickname>Test</t:Nickname><t:CompleteName><t:FirstName>Edgars</t:FirstName><t:LastName>Beigarts</t:LastName><t:FullName>Edgars
+        Beigarts</t:FullName><t:Nickname>Test</t:Nickname></t:CompleteName><t:EmailAddresses><t:Entry
+        Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry></t:EmailAddresses><t:PhysicalAddresses><t:Entry
+        Key="Business"><t:Street>Brivibas iela 1</t:Street><t:City>Riga</t:City></t:Entry></t:PhysicalAddresses><t:Surname>Beigarts</t:Surname></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa3gAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+J"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject>Edgars
+        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T18:57:18Z</t:DateTimeReceived><t:Size>569</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T18:57:18Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T18:57:18Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
+        Beigarts</t:DisplayName><t:GivenName>Edgars</t:GivenName><t:Nickname>EBEI</t:Nickname><t:CompleteName><t:FirstName>Edgars</t:FirstName><t:LastName>Beigarts</t:LastName><t:FullName>Edgars
+        Beigarts</t:FullName><t:Nickname>EBEI</t:Nickname></t:CompleteName><t:EmailAddresses><t:Entry
+        Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry></t:EmailAddresses><t:PhysicalAddresses><t:Entry
+        Key="Business"><t:Street>Brivibas iela 1</t:Street><t:City>Riga</t:City></t:Entry><t:Entry
+        Key="Home"><t:Street>Brivibas iela 2</t:Street><t:City>Riga</t:City></t:Entry></t:PhysicalAddresses><t:Surname>Beigarts</t:Surname></t:Contact></t:Items></m:RootFolder></m:FindItemResponseMessage></m:ResponseMessages></m:FindItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Thu, 11 Oct 2012 19:19:43 GMT
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <soap:Body>\n    <CreateItem
+        xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\">\n
+        \     <SavedItemFolderId>\n        <t:FolderId Id=\"AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA\"/>\n
+        \     </SavedItemFolderId>\n      <Items>\n        <t:Contact>\n  <t:GivenName>Edgars</t:GivenName>\n
+        \ <t:Nickname>EBEI</t:Nickname>\n  <t:EmailAddresses>\n    <t:Entry Key=\"EmailAddress1\">edgars.beigarts@tieto.com</t:Entry>\n
+        \ </t:EmailAddresses>\n  <t:PhysicalAddresses>\n    <t:Entry Key=\"Business\">\n
+        \     <t:Street>Brivibas iela 1</t:Street>\n      <t:City>Riga</t:City>\n
+        \   </t:Entry>\n    <t:Entry Key=\"Home\">\n      <t:Street>Brivibas iela
+        2</t:Street>\n      <t:City>Riga</t:City>\n    </t:Entry>\n  </t:PhysicalAddresses>\n
+        \ <t:Surname>Beigarts</t:Surname>\n</t:Contact>\n      </Items>\n    </CreateItem>\n
+        \ </soap:Body>\n</soap:Envelope>\n"
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Requestid:
+      - a59c5f25-10f4-46d9-a28d-8b069fb9e9dd
+      Set-Cookie:
+      - exchangecookie=6fb51f7c7dd242a88710b59ce1f190aa; expires=Fri, 11-Oct-2013
+        19:19:44 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      X-Diaginfo:
+      - AMSPRD0710CA007
+      Date:
+      - Thu, 11 Oct 2012 19:19:43 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:CreateItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:CreateItemResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+1"/></t:Contact></m:Items></m:CreateItemResponseMessage></m:ResponseMessages></m:CreateItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Thu, 11 Oct 2012 19:19:43 GMT
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
+        \ <soap:Body>\n    <GetItem xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"
+        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\">\n      <ItemShape>\n
+        \       <t:BaseShape>AllProperties</t:BaseShape>\n      </ItemShape>\n      <ItemIds>\n
+        \       <t:ItemId Id=\"AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA==\"/>\n
+        \     </ItemIds>\n    </GetItem>\n  </soap:Body>\n</soap:Envelope>\n"
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/GetItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Requestid:
+      - 752eaa19-5a15-4f73-a347-fbbb6c360ec9
+      Set-Cookie:
+      - exchangecookie=93c7ef3424a14812aca55bdd2902d117; expires=Fri, 11-Oct-2013
+        19:19:44 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      X-Diaginfo:
+      - AMSPRD0710CA010
+      Date:
+      - Thu, 11 Oct 2012 19:19:44 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:GetItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetItemResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+1"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject>Edgars
+        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:Body BodyType="Text"/><t:DateTimeReceived>2012-10-11T19:19:44Z</t:DateTimeReceived><t:Size>569</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:19:44Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:19:44Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
+        Beigarts</t:DisplayName><t:GivenName>Edgars</t:GivenName><t:Nickname>EBEI</t:Nickname><t:CompleteName><t:FirstName>Edgars</t:FirstName><t:LastName>Beigarts</t:LastName><t:FullName>Edgars
+        Beigarts</t:FullName><t:Nickname>EBEI</t:Nickname></t:CompleteName><t:EmailAddresses><t:Entry
+        Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry></t:EmailAddresses><t:PhysicalAddresses><t:Entry
+        Key="Business"><t:Street>Brivibas iela 1</t:Street><t:City>Riga</t:City></t:Entry><t:Entry
+        Key="Home"><t:Street>Brivibas iela 2</t:Street><t:City>Riga</t:City></t:Entry></t:PhysicalAddresses><t:Surname>Beigarts</t:Surname></t:Contact></m:Items></m:GetItemResponseMessage></m:ResponseMessages></m:GetItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Thu, 11 Oct 2012 19:19:44 GMT
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
+        \ <soap:Body>\n    <FindItem xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"
+        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" Traversal=\"Shallow\">\n
+        \     <ItemShape>\n        <t:BaseShape>AllProperties</t:BaseShape>\n      </ItemShape>\n
+        \     <ParentFolderIds>\n        <t:FolderId Id=\"AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA\"/>\n
+        \     </ParentFolderIds>\n    </FindItem>\n  </soap:Body>\n</soap:Envelope>\n"
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/FindItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Requestid:
+      - 70d7bafb-b1b0-418f-a467-49626356ada6
+      Set-Cookie:
+      - exchangecookie=2ec6fd49b35f4f148f1da8ccac197b60; expires=Fri, 11-Oct-2013
+        19:19:45 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      X-Diaginfo:
+      - AMSPRD0710CA020
+      Date:
+      - Thu, 11 Oct 2012 19:19:44 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:FindItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:FindItemResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:RootFolder
+        TotalItemsInView="8" IncludesLastItemInRange="true"><t:Items><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+1"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject>Edgars
+        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:19:44Z</t:DateTimeReceived><t:Size>569</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:19:44Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:19:44Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
+        Beigarts</t:DisplayName><t:GivenName>Edgars</t:GivenName><t:Nickname>EBEI</t:Nickname><t:CompleteName><t:FirstName>Edgars</t:FirstName><t:LastName>Beigarts</t:LastName><t:FullName>Edgars
+        Beigarts</t:FullName><t:Nickname>EBEI</t:Nickname></t:CompleteName><t:EmailAddresses><t:Entry
+        Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry></t:EmailAddresses><t:PhysicalAddresses><t:Entry
+        Key="Business"><t:Street>Brivibas iela 1</t:Street><t:City>Riga</t:City></t:Entry><t:Entry
+        Key="Home"><t:Street>Brivibas iela 2</t:Street><t:City>Riga</t:City></t:Entry></t:PhysicalAddresses><t:Surname>Beigarts</t:Surname></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4UAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+z"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:19:33Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:19:33Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:19:33Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4MAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+t"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:12:06Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:12:06Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:12:06Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4AAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+i"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:03:22Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:03:22Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:03:22Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa38AAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+g"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:03:21Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:03:21Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:03:21Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa34AAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+e"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:01:56Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:01:56Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:01:56Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa3oAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+Q"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject>Edgars
+        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T18:57:35Z</t:DateTimeReceived><t:Size>527</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T18:57:35Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T18:57:35Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
+        Beigarts</t:DisplayName><t:GivenName>Edgars</t:GivenName><t:Nickname>Test</t:Nickname><t:CompleteName><t:FirstName>Edgars</t:FirstName><t:LastName>Beigarts</t:LastName><t:FullName>Edgars
+        Beigarts</t:FullName><t:Nickname>Test</t:Nickname></t:CompleteName><t:EmailAddresses><t:Entry
+        Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry></t:EmailAddresses><t:PhysicalAddresses><t:Entry
+        Key="Business"><t:Street>Brivibas iela 1</t:Street><t:City>Riga</t:City></t:Entry></t:PhysicalAddresses><t:Surname>Beigarts</t:Surname></t:Contact><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa3gAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+J"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject>Edgars
+        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T18:57:18Z</t:DateTimeReceived><t:Size>569</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T18:57:18Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T18:57:18Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
+        Beigarts</t:DisplayName><t:GivenName>Edgars</t:GivenName><t:Nickname>EBEI</t:Nickname><t:CompleteName><t:FirstName>Edgars</t:FirstName><t:LastName>Beigarts</t:LastName><t:FullName>Edgars
+        Beigarts</t:FullName><t:Nickname>EBEI</t:Nickname></t:CompleteName><t:EmailAddresses><t:Entry
+        Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry></t:EmailAddresses><t:PhysicalAddresses><t:Entry
+        Key="Business"><t:Street>Brivibas iela 1</t:Street><t:City>Riga</t:City></t:Entry><t:Entry
+        Key="Home"><t:Street>Brivibas iela 2</t:Street><t:City>Riga</t:City></t:Entry></t:PhysicalAddresses><t:Surname>Beigarts</t:Surname></t:Contact></t:Items></m:RootFolder></m:FindItemResponseMessage></m:ResponseMessages></m:FindItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Thu, 11 Oct 2012 19:19:44 GMT
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <soap:Body>\n    <UpdateItem
+        xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\" ConflictResolution=\"AlwaysOverwrite\">\n
+        \     <ItemChanges>\n        <t:ItemChange>\n  <t:ItemId Id=\"AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA==\"
+        ChangeKey=\"EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+1\"/>\n  <t:Updates>\n
+        \   <t:SetItemField>\n      <t:FieldURI FieldURI=\"contacts:Nickname\"/>\n
+        \     <t:Contact>\n        <t:Nickname>Test</t:Nickname>\n      </t:Contact>\n
+        \   </t:SetItemField>\n    <t:SetItemField>\n      <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:Street\"
+        FieldIndex=\"Business\"/>\n      <t:Contact>\n        <t:PhysicalAddresses>\n
+        \         <t:Entry Key=\"Business\">\n            <t:Street>Brivibas iela
+        1</t:Street>\n          </t:Entry>\n        </t:PhysicalAddresses>\n      </t:Contact>\n
+        \   </t:SetItemField>\n    <t:SetItemField>\n      <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:City\"
+        FieldIndex=\"Business\"/>\n      <t:Contact>\n        <t:PhysicalAddresses>\n
+        \         <t:Entry Key=\"Business\">\n            <t:City>Riga</t:City>\n
+        \         </t:Entry>\n        </t:PhysicalAddresses>\n      </t:Contact>\n
+        \   </t:SetItemField>\n    <t:DeleteItemField>\n      <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:State\"
+        FieldIndex=\"Business\"/>\n    </t:DeleteItemField>\n    <t:DeleteItemField>\n
+        \     <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:CountryOrRegion\"
+        FieldIndex=\"Business\"/>\n    </t:DeleteItemField>\n    <t:DeleteItemField>\n
+        \     <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:PostalCode\"
+        FieldIndex=\"Business\"/>\n    </t:DeleteItemField>\n    <t:DeleteItemField>\n
+        \     <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:Street\" FieldIndex=\"Home\"/>\n
+        \   </t:DeleteItemField>\n    <t:DeleteItemField>\n      <t:IndexedFieldURI
+        FieldURI=\"contacts:PhysicalAddress:City\" FieldIndex=\"Home\"/>\n    </t:DeleteItemField>\n
+        \   <t:DeleteItemField>\n      <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:State\"
+        FieldIndex=\"Home\"/>\n    </t:DeleteItemField>\n    <t:DeleteItemField>\n
+        \     <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:CountryOrRegion\"
+        FieldIndex=\"Home\"/>\n    </t:DeleteItemField>\n    <t:DeleteItemField>\n
+        \     <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:PostalCode\"
+        FieldIndex=\"Home\"/>\n    </t:DeleteItemField>\n  </t:Updates>\n</t:ItemChange>\n
+        \     </ItemChanges>\n    </UpdateItem>\n  </soap:Body>\n</soap:Envelope>\n"
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/UpdateItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Requestid:
+      - 5f31fafc-ee94-4c3e-8e37-bae9671f7113
+      Set-Cookie:
+      - exchangecookie=dddb8818d3374b7ca47706020a9fbfc4; expires=Fri, 11-Oct-2013
+        19:19:45 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      X-Diaginfo:
+      - AMSPRD0710CA016
+      Date:
+      - Thu, 11 Oct 2012 19:19:45 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:UpdateItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:UpdateItemResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+2"/></t:Contact></m:Items></m:UpdateItemResponseMessage></m:ResponseMessages></m:UpdateItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Thu, 11 Oct 2012 19:19:45 GMT
+recorded_with: VCR 2.2.5

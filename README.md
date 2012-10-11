@@ -1,6 +1,8 @@
 Exchanger
 =========
 
+[![Continuous Integration status](https://secure.travis-ci.org/ebeigarts/exchanger.png)](http://travis-ci.org/ebeigarts/exchanger)
+
 Ruby library for accessing Microsoft Exchange using Exchange Web Services.
 This library tries to make creating and updating items as easy as possible.
 It will keep track of changed properties and will update only them.
@@ -61,6 +63,26 @@ Searching in Global Address Book
 
 ```ruby
 mailboxes = Exchanger::Mailbox.search("John")
+```
+
+Running specs with Exchange Server
+==================================
+
+The easiest way is to sign up for a Microsoft Office 365 free trial.
+
+1. Create a random calendar entry in July 2016
+2. Create a distribution list named 'Test'
+3. Create `spec/config.yml` with your Exchange credentials
+4. Create `spec/fixtures/get_user_availability.yml` with your Exchange email address
+5. Clear the recorded VCR cassettes by removing `spec/cassettes`
+6. Run the specs `rake spec`
+
+It looks like Office 365 trial has some rate limits,
+so you may have to record the VCR cassettes for each spec separately.
+
+```
+Exchanger::Operation::ResponseError:
+  An internal server error occurred. Try again later.
 ```
 
 Alternatives

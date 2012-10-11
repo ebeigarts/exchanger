@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <soap:Body>\n    <CreateItem
+        xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\">\n
+        \     <SavedItemFolderId>\n        <t:FolderId Id=\"AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA\"/>\n
+        \     </SavedItemFolderId>\n      <Items>\n        <t:Contact/>\n      </Items>\n
+        \   </CreateItem>\n  </soap:Body>\n</soap:Envelope>\n"
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Requestid:
+      - 07fa3a7f-6a09-4770-b26f-c0e066196b74
+      Set-Cookie:
+      - exchangecookie=5c2328ab96444ff1a4d39c1e0ea7239b; expires=Fri, 11-Oct-2013
+        19:19:23 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      X-Diaginfo:
+      - AMSPRD0710CA006
+      Date:
+      - Thu, 11 Oct 2012 19:19:22 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:CreateItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:CreateItemResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:Contact><t:ItemId
+        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4QAAA=="
+        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+v"/></t:Contact></m:Items></m:CreateItemResponseMessage></m:ResponseMessages></m:CreateItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Thu, 11 Oct 2012 19:19:23 GMT
+recorded_with: VCR 2.2.5

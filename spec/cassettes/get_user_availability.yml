@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" xmlns:m=\"http://schemas.microsoft.com/exchange/services/2006/messages\">\n
+        \ <soap:Body>\n    <m:GetUserAvailabilityRequest>\n      <t:TimeZone>\n        <t:Bias>-120</t:Bias>\n
+        \       <t:StandardTime>\n          <t:Bias>0</t:Bias>\n          <t:Time>04:00:00</t:Time>\n
+        \         <t:DayOrder>5</t:DayOrder>\n          <t:Month>10</t:Month>\n          <t:DayOfWeek>Sunday</t:DayOfWeek>\n
+        \       </t:StandardTime>\n        <t:DaylightTime>\n          <t:Bias>-60</t:Bias>\n
+        \         <t:Time>03:00:00</t:Time>\n          <t:DayOrder>5</t:DayOrder>\n
+        \         <t:Month>3</t:Month>\n          <t:DayOfWeek>Sunday</t:DayOfWeek>\n
+        \       </t:DaylightTime>\n      </t:TimeZone>\n      <m:MailboxDataArray>\n
+        \       <t:MailboxData>\n          <t:Email>\n            <t:Address>ebeigarts@ebeigarts.onmicrosoft.com</t:Address>\n
+        \         </t:Email>\n          <t:AttendeeType>Required</t:AttendeeType>\n
+        \         <t:ExcludeConflicts>false</t:ExcludeConflicts>\n        </t:MailboxData>\n
+        \     </m:MailboxDataArray>\n      <t:FreeBusyViewOptions>\n        <t:TimeWindow>\n
+        \         <t:StartTime>2016-01-01T00:00:01</t:StartTime>\n          <t:EndTime>2016-01-31T23:59:59</t:EndTime>\n
+        \       </t:TimeWindow>\n        <t:MergedFreeBusyIntervalInMinutes>60</t:MergedFreeBusyIntervalInMinutes>\n
+        \       <t:RequestedView>DetailedMerged</t:RequestedView>\n      </t:FreeBusyViewOptions>\n
+        \   </m:GetUserAvailabilityRequest>\n  </soap:Body>\n</soap:Envelope>\n"
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/GetUserAvailability
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Requestid:
+      - 3069a16e-99bb-48d5-99fd-f854fbc3c864
+      Set-Cookie:
+      - exchangecookie=0c7aa17a704f4e0ca4a789c5645b7fd6; expires=Fri, 11-Oct-2013
+        19:44:52 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      X-Diaginfo:
+      - AMSPRD0710CA022
+      Date:
+      - Thu, 11 Oct 2012 19:44:52 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><GetUserAvailabilityResponse
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/messages"><FreeBusyResponseArray><FreeBusyResponse><ResponseMessage
+        ResponseClass="Success"><ResponseCode>NoError</ResponseCode></ResponseMessage><FreeBusyView><FreeBusyViewType
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types">DetailedMerged</FreeBusyViewType><MergedFreeBusy
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types">000000000000000000000022000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</MergedFreeBusy><CalendarEventArray
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types"><CalendarEvent><StartTime>2016-01-01T23:00:00</StartTime><EndTime>2016-01-02T00:00:00</EndTime><BusyType>Busy</BusyType><CalendarEventDetails><ID>00000000508245902E38AB4AA463A15FCE20235807009A1AB553263CD64BB6153BE1259E81B800000045EDA100009A1AB553263CD64BB6153BE1259E81B80000004617140000</ID><Subject>Test</Subject><Location>Test</Location><IsMeeting>false</IsMeeting><IsRecurring>false</IsRecurring><IsException>false</IsException><IsReminderSet>true</IsReminderSet><IsPrivate>false</IsPrivate></CalendarEventDetails></CalendarEvent></CalendarEventArray><WorkingHours
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types"><TimeZone><Bias>-120</Bias><StandardTime><Bias>0</Bias><Time>03:00:00</Time><DayOrder>5</DayOrder><Month>10</Month><DayOfWeek>Sunday</DayOfWeek></StandardTime><DaylightTime><Bias>-60</Bias><Time>02:00:00</Time><DayOrder>5</DayOrder><Month>3</Month><DayOfWeek>Sunday</DayOfWeek></DaylightTime></TimeZone><WorkingPeriodArray><WorkingPeriod><DayOfWeek>Monday
+        Tuesday Wednesday Thursday Friday</DayOfWeek><StartTimeInMinutes>480</StartTimeInMinutes><EndTimeInMinutes>1020</EndTimeInMinutes></WorkingPeriod></WorkingPeriodArray></WorkingHours></FreeBusyView></FreeBusyResponse></FreeBusyResponseArray></GetUserAvailabilityResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Thu, 11 Oct 2012 19:44:52 GMT
+recorded_with: VCR 2.2.5

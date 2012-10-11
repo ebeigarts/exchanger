@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" xmlns:m=\"http://schemas.microsoft.com/exchange/services/2006/messages\">\n
+        \ <soap:Body>\n    <m:GetUserAvailabilityRequest>\n      <t:TimeZone>\n        <t:Bias>0</t:Bias>\n
+        \       <t:StandardTime>\n          <t:Bias>0</t:Bias>\n          <t:Time>04:00:00</t:Time>\n
+        \         <t:DayOrder>5</t:DayOrder>\n          <t:Month>10</t:Month>\n          <t:DayOfWeek>Sunday</t:DayOfWeek>\n
+        \       </t:StandardTime>\n        <t:DaylightTime>\n          <t:Bias>-60</t:Bias>\n
+        \         <t:Time>03:00:00</t:Time>\n          <t:DayOrder>5</t:DayOrder>\n
+        \         <t:Month>3</t:Month>\n          <t:DayOfWeek>Sunday</t:DayOfWeek>\n
+        \       </t:DaylightTime>\n      </t:TimeZone>\n      <m:MailboxDataArray>\n
+        \       <t:MailboxData>\n          <t:Email>\n            <t:Address>test.test@test.com</t:Address>\n
+        \         </t:Email>\n          <t:AttendeeType>Required</t:AttendeeType>\n
+        \         <t:ExcludeConflicts>false</t:ExcludeConflicts>\n        </t:MailboxData>\n
+        \     </m:MailboxDataArray>\n      <t:FreeBusyViewOptions>\n        <t:TimeWindow>\n
+        \         <t:StartTime>2012-10-11T00:00:01</t:StartTime>\n          <t:EndTime>2012-10-11T23:59:59</t:EndTime>\n
+        \       </t:TimeWindow>\n        <t:MergedFreeBusyIntervalInMinutes>60</t:MergedFreeBusyIntervalInMinutes>\n
+        \       <t:RequestedView>DetailedMerged</t:RequestedView>\n      </t:FreeBusyViewOptions>\n
+        \   </m:GetUserAvailabilityRequest>\n  </soap:Body>\n</soap:Envelope>\n"
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/GetUserAvailability
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Requestid:
+      - c417b162-dd2f-43dd-9b10-32cd9c8427dd
+      Set-Cookie:
+      - exchangecookie=0c71423ce93a486d985774e35e87d6ac; expires=Fri, 11-Oct-2013
+        19:44:53 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      X-Diaginfo:
+      - AMSPRD0710CA004
+      Date:
+      - Thu, 11 Oct 2012 19:44:53 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><GetUserAvailabilityResponse
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/messages"><FreeBusyResponseArray><FreeBusyResponse><ResponseMessage
+        ResponseClass="Error"><MessageText>Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException:
+        Unable to resolve e-mail address &lt;&gt;SMTP:test.test@test.com to an Active
+        Directory object.&#xD;
+
+        . Name of the server where exception originated: AMSPRD0710CA004</MessageText><ResponseCode>ErrorMailRecipientNotFound</ResponseCode><DescriptiveLinkKey>0</DescriptiveLinkKey><MessageXml><ExceptionType
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">Microsoft.Exchange.InfoWorker.Common.Availability.MailRecipientNotFoundException</ExceptionType><ExceptionCode
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">5009</ExceptionCode><ExceptionServerName
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">AMSPRD0710CA004</ExceptionServerName></MessageXml></ResponseMessage><FreeBusyView><FreeBusyViewType
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types">None</FreeBusyViewType></FreeBusyView></FreeBusyResponse></FreeBusyResponseArray></GetUserAvailabilityResponse></s:Body></s:Envelope>'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2012 19:44:53 GMT
+recorded_with: VCR 2.2.5

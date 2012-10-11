@@ -1,5 +1,9 @@
 module Exchanger
   module Persistence
+    def persisted?
+      not new_record?
+    end
+
     def new_record?
       not id
     end

@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Exchanger::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Edgars Beigarts"]
-  s.email       = "1@wb4.lv"
+  s.email       = "edgars.beigarts@gmail.com"
   s.homepage    = "http://github.com/ebeigarts/exchanger"
   s.description = %q{Ruby library for accessing Microsoft Exchange using Exchange Web Services}
   s.summary     = s.description
@@ -24,10 +24,12 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake"
   s.add_development_dependency "i18n" # required by activesupport
   s.add_development_dependency "rspec", ["~> 2.6.0"]
-  s.add_development_dependency "rcov"
+  s.add_development_dependency "simplecov"
   s.add_development_dependency "yard"
   s.add_development_dependency "BlueCloth" # required by yard
   s.add_development_dependency "tzinfo"
+  s.add_development_dependency "vcr", ["~> 2.2.5"]
+  s.add_development_dependency "webmock", ["~> 1.8.11"]
 
   s.files          = Dir.glob("{lib,spec}/**/*") + %w(README.md LICENSE)
   s.require_paths  = ["lib"]
