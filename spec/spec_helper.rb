@@ -1,13 +1,16 @@
 $:.unshift File.dirname(__FILE__) + '/../lib'
 
 require "bundler/setup"
+require "simplecov"
+
+SimpleCov.start do
+  add_filter '/spec/'
+end
+
 require "exchanger"
 require "kconv"
 require "vcr"
 require "webmock"
-require "simplecov"
-
-SimpleCov.start
 
 Exchanger::Config.instance.from_hash(YAML.load_file("#{File.dirname(__FILE__)}/config.yml"))
 
