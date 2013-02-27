@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "nokogiri", [">= 1.3.0"]
   s.add_runtime_dependency "httpclient", [">= 2.1.5.2"]
   s.add_runtime_dependency "rubyntlm", [">= 0.1.1"]
+  s.add_runtime_dependency "tzinfo", [">= 0.3.33"]
 
   s.add_development_dependency "rake"
   s.add_development_dependency "i18n" # required by activesupport
@@ -27,7 +28,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "simplecov"
   s.add_development_dependency "yard"
   s.add_development_dependency "BlueCloth" # required by yard
-  s.add_development_dependency "tzinfo"
   s.add_development_dependency "vcr", ["~> 2.2.5"]
   s.add_development_dependency "webmock", ["~> 1.8.11"]
 
