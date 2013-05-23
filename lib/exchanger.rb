@@ -67,6 +67,7 @@ require "exchanger/operations/resolve_names"
 require "exchanger/operations/expand_dl"
 require "exchanger/operations/get_user_availability"
 require "exchanger/operations/get_room_lists"
+require "exchanger/operations/get_rooms"
 
 module Exchanger
   NS = {
