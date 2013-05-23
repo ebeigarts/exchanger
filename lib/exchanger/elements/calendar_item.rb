@@ -55,5 +55,12 @@ module Exchanger
     element :is_online_meeting, :type => Boolean
     element :meeting_workspace_url
     element :net_show_url
+    element :send_meeting_invitations, :type => String
+
+    def create
+      CreateItem.run(:folder_id => parent_folder_id.id, :items => [self],
+                     :send_meeting_invitations => send_meeting_invitations ||
+                                                         "SendToAllAndSaveCopy")
+    end
   end
 end
