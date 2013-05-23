@@ -25,6 +25,8 @@ require "exchanger/elements/mailbox"
 require "exchanger/elements/single_recipient"
 require "exchanger/elements/attendee"
 require "exchanger/elements/complete_name"
+require "exchanger/elements/room"
+require "exchanger/elements/address"
 # Entry elements
 require "exchanger/elements/entry"
 require "exchanger/elements/email_address"
