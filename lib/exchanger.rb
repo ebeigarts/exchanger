@@ -25,6 +25,8 @@ require "exchanger/elements/mailbox"
 require "exchanger/elements/single_recipient"
 require "exchanger/elements/attendee"
 require "exchanger/elements/complete_name"
+require "exchanger/elements/address"
+require "exchanger/elements/room"
 # Entry elements
 require "exchanger/elements/entry"
 require "exchanger/elements/email_address"
@@ -64,6 +66,8 @@ require "exchanger/operations/delete_item"
 require "exchanger/operations/resolve_names"
 require "exchanger/operations/expand_dl"
 require "exchanger/operations/get_user_availability"
+require "exchanger/operations/get_room_lists"
+require "exchanger/operations/get_rooms"
 
 module Exchanger
   NS = {
