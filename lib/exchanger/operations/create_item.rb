@@ -11,7 +11,8 @@ module Exchanger
   # http://msdn.microsoft.com/en-us/library/aa563797.aspx
   class CreateItem < Operation
     class Request < Operation::Request
-      attr_accessor :folder_id, :email_address, :items
+      attr_accessor :folder_id, :email_address, :items,
+        :send_meeting_invitations
 
       # Reset request options to defaults.
       def reset
@@ -24,7 +25,8 @@ module Exchanger
         Nokogiri::XML::Builder.new do |xml|
           xml.send("soap:Envelope", "xmlns:soap" => NS["soap"], "xmlns:t" => NS["t"], "xmlns:xsi" => NS["xsi"], "xmlns:xsd" => NS["xsd"]) do
             xml.send("soap:Body") do
-              xml.CreateItem("xmlns" => NS["m"]) do
+              xml.CreateItem("xmlns" => NS["m"],
+                            'SendMeetingInvitations' => send_meeting_invitations) do
                 xml.SavedItemFolderId do
                   if folder_id.is_a?(Symbol)
                     xml.send("t:DistinguishedFolderId", "Id" => folder_id) do
