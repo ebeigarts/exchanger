@@ -42,14 +42,14 @@ module Exchanger
                      xml.send("t:StandardTime") do
                        xml.send("t:Bias", 0)
                        xml.send("t:Time", "04:00:00")
-                       xml.send("t:DayOrder", 5)
-                       xml.send("t:Month", 10)
+                       xml.send("t:DayOrder", 1)
+                       xml.send("t:Month", 11)
                        xml.send("t:DayOfWeek", "Sunday")
                      end
                      xml.send("t:DaylightTime") do
                        xml.send("t:Bias", (minutes_of_std_offset * -1))
                        xml.send("t:Time", "03:00:00")
-                       xml.send("t:DayOrder", 5)
+                       xml.send("t:DayOrder", 2)
                        xml.send("t:Month", 3)
                        xml.send("t:DayOfWeek", "Sunday")
                      end
