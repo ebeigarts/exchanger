@@ -51,6 +51,15 @@ module Exchanger
       response.items
     end
 
+    def self.find_calendar_view_set_by_folder_id(folder_id, calendar_view)
+      response = FindItem.run(
+        folder_id:     folder_id,
+        calendar_view: calendar_view,
+      )
+
+      response.items
+    end
+
     attr_writer :parent_folder
 
     def parent_folder

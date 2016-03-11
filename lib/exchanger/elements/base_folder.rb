@@ -57,5 +57,14 @@ module Exchanger
         item.parent_folder = self
       end
     end
+
+    # Return items (also recurring calendar items) based on
+    # provided CalendarView options
+    def items_from_calendar_view(calendar_view_options)
+      calendar_view = CalendarView.new(calendar_view_options)
+      items = Item.find_calendar_view_set_by_folder_id(id, calendar_view)
+
+      items.each { |item| item.parent_folder = self }
+    end
   end
 end

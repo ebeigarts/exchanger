@@ -4,7 +4,7 @@ module Exchanger
   # http://msdn.microsoft.com/en-us/library/aa566107.aspx
   class FindItem < Operation
     class Request < Operation::Request
-      attr_accessor :folder_id, :traversal, :base_shape, :email_address
+      attr_accessor :folder_id, :traversal, :base_shape, :email_address, :calendar_view
 
       # Reset request options to defaults.
       def reset
@@ -12,6 +12,7 @@ module Exchanger
         @traversal = :shallow
         @base_shape = :all_properties
         @email_address = nil
+        @calendar_view = nil
       end
 
       def to_xml
@@ -21,6 +22,9 @@ module Exchanger
               xml.FindItem("xmlns" => NS["m"], "xmlns:t" => NS["t"], "Traversal" => traversal.to_s.camelize) do
                 xml.ItemShape do
                   xml.send "t:BaseShape", base_shape.to_s.camelize
+                end
+                if calendar_view
+                  xml.CalendarView(calendar_view.to_xml.attributes)
                 end
                 xml.ParentFolderIds do
                   if folder_id.is_a?(Symbol)
