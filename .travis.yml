@@ -1,0 +1,2 @@
+before_install:
+  - gem install bundler -v 1.6.2
