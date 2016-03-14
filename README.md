@@ -90,8 +90,8 @@ Supported `CalendarView` options/attributes:
 ```ruby
 folder = Exchanger::Folder.find(:calendar, "email@example.com")
 calendar_view_options = {
-  start_date: (DateTime.now - 1.week).xmlschema,
-  end_date:   DateTime.now.xmlschema,
+  start_date: (DateTime.now - 1.week),
+  end_date:   DateTime.now,
 }
 folder.expanded_items(calendar_view_options) # return Exchanger::CalendarItem items
 ```

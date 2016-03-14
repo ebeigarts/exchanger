@@ -6,7 +6,7 @@ module Exchanger
   # https://msdn.microsoft.com/en-us/library/aa564515.aspx
   class CalendarView < Element
     key :max_entries_returned
-    key :start_date
-    key :end_date
+    key :start_date, type: Time
+    key :end_date, type: Time
   end
 end
