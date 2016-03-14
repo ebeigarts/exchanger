@@ -60,7 +60,7 @@ module Exchanger
 
     # Return items (also recurring calendar items) based on
     # provided CalendarView options
-    def items_from_calendar_view(calendar_view_options)
+    def expanded_items(calendar_view_options)
       calendar_view = CalendarView.new(calendar_view_options)
       items = Item.find_calendar_view_set_by_folder_id(id, calendar_view)
 
