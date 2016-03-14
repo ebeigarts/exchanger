@@ -4,6 +4,7 @@ require "base64"
 require 'kconv' # Need for rubyntlm on Ruby 1.9
 require 'tzinfo'
 
+require "active_support"
 require "active_support/core_ext"
 require "nokogiri"
 require "httpclient"
@@ -25,6 +26,7 @@ require "exchanger/elements/mailbox"
 require "exchanger/elements/single_recipient"
 require "exchanger/elements/attendee"
 require "exchanger/elements/complete_name"
+require "exchanger/elements/calendar_view"
 # Entry elements
 require "exchanger/elements/entry"
 require "exchanger/elements/email_address"

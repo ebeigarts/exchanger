@@ -30,6 +30,7 @@ Exchanger.configure do |config|
   config.endpoint = "https://domain.com/EWS/Exchanger.asmx"
   config.username = "username"
   config.password = "password"
+  config.debug = true # show Exchange request/response info
 end
 ```
 
@@ -63,6 +64,36 @@ Searching in Global Address Book
 
 ```ruby
 mailboxes = Exchanger::Mailbox.search("John")
+```
+
+Searching for Calendar items
+----------------------------
+More specific Exchange calendar documentation can be found
+[here](https://msdn.microsoft.com/en-us/library/office/dn495614(v=exchg.150).aspx).
+
+1) Return all Calendar items with recurring **master** appointments (without recurring).
+Also called as non-expanded view.
+
+```ruby
+folder = Exchanger::Folder.find(:calendar, "email@example.com")
+folder.items # return Exchanger::CalendarItem items
+```
+
+2) Return Calendar items providing
+[CalendarView](https://msdn.microsoft.com/en-us/library/microsoft.exchange.webservices.data.calendarview(v=exchg.80).aspx) (with recurring).
+
+Supported `CalendarView` options/attributes:
+* max_entries_returned
+* start_date
+* end_date
+
+```ruby
+folder = Exchanger::Folder.find(:calendar, "email@example.com")
+calendar_view_options = {
+  start_date: (DateTime.now - 1.week),
+  end_date:   DateTime.now,
+}
+folder.expanded_items(calendar_view_options) # return Exchanger::CalendarItem items
 ```
 
 Running specs with Exchange Server
