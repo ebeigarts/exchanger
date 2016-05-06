@@ -89,12 +89,17 @@ module Exchanger
 
     def update
       if changed?
-        response = UpdateItem.run(:items => [self])
+        options = { items: [self] }.merge(update_additional_options)
+        response = UpdateItem.run(options)
         move_changes
         true
       else
         true
       end
+    end
+
+    def update_additional_options
+      {}  # Implement in subclasses to add CreateItem options
     end
 
     def delete

@@ -60,6 +60,10 @@ module Exchanger
       { send_meeting_invitations: "SendToAllAndSaveCopy" }
     end
 
+    def update_additional_options
+      { send_meeting_invitations_or_cancellations: "SendToAllAndSaveCopy" }
+    end
+
     def delete_additional_options
       { send_meeting_cancellations: "SendToAllAndSaveCopy" }
     end

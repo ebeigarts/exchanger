@@ -31,6 +31,10 @@ describe Exchanger::CalendarItem do
         @calendar_item.reload
         @calendar_item.subject.should == "Calendar Item Subject"
         @folder.items.size.should == prev_items_size + 1
+        @calendar_item.subject = "Calendar Item Subject - Updated"
+        @calendar_item.should be_changed
+        @calendar_item.save
+        @calendar_item.should_not be_changed
       end
     end
   end
