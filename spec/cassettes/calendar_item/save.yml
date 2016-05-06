@@ -1,0 +1,344 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@outlook.office365.com/EWS/Exchange.asmx
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+          <soap:Body>
+            <FindItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" Traversal="Shallow">
+              <ItemShape>
+                <t:BaseShape>AllProperties</t:BaseShape>
+              </ItemShape>
+              <ParentFolderIds>
+                <t:FolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"/>
+              </ParentFolderIds>
+            </FindItem>
+          </soap:Body>
+        </soap:Envelope>
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/FindItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.0
+      Request-Id:
+      - c5aaa209-0527-42b9-9c4d-689c4a66a84e
+      X-Calculatedbetarget:
+      - BY2PR08MB046.namprd08.prod.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      Set-Cookie:
+      - exchangecookie=c5453986db0f425b99a5cd9d00c7a504; expires=Sat, 06-May-2017
+        19:42:17 GMT; path=/; HttpOnly
+      X-Ewshandler:
+      - FindItem
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Diaginfo:
+      - BY2PR08MB046
+      X-Beserver:
+      - BY2PR08MB046
+      X-Powered-By:
+      - ASP.NET
+      X-Feserver:
+      - BLUPR14CA0071
+      Date:
+      - Fri, 06 May 2016 19:42:17 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="15" MinorVersion="1" MajorBuildNumber="492" MinorBuildNumber="11"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:FindItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:FindItemResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:RootFolder
+        TotalItemsInView="2" IncludesLastItemInRange="true"><t:Items><t:CalendarItem><t:ItemId
+        Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ARgAABKlVK7wi0Um5a7NdGSAWsQcATutsxsDoLkiasjWoT1GLIQAAAgENAAAATutsxsDoLkiasjWoT1GLIQAAAhjbAAAA"
+        ChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAAABl4"/><t:ParentFolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Appointment</t:ItemClass><t:Subject>Calendar
+        Item Subject</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2016-05-06T18:40:30Z</t:DateTimeReceived><t:Size>3871</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>false</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2016-05-06T18:40:30Z</t:DateTimeSent><t:DateTimeCreated>2016-05-06T18:40:30Z</t:DateTimeCreated><t:ReminderDueBy>2016-05-06T18:40:26Z</t:ReminderDueBy><t:ReminderIsSet>true</t:ReminderIsSet><t:ReminderMinutesBeforeStart>15</t:ReminderMinutesBeforeStart><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:Start>2016-05-06T18:40:26Z</t:Start><t:End>2016-05-06T19:10:26Z</t:End><t:IsAllDayEvent>false</t:IsAllDayEvent><t:LegacyFreeBusyStatus>Busy</t:LegacyFreeBusyStatus><t:IsMeeting>true</t:IsMeeting><t:IsCancelled>false</t:IsCancelled><t:IsRecurring>false</t:IsRecurring><t:MeetingRequestWasSent>false</t:MeetingRequestWasSent><t:IsResponseRequested>true</t:IsResponseRequested><t:CalendarItemType>Single</t:CalendarItemType><t:MyResponseType>Organizer</t:MyResponseType><t:Organizer><t:Mailbox><t:Name>FIRST_NAME
+        FIRST_NAME LAST_NAME</t:Name><t:EmailAddress>/O=FIRST ORGANIZATION/OU=EXCHANGE
+        ADMINISTRATIVE GROUP(FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0003BFFDF431A754</t:EmailAddress><t:RoutingType>EX</t:RoutingType></t:Mailbox></t:Organizer><t:Duration>PT30M</t:Duration><t:TimeZone>(UTC)
+        Monrovia, Reykjavik</t:TimeZone><t:AppointmentSequenceNumber>0</t:AppointmentSequenceNumber><t:AppointmentState>1</t:AppointmentState><t:IsOnlineMeeting>false</t:IsOnlineMeeting></t:CalendarItem><t:CalendarItem><t:ItemId
+        Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ARgAABKlVK7wi0Um5a7NdGSAWsQcATutsxsDoLkiasjWoT1GLIQAAAgENAAAATutsxsDoLkiasjWoT1GLIQAAAhjaAAAA"
+        ChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAAABl2"/><t:ParentFolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Appointment</t:ItemClass><t:Subject>Appointment
+        Title</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2016-05-06T16:11:42Z</t:DateTimeReceived><t:Size>5926</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>false</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2016-05-06T16:11:42Z</t:DateTimeSent><t:DateTimeCreated>2016-05-06T16:11:42Z</t:DateTimeCreated><t:ReminderDueBy>2016-05-06T15:00:00Z</t:ReminderDueBy><t:ReminderIsSet>true</t:ReminderIsSet><t:ReminderMinutesBeforeStart>15</t:ReminderMinutesBeforeStart><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:Start>2016-05-06T15:00:00Z</t:Start><t:End>2016-05-06T15:30:00Z</t:End><t:IsAllDayEvent>false</t:IsAllDayEvent><t:LegacyFreeBusyStatus>Busy</t:LegacyFreeBusyStatus><t:Location>Test
+        Location</t:Location><t:IsMeeting>false</t:IsMeeting><t:IsCancelled>false</t:IsCancelled><t:IsRecurring>false</t:IsRecurring><t:MeetingRequestWasSent>false</t:MeetingRequestWasSent><t:IsResponseRequested>true</t:IsResponseRequested><t:CalendarItemType>Single</t:CalendarItemType><t:MyResponseType>Organizer</t:MyResponseType><t:Organizer><t:Mailbox><t:Name>FIRST_NAME
+        FIRST_NAME LAST_NAME</t:Name><t:EmailAddress>/O=FIRST ORGANIZATION/OU=EXCHANGE
+        ADMINISTRATIVE GROUP(FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0003BFFDF431A754</t:EmailAddress><t:RoutingType>EX</t:RoutingType></t:Mailbox></t:Organizer><t:Duration>PT30M</t:Duration><t:TimeZone>(UTC-06:00)
+        Central Time (US &amp; Canada)</t:TimeZone><t:AppointmentSequenceNumber>0</t:AppointmentSequenceNumber><t:AppointmentState>0</t:AppointmentState><t:IsOnlineMeeting>false</t:IsOnlineMeeting></t:CalendarItem></t:Items></m:RootFolder></m:FindItemResponseMessage></m:ResponseMessages></m:FindItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Fri, 06 May 2016 19:42:17 GMT
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@outlook.office365.com/EWS/Exchange.asmx
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <soap:Body>
+            <CreateItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" SendMeetingInvitations="SendToAllAndSaveCopy">
+              <SavedItemFolderId>
+                <t:FolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"/>
+              </SavedItemFolderId>
+              <Items>
+                <t:CalendarItem>
+          <t:Subject>Calendar Item Subject</t:Subject>
+          <t:Start>2016-05-06T14:42:17-05:00</t:Start>
+          <t:End>2016-05-06T15:12:17-05:00</t:End>
+        </t:CalendarItem>
+              </Items>
+            </CreateItem>
+          </soap:Body>
+        </soap:Envelope>
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.0
+      Request-Id:
+      - 2fd90aef-12f9-4f3a-b9a2-91ef1f60f841
+      X-Calculatedbetarget:
+      - BY2PR08MB046.namprd08.prod.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      Set-Cookie:
+      - exchangecookie=c3a544ae3d8f425b934940045a0c192b; expires=Sat, 06-May-2017
+        19:42:18 GMT; path=/; HttpOnly
+      X-Ewshandler:
+      - CreateItem
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Diaginfo:
+      - BY2PR08MB046
+      X-Beserver:
+      - BY2PR08MB046
+      X-Powered-By:
+      - ASP.NET
+      X-Feserver:
+      - DM3PR12CA0013
+      Date:
+      - Fri, 06 May 2016 19:42:17 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="15" MinorVersion="1" MajorBuildNumber="492" MinorBuildNumber="11"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:CreateItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:CreateItemResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:CalendarItem><t:ItemId
+        Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ARgAABKlVK7wi0Um5a7NdGSAWsQcATutsxsDoLkiasjWoT1GLIQAAAgENAAAATutsxsDoLkiasjWoT1GLIQAAAhjlAAAA"
+        ChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAAABmV"/></t:CalendarItem></m:Items></m:CreateItemResponseMessage></m:ResponseMessages></m:CreateItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Fri, 06 May 2016 19:42:18 GMT
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@outlook.office365.com/EWS/Exchange.asmx
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+          <soap:Body>
+            <GetItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+              <ItemShape>
+                <t:BaseShape>AllProperties</t:BaseShape>
+              </ItemShape>
+              <ItemIds>
+                <t:ItemId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ARgAABKlVK7wi0Um5a7NdGSAWsQcATutsxsDoLkiasjWoT1GLIQAAAgENAAAATutsxsDoLkiasjWoT1GLIQAAAhjlAAAA"/>
+              </ItemIds>
+            </GetItem>
+          </soap:Body>
+        </soap:Envelope>
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/GetItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.0
+      Request-Id:
+      - e16910f5-65ed-4363-a51a-c468aa19f987
+      X-Calculatedbetarget:
+      - BY2PR08MB046.namprd08.prod.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      Set-Cookie:
+      - exchangecookie=9eee39ad466c4a7e9c03db9ebf43b416; expires=Sat, 06-May-2017
+        19:42:19 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Diaginfo:
+      - BY2PR08MB046
+      X-Beserver:
+      - BY2PR08MB046
+      X-Powered-By:
+      - ASP.NET
+      X-Feserver:
+      - DM3PR20CA0030
+      Date:
+      - Fri, 06 May 2016 19:42:19 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="15" MinorVersion="1" MajorBuildNumber="492" MinorBuildNumber="11"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:GetItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetItemResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:CalendarItem><t:ItemId
+        Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ARgAABKlVK7wi0Um5a7NdGSAWsQcATutsxsDoLkiasjWoT1GLIQAAAgENAAAATutsxsDoLkiasjWoT1GLIQAAAhjlAAAA"
+        ChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAAABmV"/><t:ParentFolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Appointment</t:ItemClass><t:Subject>Calendar
+        Item Subject</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:Body BodyType="Text"/><t:DateTimeReceived>2016-05-06T19:42:18Z</t:DateTimeReceived><t:Size>3823</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>false</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2016-05-06T19:42:18Z</t:DateTimeSent><t:DateTimeCreated>2016-05-06T19:42:18Z</t:DateTimeCreated><t:ResponseObjects><t:CancelCalendarItem/><t:ForwardItem/></t:ResponseObjects><t:ReminderDueBy>2016-05-06T19:42:17Z</t:ReminderDueBy><t:ReminderIsSet>true</t:ReminderIsSet><t:ReminderMinutesBeforeStart>15</t:ReminderMinutesBeforeStart><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:Start>2016-05-06T19:42:17Z</t:Start><t:End>2016-05-06T20:12:17Z</t:End><t:IsAllDayEvent>false</t:IsAllDayEvent><t:LegacyFreeBusyStatus>Busy</t:LegacyFreeBusyStatus><t:IsMeeting>true</t:IsMeeting><t:IsCancelled>false</t:IsCancelled><t:IsRecurring>false</t:IsRecurring><t:MeetingRequestWasSent>false</t:MeetingRequestWasSent><t:IsResponseRequested>true</t:IsResponseRequested><t:CalendarItemType>Single</t:CalendarItemType><t:MyResponseType>Organizer</t:MyResponseType><t:Organizer><t:Mailbox><t:Name>Exchanger
+        SpecTester</t:Name><t:EmailAddress>FILTERED_EMAIL_ADDRESS</t:EmailAddress><t:RoutingType>SMTP</t:RoutingType></t:Mailbox></t:Organizer><t:Duration>PT30M</t:Duration><t:TimeZone>(UTC)
+        Monrovia, Reykjavik</t:TimeZone><t:AppointmentSequenceNumber>0</t:AppointmentSequenceNumber><t:AppointmentState>1</t:AppointmentState><t:IsOnlineMeeting>false</t:IsOnlineMeeting></t:CalendarItem></m:Items></m:GetItemResponseMessage></m:ResponseMessages></m:GetItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Fri, 06 May 2016 19:42:19 GMT
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@outlook.office365.com/EWS/Exchange.asmx
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+          <soap:Body>
+            <FindItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" Traversal="Shallow">
+              <ItemShape>
+                <t:BaseShape>AllProperties</t:BaseShape>
+              </ItemShape>
+              <ParentFolderIds>
+                <t:FolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"/>
+              </ParentFolderIds>
+            </FindItem>
+          </soap:Body>
+        </soap:Envelope>
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/FindItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.0
+      Request-Id:
+      - 9819ce35-f238-4818-9937-3812c0aeecfd
+      X-Calculatedbetarget:
+      - BY2PR08MB046.namprd08.prod.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      Set-Cookie:
+      - exchangecookie=75020fdb927c48a598e69d9d8cec33ce; expires=Sat, 06-May-2017
+        19:42:19 GMT; path=/; HttpOnly
+      X-Ewshandler:
+      - FindItem
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Diaginfo:
+      - BY2PR08MB046
+      X-Beserver:
+      - BY2PR08MB046
+      X-Powered-By:
+      - ASP.NET
+      X-Feserver:
+      - DM2PR10CA0054
+      Date:
+      - Fri, 06 May 2016 19:42:20 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="15" MinorVersion="1" MajorBuildNumber="492" MinorBuildNumber="11"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:FindItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:FindItemResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:RootFolder
+        TotalItemsInView="3" IncludesLastItemInRange="true"><t:Items><t:CalendarItem><t:ItemId
+        Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ARgAABKlVK7wi0Um5a7NdGSAWsQcATutsxsDoLkiasjWoT1GLIQAAAgENAAAATutsxsDoLkiasjWoT1GLIQAAAhjlAAAA"
+        ChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAAABmV"/><t:ParentFolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Appointment</t:ItemClass><t:Subject>Calendar
+        Item Subject</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2016-05-06T19:42:18Z</t:DateTimeReceived><t:Size>3823</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>false</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2016-05-06T19:42:18Z</t:DateTimeSent><t:DateTimeCreated>2016-05-06T19:42:18Z</t:DateTimeCreated><t:ReminderDueBy>2016-05-06T19:42:17Z</t:ReminderDueBy><t:ReminderIsSet>true</t:ReminderIsSet><t:ReminderMinutesBeforeStart>15</t:ReminderMinutesBeforeStart><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:Start>2016-05-06T19:42:17Z</t:Start><t:End>2016-05-06T20:12:17Z</t:End><t:IsAllDayEvent>false</t:IsAllDayEvent><t:LegacyFreeBusyStatus>Busy</t:LegacyFreeBusyStatus><t:IsMeeting>true</t:IsMeeting><t:IsCancelled>false</t:IsCancelled><t:IsRecurring>false</t:IsRecurring><t:MeetingRequestWasSent>false</t:MeetingRequestWasSent><t:IsResponseRequested>true</t:IsResponseRequested><t:CalendarItemType>Single</t:CalendarItemType><t:MyResponseType>Organizer</t:MyResponseType><t:Organizer><t:Mailbox><t:Name>Exchanger
+        SpecTester</t:Name><t:EmailAddress>/O=FIRST ORGANIZATION/OU=EXCHANGE ADMINISTRATIVE
+        GROUP(FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0003BFFDF431A754</t:EmailAddress><t:RoutingType>EX</t:RoutingType></t:Mailbox></t:Organizer><t:Duration>PT30M</t:Duration><t:TimeZone>(UTC)
+        Monrovia, Reykjavik</t:TimeZone><t:AppointmentSequenceNumber>0</t:AppointmentSequenceNumber><t:AppointmentState>1</t:AppointmentState><t:IsOnlineMeeting>false</t:IsOnlineMeeting></t:CalendarItem><t:CalendarItem><t:ItemId
+        Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ARgAABKlVK7wi0Um5a7NdGSAWsQcATutsxsDoLkiasjWoT1GLIQAAAgENAAAATutsxsDoLkiasjWoT1GLIQAAAhjbAAAA"
+        ChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAAABl4"/><t:ParentFolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Appointment</t:ItemClass><t:Subject>Calendar
+        Item Subject</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2016-05-06T18:40:30Z</t:DateTimeReceived><t:Size>3871</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>false</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2016-05-06T18:40:30Z</t:DateTimeSent><t:DateTimeCreated>2016-05-06T18:40:30Z</t:DateTimeCreated><t:ReminderDueBy>2016-05-06T18:40:26Z</t:ReminderDueBy><t:ReminderIsSet>true</t:ReminderIsSet><t:ReminderMinutesBeforeStart>15</t:ReminderMinutesBeforeStart><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:Start>2016-05-06T18:40:26Z</t:Start><t:End>2016-05-06T19:10:26Z</t:End><t:IsAllDayEvent>false</t:IsAllDayEvent><t:LegacyFreeBusyStatus>Busy</t:LegacyFreeBusyStatus><t:IsMeeting>true</t:IsMeeting><t:IsCancelled>false</t:IsCancelled><t:IsRecurring>false</t:IsRecurring><t:MeetingRequestWasSent>false</t:MeetingRequestWasSent><t:IsResponseRequested>true</t:IsResponseRequested><t:CalendarItemType>Single</t:CalendarItemType><t:MyResponseType>Organizer</t:MyResponseType><t:Organizer><t:Mailbox><t:Name>FIRST_NAME
+        FIRST_NAME LAST_NAME</t:Name><t:EmailAddress>/O=FIRST ORGANIZATION/OU=EXCHANGE
+        ADMINISTRATIVE GROUP(FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0003BFFDF431A754</t:EmailAddress><t:RoutingType>EX</t:RoutingType></t:Mailbox></t:Organizer><t:Duration>PT30M</t:Duration><t:TimeZone>(UTC)
+        Monrovia, Reykjavik</t:TimeZone><t:AppointmentSequenceNumber>0</t:AppointmentSequenceNumber><t:AppointmentState>1</t:AppointmentState><t:IsOnlineMeeting>false</t:IsOnlineMeeting></t:CalendarItem><t:CalendarItem><t:ItemId
+        Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ARgAABKlVK7wi0Um5a7NdGSAWsQcATutsxsDoLkiasjWoT1GLIQAAAgENAAAATutsxsDoLkiasjWoT1GLIQAAAhjaAAAA"
+        ChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAAABl2"/><t:ParentFolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Appointment</t:ItemClass><t:Subject>Appointment
+        Title</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2016-05-06T16:11:42Z</t:DateTimeReceived><t:Size>5926</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>false</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2016-05-06T16:11:42Z</t:DateTimeSent><t:DateTimeCreated>2016-05-06T16:11:42Z</t:DateTimeCreated><t:ReminderDueBy>2016-05-06T15:00:00Z</t:ReminderDueBy><t:ReminderIsSet>true</t:ReminderIsSet><t:ReminderMinutesBeforeStart>15</t:ReminderMinutesBeforeStart><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:Start>2016-05-06T15:00:00Z</t:Start><t:End>2016-05-06T15:30:00Z</t:End><t:IsAllDayEvent>false</t:IsAllDayEvent><t:LegacyFreeBusyStatus>Busy</t:LegacyFreeBusyStatus><t:Location>Test
+        Location</t:Location><t:IsMeeting>false</t:IsMeeting><t:IsCancelled>false</t:IsCancelled><t:IsRecurring>false</t:IsRecurring><t:MeetingRequestWasSent>false</t:MeetingRequestWasSent><t:IsResponseRequested>true</t:IsResponseRequested><t:CalendarItemType>Single</t:CalendarItemType><t:MyResponseType>Organizer</t:MyResponseType><t:Organizer><t:Mailbox><t:Name>FIRST_NAME
+        FIRST_NAME LAST_NAME</t:Name><t:EmailAddress>/O=FIRST ORGANIZATION/OU=EXCHANGE
+        ADMINISTRATIVE GROUP(FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0003BFFDF431A754</t:EmailAddress><t:RoutingType>EX</t:RoutingType></t:Mailbox></t:Organizer><t:Duration>PT30M</t:Duration><t:TimeZone>(UTC-06:00)
+        Central Time (US &amp; Canada)</t:TimeZone><t:AppointmentSequenceNumber>0</t:AppointmentSequenceNumber><t:AppointmentState>0</t:AppointmentState><t:IsOnlineMeeting>false</t:IsOnlineMeeting></t:CalendarItem></t:Items></m:RootFolder></m:FindItemResponseMessage></m:ResponseMessages></m:FindItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Fri, 06 May 2016 19:42:20 GMT
+recorded_with: VCR 3.0.1

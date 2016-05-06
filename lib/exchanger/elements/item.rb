@@ -72,7 +72,8 @@ module Exchanger
 
     def create
       if parent_folder_id
-        response = CreateItem.run(:folder_id => parent_folder_id.id, :items => [self])
+        options = { folder_id: parent_folder_id.id, items: [self] }.merge(create_additional_options)
+        response = CreateItem.run(options)
         self.item_id = response.item_ids[0]
         move_changes
         true
@@ -80,6 +81,10 @@ module Exchanger
         errors << "Parent folder can't be blank"
         false
       end
+    end
+
+    def create_additional_options
+      {}  # Implement in subclasses to add CreateItem options
     end
 
     def update
@@ -93,11 +98,16 @@ module Exchanger
     end
 
     def delete
-      if DeleteItem.run(:item_ids => [id])
+      options = { item_ids: [id] }.merge(delete_additional_options)
+      if DeleteItem.run(options)
         true
       else
         false
       end
+    end
+
+    def delete_additional_options
+      {}  # Implement in subclasses to add DeleteItem options
     end
   end
 end

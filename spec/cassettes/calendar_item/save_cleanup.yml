@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@outlook.office365.com/EWS/Exchange.asmx
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <soap:Body>
+            <DeleteItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" DeleteType="HardDelete" SendMeetingCancellations="SendToAllAndSaveCopy">
+              <ItemIds>
+                <t:ItemId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ARgAABKlVK7wi0Um5a7NdGSAWsQcATutsxsDoLkiasjWoT1GLIQAAAgENAAAATutsxsDoLkiasjWoT1GLIQAAAhjlAAAA"/>
+              </ItemIds>
+            </DeleteItem>
+          </soap:Body>
+        </soap:Envelope>
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/DeleteItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.0
+      Request-Id:
+      - a868d4e7-be86-4157-bbda-936d483968bc
+      X-Calculatedbetarget:
+      - BY2PR08MB046.namprd08.prod.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      Set-Cookie:
+      - exchangecookie=5dcaa1ccd1fa4b3ba8dd431e53e40d80; expires=Sat, 06-May-2017
+        19:42:20 GMT; path=/; HttpOnly
+      X-Ewshandler:
+      - DeleteItem
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Diaginfo:
+      - BY2PR08MB046
+      X-Beserver:
+      - BY2PR08MB046
+      X-Powered-By:
+      - ASP.NET
+      X-Feserver:
+      - DM2PR10CA0045
+      Date:
+      - Fri, 06 May 2016 19:42:20 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="15" MinorVersion="1" MajorBuildNumber="492" MinorBuildNumber="11"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:DeleteItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:DeleteItemResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode></m:DeleteItemResponseMessage></m:ResponseMessages></m:DeleteItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Fri, 06 May 2016 19:42:21 GMT
+recorded_with: VCR 3.0.1
