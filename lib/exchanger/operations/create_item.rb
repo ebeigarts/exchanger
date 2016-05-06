@@ -1,13 +1,13 @@
 module Exchanger
   # The CreateItem operation creates items in the Exchanger store.
-  # 
+  #
   # You can use the CreateItem operation to create the following:
   # * Calendar items
   # * E-mail messages
   # * Meeting requests
   # * Tasks
   # * Contacts
-  # 
+  #
   # http://msdn.microsoft.com/en-us/library/aa563797.aspx
   class CreateItem < Operation
     class Request < Operation::Request
@@ -25,8 +25,7 @@ module Exchanger
         Nokogiri::XML::Builder.new do |xml|
           xml.send("soap:Envelope", "xmlns:soap" => NS["soap"], "xmlns:t" => NS["t"], "xmlns:xsi" => NS["xsi"], "xmlns:xsd" => NS["xsd"]) do
             xml.send("soap:Body") do
-              xml.CreateItem("xmlns" => NS["m"],
-                            'SendMeetingInvitations' => send_meeting_invitations) do
+              xml.CreateItem(create_item_attributes) do
                 xml.SavedItemFolderId do
                   if folder_id.is_a?(Symbol)
                     xml.send("t:DistinguishedFolderId", "Id" => folder_id) do
@@ -53,6 +52,14 @@ module Exchanger
           end
         end
       end
+
+      private
+
+        def create_item_attributes
+          create_item_attributes = { "xmlns" => NS["m"] }
+          create_item_attributes["SendMeetingInvitations"] = send_meeting_invitations if send_meeting_invitations
+          create_item_attributes
+        end
     end
 
     class Response < Operation::Response
