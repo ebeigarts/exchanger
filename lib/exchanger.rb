@@ -27,6 +27,7 @@ require "exchanger/elements/single_recipient"
 require "exchanger/elements/attendee"
 require "exchanger/elements/complete_name"
 require "exchanger/elements/calendar_view"
+require "exchanger/elements/body"
 # Entry elements
 require "exchanger/elements/entry"
 require "exchanger/elements/email_address"
@@ -82,7 +83,7 @@ module Exchanger
       config = Config.instance
       block_given? ? yield(config) : config
     end
-    
+
     alias :config :configure
   end
 end

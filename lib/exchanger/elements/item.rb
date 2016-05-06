@@ -9,7 +9,7 @@ module Exchanger
     element :item_class
     element :subject
     element :sensitivity
-    element :body
+    element :body, type: Body
     element :attachments, :type => [String]
     element :date_time_received, :type => Time
     element :size, :type => Integer

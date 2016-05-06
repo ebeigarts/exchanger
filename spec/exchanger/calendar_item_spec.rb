@@ -21,6 +21,7 @@ describe Exchanger::CalendarItem do
       VCR.use_cassette("calendar_item/save") do
         prev_items_size = @folder.items.size
         @calendar_item.subject = "Calendar Item Subject"
+        @calendar_item.body = Exchanger::Body.new(text: "Body line 1.\nBody line 2.")
         @calendar_item.start = Time.now
         @calendar_item.end = Time.now + 30.minutes
         @calendar_item.should be_changed
