@@ -1,5 +1,5 @@
 module Exchanger
-  # The Body element represents the body of and item.
+  # The Body element represents the body of an item.
   #
   # Body:     https://msdn.microsoft.com/en-us/library/office/jj219983(v=exchg.150).aspx
   # BodyType: https://msdn.microsoft.com/en-us/library/office/aa565622(v=exchg.150).aspx

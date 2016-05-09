@@ -99,7 +99,7 @@ module Exchanger
     end
 
     def update_additional_options
-      {}  # Implement in subclasses to add CreateItem options
+      {}  # Implement in subclasses to add UpdateItem options
     end
 
     def delete

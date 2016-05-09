@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@outlook.office365.com/EWS/Exchange.asmx
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
       encoding: UTF-8
       string: |
@@ -11,7 +11,7 @@ http_interactions:
           <soap:Body>
             <DeleteItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" DeleteType="HardDelete" SendMeetingCancellations="SendToAllAndSaveCopy">
               <ItemIds>
-                <t:ItemId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ARgAABKlVK7wi0Um5a7NdGSAWsQcATutsxsDoLkiasjWoT1GLIQAAAgENAAAATutsxsDoLkiasjWoT1GLIQAAAhjuAAAA"/>
+                <t:ItemId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ARgAABKlVK7wi0Um5a7NdGSAWsQcATutsxsDoLkiasjWoT1GLIQAAAgENAAAATutsxsDoLkiasjWoT1GLIQAAAhj5AAAA"/>
               </ItemIds>
             </DeleteItem>
           </soap:Body>
@@ -37,14 +37,14 @@ http_interactions:
       Server:
       - Microsoft-IIS/8.0
       Request-Id:
-      - c0380b53-6470-4dbd-9acb-749ea56f190d
+      - 80fb0c16-e47d-494d-8539-1e3eb72a5e93
       X-Calculatedbetarget:
       - BY2PR08MB046.namprd08.prod.outlook.com
       X-Backendhttpstatus:
       - '200'
       Set-Cookie:
-      - exchangecookie=185f0d0b881c4598bb2133f24616127e; expires=Sat, 06-May-2017
-        20:40:53 GMT; path=/; HttpOnly
+      - exchangecookie=0e77f478e2ff4d39955012a1f1b0fd75; expires=Tue, 09-May-2017
+        16:00:08 GMT; path=/; HttpOnly
       X-Ewshandler:
       - DeleteItem
       X-Aspnet-Version:
@@ -56,9 +56,9 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       X-Feserver:
-      - BY2PR08CA0069
+      - CO2PR07CA0006
       Date:
-      - Fri, 06 May 2016 20:40:53 GMT
+      - Mon, 09 May 2016 16:00:08 GMT
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
@@ -69,5 +69,5 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:DeleteItemResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode></m:DeleteItemResponseMessage></m:ResponseMessages></m:DeleteItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Fri, 06 May 2016 20:40:53 GMT
+  recorded_at: Mon, 09 May 2016 16:00:08 GMT
 recorded_with: VCR 3.0.1
