@@ -9,7 +9,7 @@ module Exchanger
     element :item_class
     element :subject
     element :sensitivity
-    element :body
+    element :body, type: Body
     element :attachments, :type => [String]
     element :date_time_received, :type => Time
     element :size, :type => Integer
@@ -72,7 +72,8 @@ module Exchanger
 
     def create
       if parent_folder_id
-        response = CreateItem.run(:folder_id => parent_folder_id.id, :items => [self])
+        options = { folder_id: parent_folder_id.id, items: [self] }.merge(create_additional_options)
+        response = CreateItem.run(options)
         self.item_id = response.item_ids[0]
         move_changes
         true
@@ -82,9 +83,14 @@ module Exchanger
       end
     end
 
+    def create_additional_options
+      {}  # Implement in subclasses to add CreateItem options
+    end
+
     def update
       if changed?
-        response = UpdateItem.run(:items => [self])
+        options = { items: [self] }.merge(update_additional_options)
+        response = UpdateItem.run(options)
         move_changes
         true
       else
@@ -92,12 +98,21 @@ module Exchanger
       end
     end
 
+    def update_additional_options
+      {}  # Implement in subclasses to add UpdateItem options
+    end
+
     def delete
-      if DeleteItem.run(:item_ids => [id])
+      options = { item_ids: [id] }.merge(delete_additional_options)
+      if DeleteItem.run(options)
         true
       else
         false
       end
+    end
+
+    def delete_additional_options
+      {}  # Implement in subclasses to add DeleteItem options
     end
   end
 end

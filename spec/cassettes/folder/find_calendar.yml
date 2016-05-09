@@ -4,20 +4,28 @@ http_interactions:
     method: post
     uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
-        \ <soap:Body>\n    <GetFolder xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"
-        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\">\n      <FolderShape>\n
-        \       <t:BaseShape>Default</t:BaseShape>\n      </FolderShape>\n      <FolderIds>\n
-        \       <t:DistinguishedFolderId Id=\"calendar\"/>\n      </FolderIds>\n    </GetFolder>\n
-        \ </soap:Body>\n</soap:Envelope>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+          <soap:Body>
+            <GetFolder xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+              <FolderShape>
+                <t:BaseShape>Default</t:BaseShape>
+              </FolderShape>
+              <FolderIds>
+                <t:DistinguishedFolderId Id="calendar"/>
+              </FolderIds>
+            </GetFolder>
+          </soap:Body>
+        </soap:Envelope>
     headers:
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/GetFolder
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
   response:
     status:
       code: 200
@@ -30,31 +38,41 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/7.5
-      Requestid:
-      - 56ded872-6c51-47fa-acfa-b3aa88c55c52
+      - Microsoft-IIS/8.0
+      Request-Id:
+      - 561afca4-233e-4d3e-8d46-9c3b98f7bb42
+      X-Calculatedbetarget:
+      - BY2PR08MB046.namprd08.prod.outlook.com
+      X-Backendhttpstatus:
+      - '200'
       Set-Cookie:
-      - exchangecookie=a294c6d2503b4af2acab2ab6195297e4; expires=Fri, 11-Oct-2013
-        19:33:54 GMT; path=/; HttpOnly
+      - exchangecookie=7336c677cc004b11afaab1766f45de6c; expires=Tue, 09-May-2017
+        16:00:04 GMT; path=/; HttpOnly
+      X-Ewshandler:
+      - GetFolder
       X-Aspnet-Version:
-      - 2.0.50727
+      - 4.0.30319
+      X-Diaginfo:
+      - BY2PR08MB046
+      X-Beserver:
+      - BY2PR08MB046
       X-Powered-By:
       - ASP.NET
-      X-Diaginfo:
-      - AMSPRD0710CA014
+      X-Feserver:
+      - BY2PR13CA0012
       Date:
-      - Thu, 11 Oct 2012 19:33:54 GMT
+      - Mon, 09 May 2016 16:00:04 GMT
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
-        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:GetFolderResponse
-        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetFolderResponseMessage
+        MajorVersion="15" MinorVersion="1" MajorBuildNumber="492" MinorBuildNumber="11"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:GetFolderResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetFolderResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Folders><t:CalendarFolder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2hAAAA"
-        ChangeKey="AgAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe3B"/><t:DisplayName>Calendar</t:DisplayName><t:ChildFolderCount>0</t:ChildFolderCount></t:CalendarFolder></m:Folders></m:GetFolderResponseMessage></m:ResponseMessages></m:GetFolderResponse></s:Body></s:Envelope>
+        Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"
+        ChangeKey="AgAAABYAAABO62zGwOguSJqyNahPUYshAAAAAAA3"/><t:DisplayName>Calendar</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>2</t:ChildFolderCount></t:CalendarFolder></m:Folders></m:GetFolderResponseMessage></m:ResponseMessages></m:GetFolderResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Thu, 11 Oct 2012 19:33:54 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Mon, 09 May 2016 16:00:05 GMT
+recorded_with: VCR 3.0.1
