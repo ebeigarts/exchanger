@@ -42,6 +42,7 @@ require "exchanger/elements/contacts_folder"
 require "exchanger/elements/tasks_folder"
 require "exchanger/elements/search_folder"
 # Item elements
+require "exchanger/elements/attachment"
 require "exchanger/elements/item"
 require "exchanger/elements/message"
 require "exchanger/elements/calendar_item"
@@ -54,6 +55,8 @@ require "exchanger/elements/task"
 require "exchanger/elements/distribution_list"
 require "exchanger/elements/calendar_event_details"
 require "exchanger/elements/calendar_event"
+require "exchanger/elements/item_attachment"
+require "exchanger/elements/file_attachment"
 
 # Operations
 require "exchanger/operation"
@@ -67,6 +70,9 @@ require "exchanger/operations/delete_item"
 require "exchanger/operations/resolve_names"
 require "exchanger/operations/expand_dl"
 require "exchanger/operations/get_user_availability"
+require "exchanger/operations/get_attachment"
+require "exchanger/operations/create_attachment"
+require "exchanger/operations/delete_attachment"
 
 module Exchanger
   NS = {

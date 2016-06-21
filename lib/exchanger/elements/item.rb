@@ -10,7 +10,7 @@ module Exchanger
     element :subject
     element :sensitivity
     element :body, type: Body
-    element :attachments, :type => [String]
+    element :attachments, :type => [Attachment]
     element :date_time_received, :type => Time
     element :size, :type => Integer
     element :categories, :type => [String]
@@ -66,6 +66,14 @@ module Exchanger
       @parent_folder ||= if parent_folder_id
         Folder.find(parent_folder_id.id)
       end
+    end
+
+    def new_file_attachment(attributes = {})
+      FileAttachment.new(attributes.merge(parent_item_id: item_id.id))
+    end
+
+    def file_attachments
+      attachments.select { |attachment| attachment.is_a?(FileAttachment) }
     end
 
     private

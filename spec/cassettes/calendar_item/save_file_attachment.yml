@@ -1,0 +1,374 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <soap:Body>
+            <CreateItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" SendMeetingInvitations="SendToAllAndSaveCopy">
+              <SavedItemFolderId>
+                <t:FolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"/>
+              </SavedItemFolderId>
+              <Items>
+                <t:CalendarItem>
+          <t:Subject>Test Calendar Item</t:Subject>
+          <t:Body BodyType="Text">Body line 1.
+        Body line 2.</t:Body>
+          <t:Start>2016-06-21T09:13:14-05:00</t:Start>
+          <t:End>2016-06-21T09:43:14-05:00</t:End>
+        </t:CalendarItem>
+              </Items>
+            </CreateItem>
+          </soap:Body>
+        </soap:Envelope>
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.0
+      Request-Id:
+      - 9d7369a5-0482-43b4-be6a-78f400a31b21
+      X-Calculatedbetarget:
+      - CO2PR0801MB552.namprd08.prod.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      Set-Cookie:
+      - exchangecookie=a0afd69d84e544feafcbccf6d81cf3b1; expires=Wed, 21-Jun-2017
+        14:13:15 GMT; path=/; HttpOnly
+      X-Ewshandler:
+      - CreateItem
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Diaginfo:
+      - CO2PR0801MB552
+      X-Beserver:
+      - CO2PR0801MB552
+      X-Powered-By:
+      - ASP.NET
+      X-Feserver:
+      - BY1PR19CA0019
+      Date:
+      - Tue, 21 Jun 2016 14:13:13 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="15" MinorVersion="1" MajorBuildNumber="523" MinorBuildNumber="16"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:CreateItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:CreateItemResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:CalendarItem><t:ItemId
+        Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA="
+        ChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAcJize"/></t:CalendarItem></m:Items></m:CreateItemResponseMessage></m:ResponseMessages></m:CreateItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 14:13:14 GMT
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <soap:Body>
+            <CreateAttachment xmlns="http://schemas.microsoft.com/exchange/services/2006/messages">
+              <ParentItemId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA="/>
+              <Attachments>
+                <t:FileAttachment>
+          <t:Name>test.txt</t:Name>
+          <t:ContentType>text/plain</t:ContentType>
+          <t:Content>VGVzdCBDb250ZW50
+        </t:Content>
+        </t:FileAttachment>
+              </Attachments>
+            </CreateAttachment>
+          </soap:Body>
+        </soap:Envelope>
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/CreateAttachment
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.0
+      Request-Id:
+      - e3859936-4b38-49cf-8b68-c1de0a8030aa
+      X-Calculatedbetarget:
+      - CO2PR0801MB552.namprd08.prod.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      Set-Cookie:
+      - exchangecookie=e494592941624251b0e089f04d054993; expires=Wed, 21-Jun-2017
+        14:13:15 GMT; path=/; HttpOnly
+      X-Ewshandler:
+      - CreateAttachment
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Diaginfo:
+      - CO2PR0801MB552
+      X-Beserver:
+      - CO2PR0801MB552
+      X-Powered-By:
+      - ASP.NET
+      X-Feserver:
+      - BY1PR10CA0031
+      Date:
+      - Tue, 21 Jun 2016 14:13:14 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="15" MinorVersion="1" MajorBuildNumber="523" MinorBuildNumber="16"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:CreateAttachmentResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:CreateAttachmentResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Attachments><t:FileAttachment><t:AttachmentId
+        Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAABEgAQAD3x18GLNmVLgCkwN+NmLSk="
+        RootItemId="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA="
+        RootItemChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAcJizf"/><t:LastModifiedTime>2016-06-21T14:13:15</t:LastModifiedTime></t:FileAttachment></m:Attachments></m:CreateAttachmentResponseMessage></m:ResponseMessages></m:CreateAttachmentResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 14:13:15 GMT
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+          <soap:Body>
+            <GetItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+              <ItemShape>
+                <t:BaseShape>AllProperties</t:BaseShape>
+              </ItemShape>
+              <ItemIds>
+                <t:ItemId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA="/>
+              </ItemIds>
+            </GetItem>
+          </soap:Body>
+        </soap:Envelope>
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/GetItem
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.0
+      Request-Id:
+      - fd6f7300-940d-41c5-bedc-dfe56c9939d9
+      X-Calculatedbetarget:
+      - CO2PR0801MB552.namprd08.prod.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      Set-Cookie:
+      - exchangecookie=0297fe2cb6344f15a2ecc65eb0a989fb; expires=Wed, 21-Jun-2017
+        14:13:26 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Diaginfo:
+      - CO2PR0801MB552
+      X-Beserver:
+      - CO2PR0801MB552
+      X-Powered-By:
+      - ASP.NET
+      X-Feserver:
+      - BY1PR19CA0008
+      Date:
+      - Tue, 21 Jun 2016 14:13:25 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo MajorVersion="15" MinorVersion="1" MajorBuildNumber="523" MinorBuildNumber="16" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:GetItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetItemResponseMessage ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:CalendarItem><t:ItemId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA=" ChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAcJizf"/><t:ParentFolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA" ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Appointment</t:ItemClass><t:Subject>Test Calendar Item</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:Body BodyType="Text">Body line 1.
+        Body line 2.</t:Body><t:Attachments><t:FileAttachment><t:AttachmentId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAABEgAQAD3x18GLNmVLgCkwN+NmLSk="/><t:Name>test.txt</t:Name><t:ContentType>text/plain</t:ContentType></t:FileAttachment></t:Attachments><t:DateTimeReceived>2016-06-21T14:13:15Z</t:DateTimeReceived><t:Size>4166</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>false</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2016-06-21T14:13:15Z</t:DateTimeSent><t:DateTimeCreated>2016-06-21T14:13:15Z</t:DateTimeCreated><t:ResponseObjects><t:CancelCalendarItem/><t:ForwardItem/></t:ResponseObjects><t:ReminderDueBy>2016-06-21T14:13:14Z</t:ReminderDueBy><t:ReminderIsSet>true</t:ReminderIsSet><t:ReminderMinutesBeforeStart>15</t:ReminderMinutesBeforeStart><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>true</t:HasAttachments><t:Culture>en-US</t:Culture><t:Start>2016-06-21T14:13:14Z</t:Start><t:End>2016-06-21T14:43:14Z</t:End><t:IsAllDayEvent>false</t:IsAllDayEvent><t:LegacyFreeBusyStatus>Busy</t:LegacyFreeBusyStatus><t:IsMeeting>true</t:IsMeeting><t:IsCancelled>false</t:IsCancelled><t:IsRecurring>false</t:IsRecurring><t:MeetingRequestWasSent>false</t:MeetingRequestWasSent><t:IsResponseRequested>true</t:IsResponseRequested><t:CalendarItemType>Single</t:CalendarItemType><t:MyResponseType>Organizer</t:MyResponseType><t:Organizer><t:Mailbox><t:Name>Exchanger SpecTester</t:Name><t:EmailAddress>FILTERED_EMAIL_ADDRESS</t:EmailAddress><t:RoutingType>SMTP</t:RoutingType></t:Mailbox></t:Organizer><t:Duration>PT30M</t:Duration><t:TimeZone>(UTC) Monrovia, Reykjavik</t:TimeZone><t:AppointmentSequenceNumber>0</t:AppointmentSequenceNumber><t:AppointmentState>1</t:AppointmentState><t:IsOnlineMeeting>false</t:IsOnlineMeeting></t:CalendarItem></m:Items></m:GetItemResponseMessage></m:ResponseMessages></m:GetItemResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 14:13:26 GMT
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+          <soap:Body>
+            <GetAttachment xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+              <AttachmentShape>
+                <t:BaseShape>AllProperties</t:BaseShape>
+              </AttachmentShape>
+              <AttachmentIds>
+                <t:AttachmentId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAABEgAQAD3x18GLNmVLgCkwN+NmLSk="/>
+              </AttachmentIds>
+            </GetAttachment>
+          </soap:Body>
+        </soap:Envelope>
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/GetAttachment
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.0
+      Request-Id:
+      - 57e66672-a146-42f9-9a84-9891ee8d4b6d
+      X-Calculatedbetarget:
+      - CO2PR0801MB552.namprd08.prod.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      Set-Cookie:
+      - exchangecookie=cd0159d4f952418e9e0cd7a2c1edf614; expires=Wed, 21-Jun-2017
+        14:13:27 GMT; path=/; HttpOnly
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Diaginfo:
+      - CO2PR0801MB552
+      X-Beserver:
+      - CO2PR0801MB552
+      X-Powered-By:
+      - ASP.NET
+      X-Feserver:
+      - BY1PR19CA0018
+      Date:
+      - Tue, 21 Jun 2016 14:13:26 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="15" MinorVersion="1" MajorBuildNumber="523" MinorBuildNumber="16"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:GetAttachmentResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetAttachmentResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Attachments><t:FileAttachment><t:AttachmentId
+        Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAABEgAQAD3x18GLNmVLgCkwN+NmLSk="/><t:Name>test.txt</t:Name><t:ContentType>text/plain</t:ContentType><t:Content>VGVzdCBDb250ZW50</t:Content></t:FileAttachment></m:Attachments></m:GetAttachmentResponseMessage></m:ResponseMessages></m:GetAttachmentResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 14:13:26 GMT
+- request:
+    method: post
+    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <soap:Body>
+            <DeleteAttachment xmlns="http://schemas.microsoft.com/exchange/services/2006/messages">
+              <AttachmentIds>
+                <t:AttachmentId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAABEgAQAD3x18GLNmVLgCkwN+NmLSk="/>
+              </AttachmentIds>
+            </DeleteAttachment>
+          </soap:Body>
+        </soap:Envelope>
+    headers:
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/DeleteAttachment
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.0
+      Request-Id:
+      - 0c5e6934-8122-4ffd-9439-75c3df3700d4
+      X-Calculatedbetarget:
+      - CO2PR0801MB552.namprd08.prod.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      Set-Cookie:
+      - exchangecookie=6c63f412ce7048b4b96755b17043c82c; expires=Wed, 21-Jun-2017
+        14:13:27 GMT; path=/; HttpOnly
+      X-Ewshandler:
+      - DeleteAttachment
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Diaginfo:
+      - CO2PR0801MB552
+      X-Beserver:
+      - CO2PR0801MB552
+      X-Powered-By:
+      - ASP.NET
+      X-Feserver:
+      - CY1PR21CA0023
+      Date:
+      - Tue, 21 Jun 2016 14:13:27 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="15" MinorVersion="1" MajorBuildNumber="523" MinorBuildNumber="16"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:DeleteAttachmentResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:DeleteAttachmentResponseMessage
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:RootItemId
+        RootItemId="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA="
+        RootItemChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAcJizg"/></m:DeleteAttachmentResponseMessage></m:ResponseMessages></m:DeleteAttachmentResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Tue, 21 Jun 2016 14:13:27 GMT
+recorded_with: VCR 3.0.1

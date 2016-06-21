@@ -2,7 +2,7 @@ module Exchanger
   module Attributes
     def attributes=(values = {})
       values.each do |name, value|
-        write_attribute(name, value)
+        public_send("#{name}=", value)
       end
     end
 
