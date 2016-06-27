@@ -11,7 +11,7 @@ http_interactions:
           <soap:Body>
             <DeleteItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" DeleteType="HardDelete" SendMeetingCancellations="SendToAllAndSaveCopy">
               <ItemIds>
-                <t:ItemId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi8AAA="/>
+                <t:ItemId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA="/>
               </ItemIds>
             </DeleteItem>
           </soap:Body>
@@ -37,14 +37,14 @@ http_interactions:
       Server:
       - Microsoft-IIS/8.0
       Request-Id:
-      - c9f0900b-b14e-4b4b-8a1b-f65ac64a7244
+      - 3ef1eef1-ee8b-4a62-b05e-85a2c72ad1e0
       X-Calculatedbetarget:
       - CO2PR0801MB552.namprd08.prod.outlook.com
       X-Backendhttpstatus:
       - '200'
       Set-Cookie:
-      - exchangecookie=9201d47cd2174b3d9e1af9464175b397; expires=Wed, 21-Jun-2017
-        14:13:14 GMT; path=/; HttpOnly
+      - exchangecookie=aa4862a055bf420b8708234ff32c168c; expires=Wed, 21-Jun-2017
+        14:13:28 GMT; path=/; HttpOnly
       X-Ewshandler:
       - DeleteItem
       X-Aspnet-Version:
@@ -56,9 +56,9 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       X-Feserver:
-      - CO2PR20CA0007
+      - BY1PR10CA0002
       Date:
-      - Tue, 21 Jun 2016 14:13:13 GMT
+      - Tue, 21 Jun 2016 14:13:28 GMT
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
@@ -69,5 +69,5 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:DeleteItemResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode></m:DeleteItemResponseMessage></m:ResponseMessages></m:DeleteItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Tue, 21 Jun 2016 14:13:14 GMT
+  recorded_at: Tue, 21 Jun 2016 14:13:28 GMT
 recorded_with: VCR 3.0.1

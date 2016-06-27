@@ -14,6 +14,7 @@ Supported operations
 * FindFolder, GetFolder
 * ResolveNames, ExpandDL
 * GetUserAvailability
+* GetAttachment, CreateAttachment, DeleteAttachment
 
 Installing
 ==========

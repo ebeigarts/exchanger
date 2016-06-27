@@ -72,22 +72,25 @@ module Exchanger
     end
 
     def self.new_from_xml(xml)
-      object = new
+      new.assign_attributes_from_xml(xml)
+    end
+
+    def assign_attributes_from_xml(xml)
       # Keys
       xml.attributes.values.each do |attr|
         name = attr.name.underscore.to_sym
         value = attr.value
-        object.write_attribute(name, value)
+        write_attribute(name, value)
       end
       # Fields
       xml.children.each do |node|
         name = node.name.underscore.to_sym
         field = elements[name] || Field.new(name)
         value = field.value_from_xml(node)
-        object.write_attribute(name, value)
+        write_attribute(name, value)
       end
-      object.send(:reset_modifications)
-      object
+      send(:reset_modifications)
+      self
     end
 
     # Builds XML from elements and attributes
