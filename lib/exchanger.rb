@@ -41,7 +41,12 @@ require "exchanger/elements/calendar_folder"
 require "exchanger/elements/contacts_folder"
 require "exchanger/elements/tasks_folder"
 require "exchanger/elements/search_folder"
+require "exchanger/elements/user_configuration_name"
+require "exchanger/elements/user_configuration"
 # Item elements
+require "exchanger/elements/category_string"
+require "exchanger/elements/category_color"
+require "exchanger/elements/category"
 require "exchanger/elements/attachment"
 require "exchanger/elements/item"
 require "exchanger/elements/message"
@@ -73,6 +78,7 @@ require "exchanger/operations/get_user_availability"
 require "exchanger/operations/get_attachment"
 require "exchanger/operations/create_attachment"
 require "exchanger/operations/delete_attachment"
+require "exchanger/operations/get_user_configuration"
 
 module Exchanger
   NS = {
