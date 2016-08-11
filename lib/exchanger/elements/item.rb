@@ -13,7 +13,7 @@ module Exchanger
     element :attachments, :type => [Attachment]
     element :date_time_received, :type => Time
     element :size, :type => Integer
-    element :categories, :type => [String]
+    element :categories, :type => [CategoryString]
     element :importance
     element :in_reply_to
     element :is_submitted, :type => Boolean
@@ -74,6 +74,10 @@ module Exchanger
 
     def file_attachments
       attachments.select { |attachment| attachment.is_a?(FileAttachment) }
+    end
+
+    def categories_with_color
+      parent_folder.category_list.select { |c| categories.include?(c.name) }
     end
 
     private

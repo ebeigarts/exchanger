@@ -7,7 +7,11 @@ describe Exchanger::CalendarItem do
     @folder = VCR.use_cassette('folder/find_calendar') do
       Exchanger::Folder.find(:calendar)
     end
-    @calendar_item = @folder.new_calendar_item(subject: SUBJECT, body: Exchanger::Body.new(text: "Body line 1.\nBody line 2."), start: Time.now, end: Time.now + 30.minutes)
+    @calendar_item = @folder.new_calendar_item(subject: SUBJECT,
+                                                  body: Exchanger::Body.new(text: "Body line 1.\nBody line 2."),
+                                                  start: Time.now,
+                                                    end: Time.now + 30.minutes,
+                                             categories: [Exchanger::CategoryString.new(text: "Green category")])
   end
 
   describe "#save" do
@@ -28,6 +32,8 @@ describe Exchanger::CalendarItem do
         @calendar_item.should_not be_changed
         @calendar_item.reload
         @calendar_item.subject.should == SUBJECT
+        @calendar_item.categories.should == ["Green category"]
+        @calendar_item.categories_with_color.map { |c| c.category_color.css_color }.should == ["rgb(95, 190, 125)"]
         @folder.items.size.should == prev_items_size + 1
         @calendar_item.subject += " Updated"
         @calendar_item.should be_changed

@@ -66,5 +66,9 @@ module Exchanger
 
       items.each { |item| item.parent_folder = self }
     end
+
+    def category_list
+      @category_list ||= GetUserConfiguration.run(folder_id: id, user_configuration_name: "CategoryList").configuration.category_list
+    end
   end
 end
