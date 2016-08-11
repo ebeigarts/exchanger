@@ -16,8 +16,12 @@ module Exchanger
     key :last_time_used
     key :guid
 
+    def color
+      read_attribute(:color).to_i
+    end
+
     def category_color
-      @category_color ||= CategoryColor.new(color.to_i)
+      @category_color ||= CategoryColor.new(color)
     end
   end
 end

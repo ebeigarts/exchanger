@@ -37,18 +37,17 @@ module Exchanger
       24 => [128, 39, 93],    # Dark maroon
     }.freeze
 
-    attr_reader :value, :red, :green, :blue
+    attr_reader :red, :green, :blue
 
     def initialize(value)
-      @value = COLORS.keys.include?(value) ? value : -1
-      rgb = COLORS[@value]
+      rgb = COLORS[value] || COLORS[-1]
       @red = rgb[0]
       @green = rgb[1]
       @blue = rgb[2]
     end
 
     def css_color
-      "rgb(#{red}, #{green}, #{blue});"
+      "rgb(#{red}, #{green}, #{blue})"
     end
   end
 end

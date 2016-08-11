@@ -33,7 +33,7 @@ describe Exchanger::CalendarItem do
         @calendar_item.reload
         @calendar_item.subject.should == SUBJECT
         @calendar_item.categories.should == ["Green category"]
-        @calendar_item.categories_with_color.map { |c| c.category_color.css_color }.should == ["rgb(95, 190, 125);"]
+        @calendar_item.categories_with_color.map { |c| c.category_color.css_color }.should == ["rgb(95, 190, 125)"]
         @folder.items.size.should == prev_items_size + 1
         @calendar_item.subject += " Updated"
         @calendar_item.should be_changed
