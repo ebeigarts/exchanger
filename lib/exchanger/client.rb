@@ -1,13 +1,14 @@
 module Exchanger
   # SOAP Client for Exhange Web Services
   class Client
-    delegate :endpoint, :timeout, :username, :password, :debug, :insecure_ssl, :to => "Exchanger.config"
+    delegate :endpoint, :timeout, :username, :password, :debug, :insecure_ssl, :ssl_version, :to => "Exchanger.config"
 
     def initialize
       @client = HTTPClient.new
       @client.debug_dev = STDERR if debug
       @client.set_auth nil, username, password if username
       @client.ssl_config.verify_mode = OpenSSL::SSL::VERIFY_NONE if insecure_ssl
+      @client.ssl_config.ssl_version = ssl_version if ssl_version
     end
 
     # Does the actual HTTP level interaction.

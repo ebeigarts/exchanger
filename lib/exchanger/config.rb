@@ -2,7 +2,7 @@ module Exchanger
   class Config
     include Singleton
 
-    attr_accessor :endpoint, :timeout, :username, :password, :debug, :insecure_ssl
+    attr_accessor :endpoint, :timeout, :username, :password, :debug, :insecure_ssl, :ssl_version
 
     def initialize
       reset
@@ -16,6 +16,7 @@ module Exchanger
       @password = nil
       @debug = false
       @insecure_ssl = false
+      @ssl_version = nil
     end
 
     # Configure Exchanger client from a hash. This is usually called after parsing a
