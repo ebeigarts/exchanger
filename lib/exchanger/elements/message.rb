@@ -20,5 +20,17 @@ module Exchanger
     element :reply_to, :type => [Mailbox]
     element :received_by, :type => SingleRecipient
     element :received_representing, :type => SingleRecipient
+
+    def create_additional_options
+      { message_disposition: "SendAndSaveCopy" }
+    end
+
+    def update_additional_options
+      { message_disposition: "SaveOnly" }
+    end
+
+    def delete_additional_options
+      { message_disposition: "SaveOnly" }
+    end
   end
 end
