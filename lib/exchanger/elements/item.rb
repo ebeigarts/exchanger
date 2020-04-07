@@ -82,6 +82,10 @@ module Exchanger
       parent_folder.category_list.select { |c| categories.include?(c.name) }
     end
 
+    def move_to_folder(folder)
+      Exchanger::MoveItem.run(items: [self], folder_id: folder.id)
+    end
+
     private
 
     def create
