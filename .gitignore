@@ -6,3 +6,5 @@ pkg
 .yardoc
 doc
 *.gem
+.DS_Store
+

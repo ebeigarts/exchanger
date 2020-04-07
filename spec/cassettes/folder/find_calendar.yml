@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
       encoding: UTF-8
       string: |
@@ -20,12 +20,18 @@ http_interactions:
           </soap:Body>
         </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 09:24:47 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/GetFolder
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -38,41 +44,55 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/8.0
+      - Microsoft-IIS/10.0
       Request-Id:
-      - 561afca4-233e-4d3e-8d46-9c3b98f7bb42
-      X-Calculatedbetarget:
-      - BY2PR08MB046.namprd08.prod.outlook.com
+      - e3b6b227-1fbf-40c6-a03f-d91af78d2a4d
+      X-Calculatedfetarget:
+      - AM6PR04CU002.internal.outlook.com
       X-Backendhttpstatus:
       - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=7336c677cc004b11afaab1766f45de6c; expires=Tue, 09-May-2017
-        16:00:04 GMT; path=/; HttpOnly
+      - exchangecookie=93119067458246619b6b902967f06681; expires=Wed, 07-Apr-2021
+        09:24:47 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - AM6PR04CA0062.EURPRD04.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
       X-Ewshandler:
       - GetFolder
       X-Aspnet-Version:
       - 4.0.30319
+      X-Besku:
+      - WCS6
       X-Diaginfo:
-      - BY2PR08MB046
+      - AM7PR05MB6693
       X-Beserver:
-      - BY2PR08MB046
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - AM6PR04CA0062
+      - HE1PR0101CA0023
       X-Powered-By:
       - ASP.NET
-      X-Feserver:
-      - BY2PR13CA0012
       Date:
-      - Mon, 09 May 2016 16:00:04 GMT
+      - Tue, 07 Apr 2020 09:24:47 GMT
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="15" MinorVersion="1" MajorBuildNumber="492" MinorBuildNumber="11"
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
         xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:GetFolderResponse
         xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetFolderResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Folders><t:CalendarFolder><t:FolderId
-        Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"
-        ChangeKey="AgAAABYAAABO62zGwOguSJqyNahPUYshAAAAAAA3"/><t:DisplayName>Calendar</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>2</t:ChildFolderCount></t:CalendarFolder></m:Folders></m:GetFolderResponseMessage></m:ResponseMessages></m:GetFolderResponse></s:Body></s:Envelope>
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAA="
+        ChangeKey="AgAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAHZLx1j"/><t:DisplayName>Kalender</t:DisplayName><t:TotalCount>1</t:TotalCount><t:ChildFolderCount>2</t:ChildFolderCount></t:CalendarFolder></m:Folders></m:GetFolderResponseMessage></m:ResponseMessages></m:GetFolderResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Mon, 09 May 2016 16:00:05 GMT
-recorded_with: VCR 3.0.1
+  recorded_at: Tue, 07 Apr 2020 09:24:47 GMT
+recorded_with: VCR 3.0.3

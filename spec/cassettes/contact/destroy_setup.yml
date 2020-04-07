@@ -2,23 +2,36 @@
 http_interactions:
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
-        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <soap:Body>\n    <CreateItem
-        xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\">\n
-        \     <SavedItemFolderId>\n        <t:FolderId Id=\"AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA\"/>\n
-        \     </SavedItemFolderId>\n      <Items>\n        <t:Contact/>\n      </Items>\n
-        \   </CreateItem>\n  </soap:Body>\n</soap:Envelope>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <soap:Body>
+            <CreateItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages">
+              <SavedItemFolderId>
+                <t:FolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="/>
+              </SavedItemFolderId>
+              <Items>
+                <t:Contact/>
+              </Items>
+            </CreateItem>
+          </soap:Body>
+        </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 09:24:53 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -31,31 +44,55 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/7.5
-      Requestid:
-      - 07fa3a7f-6a09-4770-b26f-c0e066196b74
+      - Microsoft-IIS/10.0
+      Request-Id:
+      - 56720586-064b-4721-acff-cb2e49f9efc3
+      X-Calculatedfetarget:
+      - AM6P191CU003.internal.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=5c2328ab96444ff1a4d39c1e0ea7239b; expires=Fri, 11-Oct-2013
-        19:19:23 GMT; path=/; HttpOnly
+      - exchangecookie=af53d8bb864347adb9a0d8a9a52fc21a; expires=Wed, 07-Apr-2021
+        09:24:53 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - AM6P191CA0086.EURP191.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
+      X-Ewshandler:
+      - CreateItem
       X-Aspnet-Version:
-      - 2.0.50727
+      - 4.0.30319
+      X-Besku:
+      - WCS6
+      X-Diaginfo:
+      - AM7PR05MB6693
+      X-Beserver:
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - AM6P191CA0086
+      - HE1PR0101CA0012
       X-Powered-By:
       - ASP.NET
-      X-Diaginfo:
-      - AMSPRD0710CA006
       Date:
-      - Thu, 11 Oct 2012 19:19:22 GMT
+      - Tue, 07 Apr 2020 09:24:53 GMT
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
-        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:CreateItemResponse
-        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:CreateItemResponseMessage
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:CreateItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:CreateItemResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4QAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+v"/></t:Contact></m:Items></m:CreateItemResponseMessage></m:ResponseMessages></m:CreateItemResponse></s:Body></s:Envelope>
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVioAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U28R"/></t:Contact></m:Items></m:CreateItemResponseMessage></m:ResponseMessages></m:CreateItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Thu, 11 Oct 2012 19:19:23 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Tue, 07 Apr 2020 09:24:53 GMT
+recorded_with: VCR 3.0.3

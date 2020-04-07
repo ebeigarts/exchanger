@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
       encoding: UTF-8
       string: |
@@ -11,18 +11,24 @@ http_interactions:
           <soap:Body>
             <DeleteItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" DeleteType="HardDelete" SendMeetingCancellations="SendToAllAndSaveCopy">
               <ItemIds>
-                <t:ItemId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi8AAA="/>
+                <t:ItemId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1kAAA="/>
               </ItemIds>
             </DeleteItem>
           </soap:Body>
         </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 09:24:49 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/DeleteItem
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -35,39 +41,53 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/8.0
+      - Microsoft-IIS/10.0
       Request-Id:
-      - c9f0900b-b14e-4b4b-8a1b-f65ac64a7244
-      X-Calculatedbetarget:
-      - CO2PR0801MB552.namprd08.prod.outlook.com
+      - 5668fe45-49f8-4679-9ed3-2bee01919d21
+      X-Calculatedfetarget:
+      - PR3P191CU002.internal.outlook.com
       X-Backendhttpstatus:
       - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=9201d47cd2174b3d9e1af9464175b397; expires=Wed, 21-Jun-2017
-        14:13:14 GMT; path=/; HttpOnly
+      - exchangecookie=aa7484179a014fdab799ffe5de72c0fa; expires=Wed, 07-Apr-2021
+        09:24:49 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - PR3P191CA0038.EURP191.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
       X-Ewshandler:
       - DeleteItem
       X-Aspnet-Version:
       - 4.0.30319
+      X-Besku:
+      - WCS6
       X-Diaginfo:
-      - CO2PR0801MB552
+      - AM7PR05MB6693
       X-Beserver:
-      - CO2PR0801MB552
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - HE1PR0101CA0011
+      - PR3P191CA0038
       X-Powered-By:
       - ASP.NET
-      X-Feserver:
-      - CO2PR20CA0007
       Date:
-      - Tue, 21 Jun 2016 14:13:13 GMT
+      - Tue, 07 Apr 2020 09:24:49 GMT
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="15" MinorVersion="1" MajorBuildNumber="523" MinorBuildNumber="16"
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
         xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:DeleteItemResponse
         xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:DeleteItemResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode></m:DeleteItemResponseMessage></m:ResponseMessages></m:DeleteItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Tue, 21 Jun 2016 14:13:14 GMT
-recorded_with: VCR 3.0.1
+  recorded_at: Tue, 07 Apr 2020 09:24:50 GMT
+recorded_with: VCR 3.0.3

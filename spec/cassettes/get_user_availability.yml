@@ -2,34 +2,64 @@
 http_interactions:
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
-        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" xmlns:m=\"http://schemas.microsoft.com/exchange/services/2006/messages\">\n
-        \ <soap:Body>\n    <m:GetUserAvailabilityRequest>\n      <t:TimeZone>\n        <t:Bias>-120</t:Bias>\n
-        \       <t:StandardTime>\n          <t:Bias>0</t:Bias>\n          <t:Time>04:00:00</t:Time>\n
-        \         <t:DayOrder>5</t:DayOrder>\n          <t:Month>10</t:Month>\n          <t:DayOfWeek>Sunday</t:DayOfWeek>\n
-        \       </t:StandardTime>\n        <t:DaylightTime>\n          <t:Bias>-60</t:Bias>\n
-        \         <t:Time>03:00:00</t:Time>\n          <t:DayOrder>5</t:DayOrder>\n
-        \         <t:Month>3</t:Month>\n          <t:DayOfWeek>Sunday</t:DayOfWeek>\n
-        \       </t:DaylightTime>\n      </t:TimeZone>\n      <m:MailboxDataArray>\n
-        \       <t:MailboxData>\n          <t:Email>\n            <t:Address>ebeigarts@ebeigarts.onmicrosoft.com</t:Address>\n
-        \         </t:Email>\n          <t:AttendeeType>Required</t:AttendeeType>\n
-        \         <t:ExcludeConflicts>false</t:ExcludeConflicts>\n        </t:MailboxData>\n
-        \     </m:MailboxDataArray>\n      <t:FreeBusyViewOptions>\n        <t:TimeWindow>\n
-        \         <t:StartTime>2016-01-01T00:00:01</t:StartTime>\n          <t:EndTime>2016-01-31T23:59:59</t:EndTime>\n
-        \       </t:TimeWindow>\n        <t:MergedFreeBusyIntervalInMinutes>60</t:MergedFreeBusyIntervalInMinutes>\n
-        \       <t:RequestedView>DetailedMerged</t:RequestedView>\n      </t:FreeBusyViewOptions>\n
-        \   </m:GetUserAvailabilityRequest>\n  </soap:Body>\n</soap:Envelope>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+          <soap:Body>
+            <m:GetUserAvailabilityRequest>
+              <t:TimeZone>
+                <t:Bias>-120</t:Bias>
+                <t:StandardTime>
+                  <t:Bias>0</t:Bias>
+                  <t:Time>04:00:00</t:Time>
+                  <t:DayOrder>5</t:DayOrder>
+                  <t:Month>10</t:Month>
+                  <t:DayOfWeek>Sunday</t:DayOfWeek>
+                </t:StandardTime>
+                <t:DaylightTime>
+                  <t:Bias>-60</t:Bias>
+                  <t:Time>03:00:00</t:Time>
+                  <t:DayOrder>5</t:DayOrder>
+                  <t:Month>3</t:Month>
+                  <t:DayOfWeek>Sunday</t:DayOfWeek>
+                </t:DaylightTime>
+              </t:TimeZone>
+              <m:MailboxDataArray>
+                <t:MailboxData>
+                  <t:Email>
+                    <t:Address>ebeigarts@ebeigarts.onmicrosoft.com</t:Address>
+                  </t:Email>
+                  <t:AttendeeType>Required</t:AttendeeType>
+                  <t:ExcludeConflicts>false</t:ExcludeConflicts>
+                </t:MailboxData>
+              </m:MailboxDataArray>
+              <t:FreeBusyViewOptions>
+                <t:TimeWindow>
+                  <t:StartTime>2016-01-01T00:00:01</t:StartTime>
+                  <t:EndTime>2016-01-31T23:59:59</t:EndTime>
+                </t:TimeWindow>
+                <t:MergedFreeBusyIntervalInMinutes>60</t:MergedFreeBusyIntervalInMinutes>
+                <t:RequestedView>DetailedMerged</t:RequestedView>
+              </t:FreeBusyViewOptions>
+            </m:GetUserAvailabilityRequest>
+          </soap:Body>
+        </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 09:24:55 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/GetUserAvailability
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -42,34 +72,61 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/7.5
-      Requestid:
-      - 3069a16e-99bb-48d5-99fd-f854fbc3c864
+      - Microsoft-IIS/10.0
+      Request-Id:
+      - 2764059b-de09-4fdc-a101-f637de65ef18
+      X-Calculatedfetarget:
+      - PR3P192CU002.internal.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=0c7aa17a704f4e0ca4a789c5645b7fd6; expires=Fri, 11-Oct-2013
-        19:44:52 GMT; path=/; HttpOnly
+      - exchangecookie=e65589a6ec6349b28a9c35c70b2dc9fa; expires=Wed, 07-Apr-2021
+        09:24:55 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - PR3P192CA0042.EURP192.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
+      X-Ewshandler:
+      - GetUserAvailability
       X-Aspnet-Version:
-      - 2.0.50727
+      - 4.0.30319
+      X-Besku:
+      - WCS6
+      X-Diaginfo:
+      - AM7PR05MB6693
+      X-Beserver:
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - HE1PR0101CA0022
+      - PR3P192CA0042
       X-Powered-By:
       - ASP.NET
-      X-Diaginfo:
-      - AMSPRD0710CA022
       Date:
-      - Thu, 11 Oct 2012 19:44:52 GMT
+      - Tue, 07 Apr 2020 09:24:54 GMT
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
-        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><GetUserAvailabilityResponse
-        xmlns="http://schemas.microsoft.com/exchange/services/2006/messages"><FreeBusyResponseArray><FreeBusyResponse><ResponseMessage
-        ResponseClass="Success"><ResponseCode>NoError</ResponseCode></ResponseMessage><FreeBusyView><FreeBusyViewType
-        xmlns="http://schemas.microsoft.com/exchange/services/2006/types">DetailedMerged</FreeBusyViewType><MergedFreeBusy
-        xmlns="http://schemas.microsoft.com/exchange/services/2006/types">000000000000000000000022000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</MergedFreeBusy><CalendarEventArray
-        xmlns="http://schemas.microsoft.com/exchange/services/2006/types"><CalendarEvent><StartTime>2016-01-01T23:00:00</StartTime><EndTime>2016-01-02T00:00:00</EndTime><BusyType>Busy</BusyType><CalendarEventDetails><ID>00000000508245902E38AB4AA463A15FCE20235807009A1AB553263CD64BB6153BE1259E81B800000045EDA100009A1AB553263CD64BB6153BE1259E81B80000004617140000</ID><Subject>Test</Subject><Location>Test</Location><IsMeeting>false</IsMeeting><IsRecurring>false</IsRecurring><IsException>false</IsException><IsReminderSet>true</IsReminderSet><IsPrivate>false</IsPrivate></CalendarEventDetails></CalendarEvent></CalendarEventArray><WorkingHours
-        xmlns="http://schemas.microsoft.com/exchange/services/2006/types"><TimeZone><Bias>-120</Bias><StandardTime><Bias>0</Bias><Time>03:00:00</Time><DayOrder>5</DayOrder><Month>10</Month><DayOfWeek>Sunday</DayOfWeek></StandardTime><DaylightTime><Bias>-60</Bias><Time>02:00:00</Time><DayOrder>5</DayOrder><Month>3</Month><DayOfWeek>Sunday</DayOfWeek></DaylightTime></TimeZone><WorkingPeriodArray><WorkingPeriod><DayOfWeek>Monday
-        Tuesday Wednesday Thursday Friday</DayOfWeek><StartTimeInMinutes>480</StartTimeInMinutes><EndTimeInMinutes>1020</EndTimeInMinutes></WorkingPeriod></WorkingPeriodArray></WorkingHours></FreeBusyView></FreeBusyResponse></FreeBusyResponseArray></GetUserAvailabilityResponse></s:Body></s:Envelope>
+      encoding: UTF-8
+      string: '<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><GetUserAvailabilityResponse
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><FreeBusyResponseArray><FreeBusyResponse><ResponseMessage
+        ResponseClass="Error"><MessageText>An internal server error occurred. The
+        operation failed.</MessageText><ResponseCode>ErrorInternalServerError</ResponseCode><DescriptiveLinkKey>0</DescriptiveLinkKey><MessageXml><ExceptionType
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">MailRecipientNotFoundException</ExceptionType><ExceptionCode
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">5009</ExceptionCode><ExceptionServerName
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">AM7PR05MB6693</ExceptionServerName><ExceptionMessage
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">Unable
+        to resolve e-mail address ebeigarts@ebeigarts.onmicrosoft.com to an Active
+        Directory object. LID: 35938</ExceptionMessage></MessageXml></ResponseMessage><FreeBusyView><FreeBusyViewType
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types">None</FreeBusyViewType></FreeBusyView></FreeBusyResponse></FreeBusyResponseArray></GetUserAvailabilityResponse></s:Body></s:Envelope>'
     http_version: 
-  recorded_at: Thu, 11 Oct 2012 19:44:52 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Tue, 07 Apr 2020 09:24:55 GMT
+recorded_with: VCR 3.0.3
