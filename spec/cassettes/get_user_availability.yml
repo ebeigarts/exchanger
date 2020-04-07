@@ -11,26 +11,12 @@ http_interactions:
           <soap:Body>
             <m:GetUserAvailabilityRequest>
               <t:TimeZone>
-                <t:Bias>-120</t:Bias>
-                <t:StandardTime>
-                  <t:Bias>0</t:Bias>
-                  <t:Time>04:00:00</t:Time>
-                  <t:DayOrder>5</t:DayOrder>
-                  <t:Month>10</t:Month>
-                  <t:DayOfWeek>Sunday</t:DayOfWeek>
-                </t:StandardTime>
-                <t:DaylightTime>
-                  <t:Bias>-60</t:Bias>
-                  <t:Time>03:00:00</t:Time>
-                  <t:DayOrder>5</t:DayOrder>
-                  <t:Month>3</t:Month>
-                  <t:DayOfWeek>Sunday</t:DayOfWeek>
-                </t:DaylightTime>
+                <t:Bias>0</t:Bias>
               </t:TimeZone>
               <m:MailboxDataArray>
                 <t:MailboxData>
                   <t:Email>
-                    <t:Address>ebeigarts@ebeigarts.onmicrosoft.com</t:Address>
+                    <t:Address>FILTERED_EMAIL_ADDRESS</t:Address>
                   </t:Email>
                   <t:AttendeeType>Required</t:AttendeeType>
                   <t:ExcludeConflicts>false</t:ExcludeConflicts>
@@ -53,7 +39,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Tue, 07 Apr 2020 09:24:55 GMT
+      - Tue, 07 Apr 2020 10:27:17 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/GetUserAvailability
       Content-Type:
@@ -74,17 +60,17 @@ http_interactions:
       Server:
       - Microsoft-IIS/10.0
       Request-Id:
-      - 2764059b-de09-4fdc-a101-f637de65ef18
+      - d4d4c314-9898-41a2-a002-38b5c80be9b9
       X-Calculatedfetarget:
-      - PR3P192CU002.internal.outlook.com
+      - PR3P191CU001.internal.outlook.com
       X-Backendhttpstatus:
       - '200'
       - '200'
       Set-Cookie:
-      - exchangecookie=e65589a6ec6349b28a9c35c70b2dc9fa; expires=Wed, 07-Apr-2021
-        09:24:55 GMT; path=/; secure; HttpOnly
+      - exchangecookie=bb7fb6d36c8346aa9e0df42e4b755efe; expires=Wed, 07-Apr-2021
+        10:27:17 GMT; path=/; secure; HttpOnly
       X-Feproxyinfo:
-      - PR3P192CA0042.EURP192.PROD.OUTLOOK.COM
+      - PR3P191CA0003.EURP191.PROD.OUTLOOK.COM
       X-Calculatedbetarget:
       - AM7PR05MB6693.eurprd05.prod.outlook.com
       X-Rum-Validated:
@@ -104,29 +90,140 @@ http_interactions:
       X-Proxy-Backendserverstatus:
       - '200'
       X-Feserver:
-      - HE1PR0101CA0022
-      - PR3P192CA0042
+      - HE1PR08CA0054
+      - PR3P191CA0003
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 07 Apr 2020 09:24:54 GMT
+      - Tue, 07 Apr 2020 10:27:17 GMT
     body:
       encoding: UTF-8
-      string: '<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
         MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
         xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><GetUserAvailabilityResponse
         xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><FreeBusyResponseArray><FreeBusyResponse><ResponseMessage
-        ResponseClass="Error"><MessageText>An internal server error occurred. The
-        operation failed.</MessageText><ResponseCode>ErrorInternalServerError</ResponseCode><DescriptiveLinkKey>0</DescriptiveLinkKey><MessageXml><ExceptionType
-        xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">MailRecipientNotFoundException</ExceptionType><ExceptionCode
-        xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">5009</ExceptionCode><ExceptionServerName
-        xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">AM7PR05MB6693</ExceptionServerName><ExceptionMessage
-        xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">Unable
-        to resolve e-mail address ebeigarts@ebeigarts.onmicrosoft.com to an Active
-        Directory object. LID: 35938</ExceptionMessage></MessageXml></ResponseMessage><FreeBusyView><FreeBusyViewType
-        xmlns="http://schemas.microsoft.com/exchange/services/2006/types">None</FreeBusyViewType></FreeBusyView></FreeBusyResponse></FreeBusyResponseArray></GetUserAvailabilityResponse></s:Body></s:Envelope>'
+        ResponseClass="Success"><ResponseCode>NoError</ResponseCode></ResponseMessage><FreeBusyView><FreeBusyViewType
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types">DetailedMerged</FreeBusyViewType><MergedFreeBusy
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types">000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000220000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</MergedFreeBusy><CalendarEventArray
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types"><CalendarEvent><StartTime>2016-01-07T16:00:00</StartTime><EndTime>2016-01-07T16:30:00</EndTime><BusyType>Busy</BusyType><CalendarEventDetails><ID>00000000B5D445D94FEDD34996D91BD70C4FE5E807001D5FEFED4D0846489DA0E8714A3E58AE00000000010D00001D5FEFED4D0846489DA0E8714A3E58AE00033C2D2D660000</ID><Subject>Great
+        event</Subject><Location/><IsMeeting>false</IsMeeting><IsRecurring>false</IsRecurring><IsException>false</IsException><IsReminderSet>true</IsReminderSet><IsPrivate>false</IsPrivate></CalendarEventDetails></CalendarEvent></CalendarEventArray><WorkingHours
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types"><TimeZone><Bias>480</Bias><StandardTime><Bias>0</Bias><Time>02:00:00</Time><DayOrder>1</DayOrder><Month>11</Month><DayOfWeek>Sunday</DayOfWeek></StandardTime><DaylightTime><Bias>-60</Bias><Time>02:00:00</Time><DayOrder>2</DayOrder><Month>3</Month><DayOfWeek>Sunday</DayOfWeek></DaylightTime></TimeZone><WorkingPeriodArray><WorkingPeriod><DayOfWeek>Monday
+        Tuesday Wednesday Thursday Friday</DayOfWeek><StartTimeInMinutes>480</StartTimeInMinutes><EndTimeInMinutes>1020</EndTimeInMinutes></WorkingPeriod></WorkingPeriodArray></WorkingHours></FreeBusyView></FreeBusyResponse></FreeBusyResponseArray></GetUserAvailabilityResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Tue, 07 Apr 2020 09:24:55 GMT
+  recorded_at: Tue, 07 Apr 2020 10:27:17 GMT
+- request:
+    method: post
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+          <soap:Body>
+            <m:GetUserAvailabilityRequest>
+              <t:TimeZone>
+                <t:Bias>0</t:Bias>
+              </t:TimeZone>
+              <m:MailboxDataArray>
+                <t:MailboxData>
+                  <t:Email>
+                    <t:Address>FILTERED_EMAIL_ADDRESS</t:Address>
+                  </t:Email>
+                  <t:AttendeeType>Required</t:AttendeeType>
+                  <t:ExcludeConflicts>false</t:ExcludeConflicts>
+                </t:MailboxData>
+              </m:MailboxDataArray>
+              <t:FreeBusyViewOptions>
+                <t:TimeWindow>
+                  <t:StartTime>2016-01-01T00:00:01</t:StartTime>
+                  <t:EndTime>2016-01-31T23:59:59</t:EndTime>
+                </t:TimeWindow>
+                <t:MergedFreeBusyIntervalInMinutes>60</t:MergedFreeBusyIntervalInMinutes>
+                <t:RequestedView>DetailedMerged</t:RequestedView>
+              </t:FreeBusyViewOptions>
+            </m:GetUserAvailabilityRequest>
+          </soap:Body>
+        </soap:Envelope>
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 10:27:17 GMT
+      Soapaction:
+      - http://schemas.microsoft.com/exchange/services/2006/messages/GetUserAvailability
+      Content-Type:
+      - text/xml; charset=utf-8
+      Authorization:
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/10.0
+      Request-Id:
+      - 0cda73a6-81e3-4fc8-916c-ecc9b48b2e39
+      X-Calculatedfetarget:
+      - AM6PR02CU001.internal.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      - '200'
+      Set-Cookie:
+      - exchangecookie=8e5e602d45cf4374afaffdfefcbb158c; expires=Wed, 07-Apr-2021
+        10:27:17 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - AM6PR02CA0032.EURPRD02.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
+      X-Ewshandler:
+      - GetUserAvailability
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Besku:
+      - WCS6
+      X-Diaginfo:
+      - AM7PR05MB6693
+      X-Beserver:
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - AM6PR02CA0032
+      - HE1PR08CA0060
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 07 Apr 2020 10:27:16 GMT
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><GetUserAvailabilityResponse
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><FreeBusyResponseArray><FreeBusyResponse><ResponseMessage
+        ResponseClass="Success"><ResponseCode>NoError</ResponseCode></ResponseMessage><FreeBusyView><FreeBusyViewType
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types">DetailedMerged</FreeBusyViewType><MergedFreeBusy
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types">000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000220000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</MergedFreeBusy><CalendarEventArray
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types"><CalendarEvent><StartTime>2016-01-07T16:00:00</StartTime><EndTime>2016-01-07T16:30:00</EndTime><BusyType>Busy</BusyType><CalendarEventDetails><ID>00000000B5D445D94FEDD34996D91BD70C4FE5E807001D5FEFED4D0846489DA0E8714A3E58AE00000000010D00001D5FEFED4D0846489DA0E8714A3E58AE00033C2D2D660000</ID><Subject>Great
+        event</Subject><Location/><IsMeeting>false</IsMeeting><IsRecurring>false</IsRecurring><IsException>false</IsException><IsReminderSet>true</IsReminderSet><IsPrivate>false</IsPrivate></CalendarEventDetails></CalendarEvent></CalendarEventArray><WorkingHours
+        xmlns="http://schemas.microsoft.com/exchange/services/2006/types"><TimeZone><Bias>480</Bias><StandardTime><Bias>0</Bias><Time>02:00:00</Time><DayOrder>1</DayOrder><Month>11</Month><DayOfWeek>Sunday</DayOfWeek></StandardTime><DaylightTime><Bias>-60</Bias><Time>02:00:00</Time><DayOrder>2</DayOrder><Month>3</Month><DayOfWeek>Sunday</DayOfWeek></DaylightTime></TimeZone><WorkingPeriodArray><WorkingPeriod><DayOfWeek>Monday
+        Tuesday Wednesday Thursday Friday</DayOfWeek><StartTimeInMinutes>480</StartTimeInMinutes><EndTimeInMinutes>1020</EndTimeInMinutes></WorkingPeriod></WorkingPeriodArray></WorkingHours></FreeBusyView></FreeBusyResponse></FreeBusyResponseArray></GetUserAvailabilityResponse></s:Body></s:Envelope>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2020 10:27:17 GMT
 recorded_with: VCR 3.0.3

@@ -11,7 +11,7 @@ http_interactions:
           <soap:Body>
             <DeleteItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" DeleteType="HardDelete" SendMeetingCancellations="SendToAllAndSaveCopy">
               <ItemIds>
-                <t:ItemId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1kAAA="/>
+                <t:ItemId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1rAAA="/>
               </ItemIds>
             </DeleteItem>
           </soap:Body>
@@ -22,7 +22,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Tue, 07 Apr 2020 09:24:49 GMT
+      - Tue, 07 Apr 2020 10:24:38 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/DeleteItem
       Content-Type:
@@ -43,17 +43,17 @@ http_interactions:
       Server:
       - Microsoft-IIS/10.0
       Request-Id:
-      - 5668fe45-49f8-4679-9ed3-2bee01919d21
+      - 9b6a427d-7ffe-4a40-ad5e-4088693a334d
       X-Calculatedfetarget:
-      - PR3P191CU002.internal.outlook.com
+      - PR0P264CU009.internal.outlook.com
       X-Backendhttpstatus:
       - '200'
       - '200'
       Set-Cookie:
-      - exchangecookie=aa7484179a014fdab799ffe5de72c0fa; expires=Wed, 07-Apr-2021
-        09:24:49 GMT; path=/; secure; HttpOnly
+      - exchangecookie=f900ae888a8b4dd1b1df2d1d22d3621f; expires=Wed, 07-Apr-2021
+        10:24:38 GMT; path=/; secure; HttpOnly
       X-Feproxyinfo:
-      - PR3P191CA0038.EURP191.PROD.OUTLOOK.COM
+      - PR0P264CA0214.FRAP264.PROD.OUTLOOK.COM
       X-Calculatedbetarget:
       - AM7PR05MB6693.eurprd05.prod.outlook.com
       X-Rum-Validated:
@@ -73,12 +73,12 @@ http_interactions:
       X-Proxy-Backendserverstatus:
       - '200'
       X-Feserver:
-      - HE1PR0101CA0011
-      - PR3P191CA0038
+      - HE1PR07CA0022
+      - PR0P264CA0214
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 07 Apr 2020 09:24:49 GMT
+      - Tue, 07 Apr 2020 10:24:38 GMT
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
@@ -89,5 +89,5 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:DeleteItemResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode></m:DeleteItemResponseMessage></m:ResponseMessages></m:DeleteItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Tue, 07 Apr 2020 09:24:50 GMT
+  recorded_at: Tue, 07 Apr 2020 10:24:39 GMT
 recorded_with: VCR 3.0.3

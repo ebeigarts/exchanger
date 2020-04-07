@@ -33,17 +33,11 @@ describe Exchanger::CalendarItem do
         @calendar_item.reload
         @calendar_item.subject.should == SUBJECT
         @calendar_item.categories.should == ["Green category"]
-        puts "woot"
-        puts "item itslef"
-        puts @calendar_item.inspect
-        puts "Parent folder categories"
-        puts @calendar_item.parent_folder.category_list.inspect
-        puts "Categories"
-        puts @calendar_item.categories.inspect
 
         # FIXME Implementation is language dependat since it used the name of the color category
+        # When the outlook account is created the name of the categories are created in the user's language
         # @calendar_item.categories_with_color.map { |c| c.category_color.css_color }.should == ["rgb(95, 190, 125)"]
-        
+
         @folder.items.size.should == prev_items_size + 1
         @calendar_item.subject += " Updated"
         @calendar_item.should be_changed

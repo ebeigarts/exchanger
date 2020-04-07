@@ -53,7 +53,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Tue, 07 Apr 2020 09:24:55 GMT
+      - Tue, 07 Apr 2020 10:27:17 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/GetUserAvailability
       Content-Type:
@@ -74,17 +74,17 @@ http_interactions:
       Server:
       - Microsoft-IIS/10.0
       Request-Id:
-      - 8cfbd572-17f5-436b-9d23-f5c1a62808af
+      - 370078cf-a27f-4b30-919f-add9f4ba0e11
       X-Calculatedfetarget:
-      - PR3P192CU002.internal.outlook.com
+      - AM6P195CU002.internal.outlook.com
       X-Backendhttpstatus:
       - '200'
       - '200'
       Set-Cookie:
-      - exchangecookie=cc6555a019534f6581053a681c4a7f13; expires=Wed, 07-Apr-2021
-        09:24:55 GMT; path=/; secure; HttpOnly
+      - exchangecookie=2f5b7ccc454a45aeb145b076725a2a67; expires=Wed, 07-Apr-2021
+        10:27:17 GMT; path=/; secure; HttpOnly
       X-Feproxyinfo:
-      - PR3P192CA0038.EURP192.PROD.OUTLOOK.COM
+      - AM6P195CA0047.EURP195.PROD.OUTLOOK.COM
       X-Calculatedbetarget:
       - AM7PR05MB6693.eurprd05.prod.outlook.com
       X-Rum-Validated:
@@ -104,12 +104,12 @@ http_interactions:
       X-Proxy-Backendserverstatus:
       - '200'
       X-Feserver:
-      - HE1PR0101CA0022
-      - PR3P192CA0038
+      - AM6P195CA0047
+      - HE1PR08CA0070
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 07 Apr 2020 09:24:54 GMT
+      - Tue, 07 Apr 2020 10:27:16 GMT
     body:
       encoding: UTF-8
       string: |-
@@ -121,5 +121,5 @@ http_interactions:
            at Microsoft.Exchange.InfoWorker.Common.Availability.ProxyWebRequest.EndInvoke(IAsyncResult asyncResult)&#xD;
            at Microsoft.Exchange.InfoWorker.Common.Availability.AsyncWebRequest.EndInvokeWithErrorHandling()</MessageText><ResponseCode>ErrorProxyRequestProcessingFailed</ResponseCode><DescriptiveLinkKey>0</DescriptiveLinkKey><MessageXml><ExceptionType xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">ProxyWebRequestProcessingException</ExceptionType><ExceptionCode xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">5016</ExceptionCode><ExceptionServerName xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">AM7PR05MB6693</ExceptionServerName><ExceptionMessage xmlns="http://schemas.microsoft.com/exchange/services/2006/errors">Proxy web request failed. , inner exception: The request failed with HTTP status 401: Unauthorized. LID: 43532</ExceptionMessage></MessageXml></ResponseMessage><FreeBusyView><FreeBusyViewType xmlns="http://schemas.microsoft.com/exchange/services/2006/types">None</FreeBusyViewType></FreeBusyView></FreeBusyResponse></FreeBusyResponseArray></GetUserAvailabilityResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Tue, 07 Apr 2020 09:24:55 GMT
+  recorded_at: Tue, 07 Apr 2020 10:27:17 GMT
 recorded_with: VCR 3.0.3

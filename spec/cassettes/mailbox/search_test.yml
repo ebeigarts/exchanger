@@ -20,13 +20,13 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Tue, 07 Apr 2020 09:24:55 GMT
+      - Tue, 07 Apr 2020 09:47:23 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/ResolveNames
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
+      - Basic bWlrZUBob25leWJhZGdlcnN0dWRpby5vbm1pY3Jvc29mdC5jb206MjAyMHRyaWFsIQ==
   response:
     status:
       code: 200
@@ -41,19 +41,23 @@ http_interactions:
       Server:
       - Microsoft-IIS/10.0
       Request-Id:
-      - 6d433c7c-a1f2-45c8-b48e-08c0a7bb2ccc
+      - 69451d37-2db4-4d96-929b-5140142a6969
       X-Calculatedfetarget:
-      - AM5PR0201CU001.internal.outlook.com
+      - CWLP123CU007.internal.outlook.com
       X-Backendhttpstatus:
       - '200'
       - '200'
       Set-Cookie:
-      - exchangecookie=443d11e9be5a482e8114d3bda22a6306; expires=Wed, 07-Apr-2021
-        09:24:55 GMT; path=/; secure; HttpOnly
+      - EXOBasicAuth=compactTicket=t%3dEwAYA9P5AwAUFFpUAo7J3Ve0bjLBWZWCclRC3EoAAV55Q4Y%2bGRXa8A86ZZvQrCJyleFDSv5%2fyGHHAZctCYhbV5dvRlqeRW24j0aAt6MY9m3x07B5Fk%2fdb6CEs8x34aTpVQ2gkK6dYBL00HKBA026OydJjDuVYzdeJPXv2t8x3U69a5%2b8Qc2CY3GEzs9iU86FnDmxn%2frzx4x6xrnV8lDslDk7Sk7HLdNmEzEEyLLlKlSaPmxVMvORUwuG5C9lt9eosqOwPhLCr3I6uuz3bOuqa2fh6xqSmQi9GGQOQwZTuXtsQyB99mUce30%2fl8Nz5A4OI7K3iJl5g32K%2bjfkujQ84FGdyz%2fyATuYt2rQtJ6znJ3Um72DExPglzxHj9tsjIYDZgAACJC9Chcv7Q4v6AHmq0VnRuDfLXLoYZpxbpdcwPz62fF6Soe7IVOdwJiMu0yeiVgiumnRqUYwAmUMj41DU%2beXllJmGv6Tuz7dFc%2fDMV4pDtx%2bIiK7%2bJsa1aIso1Wf10f1bQnqK8H8C4g62Qy%2fsRz%2fpN%2bPaQPHdsQ1Tm56sGUK7vfavW44I4cNvXCTJ9LU7nVzxFajJgDLSqHAWGBnRDUKRKAl%2bC5%2bkAk3PhBs%2f8fWFTeCeNCzCaLDgOwZwz6eNb0kg51%2br60%2b4EuTuXHycS4t5%2fgxdgvxRuF6z7VCSCPHV5oZakqJ%2bJcm9qQXjEkWSA3lkxw93vPS3uHA7D3%2fbHXdQ66BOwbplOjqSfM4viEYyGyytQjqS5vAHCgukOZLtxqwD3SbszinvcyvBQUbAO%2fprc4DocrDap7nTeJmi4jz1yrtwfswlACEKxAW3WoSA%2blJok5ZMKIwPc7vUOrW4MfaIUc%2fLLwt019HgKH%2f%2bpmJdVgj%2bLN36uEetlOwc%2f%2bNPSskkbweX4IENh7DL2tROhcrHc5nEd9yEsjnqH1WM%2bznWYcvTe9Y%2bOz5QKp9S%2b19v%2fQSvAYlpIBXQssuNWqA5Um3FrnU4jonrfsfecgZ%2fiYQiWzZs%2fYSVktqDjpwSJnWqvU2qfkYGPL3QdkhQVr4EdEpPhDmLlAC%26amp%3bp%3d&key=FILTERED_USERNAME+microsoft.exchange.webservices+83.227.14.226+&signature=pSFhMLMA0b/FaCXQesPhk4xEVw0xMKL4zl0TG0dKg7yyVx33AeHNiYeBaEY+I5ARy4kY5G/jsG1KqM+g57c0/n2qnBcf/ZkzBj23Fno2GR6Tpl+pgc8TNVlLNCPacbipcdf598ChYtZtPgkBDGYKJBTEMT+VWpy0invDaRkGtSUKxAGjJIerYM896dNQ92FBXHY+BjVzQqzg87ra8fQXoZYMPJLENCLxtafgcQV1hMU9qsJNjLqkbjonKP0+AfGIgX+lec8ZXbloWxEVE3Xkdq6G8DGW7c1suU74vJT9pmOlapEhDdtXbNbX6oU4Q9URWO9Ds2cBoOSsoC34WGO8Uw==&puid=10032000ACAAC568&expireTime=637218784430000000&membername=FILTERED_USERNAME&flags=False&userType=ManagedBusiness&ageGroup=0&organizationId=043db638-9a35-496c-ad03-3a122c56f4d8;
+        expires=Tue, 07-Apr-2020 17:47:23 GMT; path=/EWS; secure; HttpOnly
+      - exchangecookie=30e866d459054ae2bbc945dd7b5a86e5; expires=Wed, 07-Apr-2021
+        09:47:23 GMT; path=/; secure; HttpOnly
+      - exchangecookie=30e866d459054ae2bbc945dd7b5a86e5; expires=Wed, 07-Apr-2021
+        09:47:23 GMT; path=/; secure; HttpOnly
       X-Feproxyinfo:
-      - AM5PR0201CA0006.EURPRD02.PROD.OUTLOOK.COM
+      - CWLP123CA0151.GBRP123.PROD.OUTLOOK.COM
       X-Calculatedbetarget:
-      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      - DB7PR05MB4986.eurprd05.prod.outlook.com
       X-Rum-Validated:
       - '1'
       X-Ewshandler:
@@ -61,31 +65,34 @@ http_interactions:
       X-Aspnet-Version:
       - 4.0.30319
       X-Besku:
-      - WCS6
+      - WCS5
       X-Diaginfo:
-      - AM7PR05MB6693
+      - DB7PR05MB4986
       X-Beserver:
-      - AM7PR05MB6693
+      - DB7PR05MB4986
       X-Proxy-Routingcorrectness:
       - '1'
       X-Proxy-Backendserverstatus:
       - '200'
       X-Feserver:
-      - AM5PR0201CA0006
-      - HE1PR0101CA0015
+      - CWLP123CA0151
+      - HE1PR0902CA0015
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 07 Apr 2020 09:24:55 GMT
+      - Tue, 07 Apr 2020 09:47:23 GMT
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="20"
         xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:ResolveNamesResponse
         xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:ResolveNamesResponseMessage
-        ResponseClass="Error"><m:MessageText>No results were found.</m:MessageText><m:ResponseCode>ErrorNameResolutionNoResults</m:ResponseCode><m:DescriptiveLinkKey>0</m:DescriptiveLinkKey></m:ResolveNamesResponseMessage></m:ResponseMessages></m:ResolveNamesResponse></s:Body></s:Envelope>
+        ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:ResolutionSet
+        TotalItemsInView="1" IncludesLastItemInRange="true"><t:Resolution><t:Mailbox><t:Name>test_947c6511-6fcd-428b-a599-4708ece3a499</t:Name><t:EmailAddress>test@honeybadgerstudio.onmicrosoft.com</t:EmailAddress><t:RoutingType>SMTP</t:RoutingType><t:MailboxType>PublicDL</t:MailboxType></t:Mailbox><t:Contact><t:Culture>en-US</t:Culture><t:DisplayName>Test</t:DisplayName><t:EmailAddresses><t:Entry
+        Key="EmailAddress1">SPO:SPO_46d896c7-0d2b-438d-8104-cf799d793bb2@SPO_043db638-9a35-496c-ad03-3a122c56f4d8</t:Entry><t:Entry
+        Key="EmailAddress2">SMTP:test@honeybadgerstudio.onmicrosoft.com</t:Entry></t:EmailAddresses><t:AssistantName/><t:ContactSource>ActiveDirectory</t:ContactSource></t:Contact></t:Resolution></m:ResolutionSet></m:ResolveNamesResponseMessage></m:ResponseMessages></m:ResolveNamesResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Tue, 07 Apr 2020 09:24:56 GMT
+  recorded_at: Tue, 07 Apr 2020 09:47:23 GMT
 recorded_with: VCR 3.0.3
