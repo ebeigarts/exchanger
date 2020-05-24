@@ -10,7 +10,7 @@ It will keep track of changed properties and will update only them.
 Supported operations
 ====================
 
-* FindItem, GetItem, CreateItem, UpdateItem, DeleteItem
+* FindItem, GetItem, CreateItem, UpdateItem, DeleteItem, MoveItem
 * FindFolder, GetFolder
 * ResolveNames, ExpandDL
 * GetUserAvailability
