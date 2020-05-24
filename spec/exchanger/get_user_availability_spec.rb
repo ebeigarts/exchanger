@@ -10,6 +10,7 @@ describe Exchanger::GetUserAvailability do
   before do
     @response = VCR.use_cassette('get_user_availability') do
       Exchanger::GetUserAvailability.run(@valid_attributes)
+      Exchanger::GetUserAvailability.run(@valid_attributes) # First request gets 401, second one works
     end
     @items = @response.items
   end
@@ -25,22 +26,22 @@ describe Exchanger::GetUserAvailability do
   end
 
   it "should response have calendar event items" do
-    @items.all?{ |i| i.class.name == "Exchanger::CalendarEvent" }.should be_true
+    @items.all?{ |i| i.class.name == "Exchanger::CalendarEvent" }.should be_truthy
   end
 
   it "should calendar event item have valid attributes" do
     ["start_time", "end_time", "busy_type", "calendar_event_details"].each do |k|
-      @items[0].attributes.keys.include?(k).should be_true
+      @items[0].attributes.keys.include?(k).should be_truthy
     end
   end
 
   it "should calendar event items have calendar event details" do
-    @items.all?{ |i| i.calendar_event_details.class.name == "Exchanger::CalendarEventDetails" }.should be_true
+    @items.all?{ |i| i.calendar_event_details.class.name == "Exchanger::CalendarEventDetails" }.should be_truthy
   end
 
   it "should calendar event details item have valid attributes" do
     ["id","subject","location", "is_meeting", "is_recurring", "is_exception", "is_reminder_set", "is_private"].each do |k|
-      @items[0].calendar_event_details.attributes.keys.include?(k).should be_true
+      @items[0].calendar_event_details.attributes.keys.include?(k).should be_truthy
     end
   end
 end

@@ -24,12 +24,12 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rake", ["~> 0.9.2"]
   s.add_development_dependency "i18n" # required by activesupport
-  s.add_development_dependency "rspec", ["~> 2.6.0"]
+  s.add_development_dependency "rspec", ["~> 3.5.0"]
   s.add_development_dependency "simplecov"
   s.add_development_dependency "yard"
   s.add_development_dependency "BlueCloth" # required by yard
   s.add_development_dependency "vcr", ["~> 3.0.1"]
-  s.add_development_dependency "webmock", ["~> 1.8.11"]
+  s.add_development_dependency "webmock", ["~> 2.1.0"]
 
   s.files          = Dir.glob("{lib,spec}/**/*") + %w(README.md LICENSE)
   s.require_paths  = ["lib"]

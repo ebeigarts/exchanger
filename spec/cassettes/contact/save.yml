@@ -2,22 +2,36 @@
 http_interactions:
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
-        \ <soap:Body>\n    <FindItem xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"
-        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" Traversal=\"Shallow\">\n
-        \     <ItemShape>\n        <t:BaseShape>AllProperties</t:BaseShape>\n      </ItemShape>\n
-        \     <ParentFolderIds>\n        <t:FolderId Id=\"AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA\"/>\n
-        \     </ParentFolderIds>\n    </FindItem>\n  </soap:Body>\n</soap:Envelope>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+          <soap:Body>
+            <FindItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" Traversal="Shallow">
+              <ItemShape>
+                <t:BaseShape>AllProperties</t:BaseShape>
+              </ItemShape>
+              <ParentFolderIds>
+                <t:FolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="/>
+              </ParentFolderIds>
+            </FindItem>
+          </soap:Body>
+        </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 09:24:52 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/FindItem
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -30,89 +44,117 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/7.5
-      Requestid:
-      - bec55c2b-a862-4485-8a5b-31f64eca442e
+      - Microsoft-IIS/10.0
+      Request-Id:
+      - 2fa2c296-76aa-41cf-93ea-eb38115904f3
+      X-Calculatedfetarget:
+      - PR3P193CU001.internal.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=52597437df324701869ab491e290435a; expires=Fri, 11-Oct-2013
-        19:19:43 GMT; path=/; HttpOnly
+      - exchangecookie=b4353a36f154438d91e39d99a9eaa019; expires=Wed, 07-Apr-2021
+        09:24:52 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - PR3P193CA0021.EURP193.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
+      X-Ewshandler:
+      - FindItem
       X-Aspnet-Version:
-      - 2.0.50727
+      - 4.0.30319
+      X-Besku:
+      - WCS6
+      X-Diaginfo:
+      - AM7PR05MB6693
+      X-Beserver:
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - HE1PR0101CA0009
+      - PR3P193CA0021
       X-Powered-By:
       - ASP.NET
-      X-Diaginfo:
-      - AMSPRD0710CA013
       Date:
-      - Thu, 11 Oct 2012 19:19:42 GMT
+      - Tue, 07 Apr 2020 09:24:51 GMT
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
-        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:FindItemResponse
-        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:FindItemResponseMessage
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:FindItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:FindItemResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:RootFolder
-        TotalItemsInView="7" IncludesLastItemInRange="true"><t:Items><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4UAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+z"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:19:33Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:19:33Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:19:33Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4MAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+t"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:12:06Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:12:06Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:12:06Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4AAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+i"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:03:22Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:03:22Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:03:22Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa38AAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+g"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:03:21Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:03:21Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:03:21Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa34AAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+e"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:01:56Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:01:56Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:01:56Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa3oAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+Q"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject>Edgars
-        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T18:57:35Z</t:DateTimeReceived><t:Size>527</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T18:57:35Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T18:57:35Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
-        Beigarts</t:DisplayName><t:GivenName>Edgars</t:GivenName><t:Nickname>Test</t:Nickname><t:CompleteName><t:FirstName>Edgars</t:FirstName><t:LastName>Beigarts</t:LastName><t:FullName>Edgars
-        Beigarts</t:FullName><t:Nickname>Test</t:Nickname></t:CompleteName><t:EmailAddresses><t:Entry
-        Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry></t:EmailAddresses><t:PhysicalAddresses><t:Entry
-        Key="Business"><t:Street>Brivibas iela 1</t:Street><t:City>Riga</t:City></t:Entry></t:PhysicalAddresses><t:Surname>Beigarts</t:Surname></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa3gAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+J"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject>Edgars
-        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T18:57:18Z</t:DateTimeReceived><t:Size>569</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T18:57:18Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T18:57:18Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
-        Beigarts</t:DisplayName><t:GivenName>Edgars</t:GivenName><t:Nickname>EBEI</t:Nickname><t:CompleteName><t:FirstName>Edgars</t:FirstName><t:LastName>Beigarts</t:LastName><t:FullName>Edgars
-        Beigarts</t:FullName><t:Nickname>EBEI</t:Nickname></t:CompleteName><t:EmailAddresses><t:Entry
-        Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry></t:EmailAddresses><t:PhysicalAddresses><t:Entry
-        Key="Business"><t:Street>Brivibas iela 1</t:Street><t:City>Riga</t:City></t:Entry><t:Entry
-        Key="Home"><t:Street>Brivibas iela 2</t:Street><t:City>Riga</t:City></t:Entry></t:PhysicalAddresses><t:Surname>Beigarts</t:Surname></t:Contact></t:Items></m:RootFolder></m:FindItemResponseMessage></m:ResponseMessages></m:FindItemResponse></s:Body></s:Envelope>
+        TotalItemsInView="4" IncludesLastItemInRange="true"><t:Items><t:Contact><t:ItemId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVimAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U20q"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2020-04-07T09:17:11Z</t:DateTimeReceived><t:Size>1395</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2020-04-07T09:17:11Z</t:DateTimeSent><t:DateTimeCreated>2020-04-07T09:17:11Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVijAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U2cx"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2020-04-07T07:30:38Z</t:DateTimeReceived><t:Size>1401</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2020-04-07T07:30:38Z</t:DateTimeSent><t:DateTimeCreated>2020-04-07T07:30:38Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVigAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U2bd"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2020-04-07T07:14:19Z</t:DateTimeReceived><t:Size>1394</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2020-04-07T07:14:19Z</t:DateTimeSent><t:DateTimeCreated>2020-04-07T07:14:19Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVidAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U2aC"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2020-04-07T07:04:07Z</t:DateTimeReceived><t:Size>1392</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2020-04-07T07:04:07Z</t:DateTimeSent><t:DateTimeCreated>2020-04-07T07:04:07Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact></t:Items></m:RootFolder></m:FindItemResponseMessage></m:ResponseMessages></m:FindItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Thu, 11 Oct 2012 19:19:43 GMT
+  recorded_at: Tue, 07 Apr 2020 09:24:52 GMT
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
-        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <soap:Body>\n    <CreateItem
-        xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\">\n
-        \     <SavedItemFolderId>\n        <t:FolderId Id=\"AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA\"/>\n
-        \     </SavedItemFolderId>\n      <Items>\n        <t:Contact>\n  <t:GivenName>Edgars</t:GivenName>\n
-        \ <t:Nickname>EBEI</t:Nickname>\n  <t:EmailAddresses>\n    <t:Entry Key=\"EmailAddress1\">edgars.beigarts@tieto.com</t:Entry>\n
-        \ </t:EmailAddresses>\n  <t:PhysicalAddresses>\n    <t:Entry Key=\"Business\">\n
-        \     <t:Street>Brivibas iela 1</t:Street>\n      <t:City>Riga</t:City>\n
-        \   </t:Entry>\n    <t:Entry Key=\"Home\">\n      <t:Street>Brivibas iela
-        2</t:Street>\n      <t:City>Riga</t:City>\n    </t:Entry>\n  </t:PhysicalAddresses>\n
-        \ <t:Surname>Beigarts</t:Surname>\n</t:Contact>\n      </Items>\n    </CreateItem>\n
-        \ </soap:Body>\n</soap:Envelope>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <soap:Body>
+            <CreateItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages">
+              <SavedItemFolderId>
+                <t:FolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="/>
+              </SavedItemFolderId>
+              <Items>
+                <t:Contact>
+          <t:GivenName>Edgars</t:GivenName>
+          <t:Nickname>EBEI</t:Nickname>
+          <t:EmailAddresses>
+            <t:Entry Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry>
+          </t:EmailAddresses>
+          <t:PhysicalAddresses>
+            <t:Entry Key="Business">
+              <t:Street>Brivibas iela 1</t:Street>
+              <t:City>Riga</t:City>
+            </t:Entry>
+            <t:Entry Key="Home">
+              <t:Street>Brivibas iela 2</t:Street>
+              <t:City>Riga</t:City>
+            </t:Entry>
+          </t:PhysicalAddresses>
+          <t:Surname>Beigarts</t:Surname>
+        </t:Contact>
+              </Items>
+            </CreateItem>
+          </soap:Body>
+        </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 09:24:52 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -125,51 +167,89 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/7.5
-      Requestid:
-      - a59c5f25-10f4-46d9-a28d-8b069fb9e9dd
+      - Microsoft-IIS/10.0
+      Request-Id:
+      - dd6106cb-6980-4a26-ba49-b6822ffb4c69
+      X-Calculatedfetarget:
+      - AM6PR04CU002.internal.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=6fb51f7c7dd242a88710b59ce1f190aa; expires=Fri, 11-Oct-2013
-        19:19:44 GMT; path=/; HttpOnly
+      - exchangecookie=f6f1c96b82894a5badee34749f8f642e; expires=Wed, 07-Apr-2021
+        09:24:52 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - AM6PR04CA0069.EURPRD04.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
+      X-Ewshandler:
+      - CreateItem
       X-Aspnet-Version:
-      - 2.0.50727
+      - 4.0.30319
+      X-Besku:
+      - WCS6
+      X-Diaginfo:
+      - AM7PR05MB6693
+      X-Beserver:
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - AM6PR04CA0069
+      - HE1PR0101CA0012
       X-Powered-By:
       - ASP.NET
-      X-Diaginfo:
-      - AMSPRD0710CA007
       Date:
-      - Thu, 11 Oct 2012 19:19:43 GMT
+      - Tue, 07 Apr 2020 09:24:51 GMT
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
-        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:CreateItemResponse
-        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:CreateItemResponseMessage
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:CreateItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:CreateItemResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+1"/></t:Contact></m:Items></m:CreateItemResponseMessage></m:ResponseMessages></m:CreateItemResponse></s:Body></s:Envelope>
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVinAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U278"/></t:Contact></m:Items></m:CreateItemResponseMessage></m:ResponseMessages></m:CreateItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Thu, 11 Oct 2012 19:19:43 GMT
+  recorded_at: Tue, 07 Apr 2020 09:24:52 GMT
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
-        \ <soap:Body>\n    <GetItem xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"
-        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\">\n      <ItemShape>\n
-        \       <t:BaseShape>AllProperties</t:BaseShape>\n      </ItemShape>\n      <ItemIds>\n
-        \       <t:ItemId Id=\"AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA==\"/>\n
-        \     </ItemIds>\n    </GetItem>\n  </soap:Body>\n</soap:Envelope>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+          <soap:Body>
+            <GetItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+              <ItemShape>
+                <t:BaseShape>AllProperties</t:BaseShape>
+              </ItemShape>
+              <ItemIds>
+                <t:ItemId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVinAAA="/>
+              </ItemIds>
+            </GetItem>
+          </soap:Body>
+        </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 09:24:52 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/GetItem
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -182,58 +262,96 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/7.5
-      Requestid:
-      - 752eaa19-5a15-4f73-a347-fbbb6c360ec9
+      - Microsoft-IIS/10.0
+      Request-Id:
+      - 4520b198-657d-42ae-b6fe-5a949be5da17
+      X-Calculatedfetarget:
+      - AM6P191CU003.internal.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=93c7ef3424a14812aca55bdd2902d117; expires=Fri, 11-Oct-2013
-        19:19:44 GMT; path=/; HttpOnly
+      - exchangecookie=b225c16149a34ed4bcaf1c7958925b74; expires=Wed, 07-Apr-2021
+        09:24:52 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - AM6P191CA0106.EURP191.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
+      X-Ewshandler:
+      - GetItem
       X-Aspnet-Version:
-      - 2.0.50727
+      - 4.0.30319
+      X-Besku:
+      - WCS6
+      X-Diaginfo:
+      - AM7PR05MB6693
+      X-Beserver:
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - AM6P191CA0106
+      - HE1PR0101CA0009
       X-Powered-By:
       - ASP.NET
-      X-Diaginfo:
-      - AMSPRD0710CA010
       Date:
-      - Thu, 11 Oct 2012 19:19:44 GMT
+      - Tue, 07 Apr 2020 09:24:51 GMT
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
-        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:GetItemResponse
-        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetItemResponseMessage
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:GetItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetItemResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+1"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVinAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U278"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="
         ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject>Edgars
-        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:Body BodyType="Text"/><t:DateTimeReceived>2012-10-11T19:19:44Z</t:DateTimeReceived><t:Size>569</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:19:44Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:19:44Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
+        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:Body BodyType="Text"/><t:DateTimeReceived>2020-04-07T09:24:52Z</t:DateTimeReceived><t:Size>2158</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2020-04-07T09:24:52Z</t:DateTimeSent><t:DateTimeCreated>2020-04-07T09:24:52Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
         Beigarts</t:DisplayName><t:GivenName>Edgars</t:GivenName><t:Nickname>EBEI</t:Nickname><t:CompleteName><t:FirstName>Edgars</t:FirstName><t:LastName>Beigarts</t:LastName><t:FullName>Edgars
         Beigarts</t:FullName><t:Nickname>EBEI</t:Nickname></t:CompleteName><t:EmailAddresses><t:Entry
         Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry></t:EmailAddresses><t:PhysicalAddresses><t:Entry
         Key="Business"><t:Street>Brivibas iela 1</t:Street><t:City>Riga</t:City></t:Entry><t:Entry
         Key="Home"><t:Street>Brivibas iela 2</t:Street><t:City>Riga</t:City></t:Entry></t:PhysicalAddresses><t:Surname>Beigarts</t:Surname></t:Contact></m:Items></m:GetItemResponseMessage></m:ResponseMessages></m:GetItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Thu, 11 Oct 2012 19:19:44 GMT
+  recorded_at: Tue, 07 Apr 2020 09:24:52 GMT
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
-        \ <soap:Body>\n    <FindItem xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"
-        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" Traversal=\"Shallow\">\n
-        \     <ItemShape>\n        <t:BaseShape>AllProperties</t:BaseShape>\n      </ItemShape>\n
-        \     <ParentFolderIds>\n        <t:FolderId Id=\"AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA\"/>\n
-        \     </ParentFolderIds>\n    </FindItem>\n  </soap:Body>\n</soap:Envelope>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+          <soap:Body>
+            <FindItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" Traversal="Shallow">
+              <ItemShape>
+                <t:BaseShape>AllProperties</t:BaseShape>
+              </ItemShape>
+              <ParentFolderIds>
+                <t:FolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="/>
+              </ParentFolderIds>
+            </FindItem>
+          </soap:Body>
+        </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 09:24:52 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/FindItem
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -246,117 +364,160 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/7.5
-      Requestid:
-      - 70d7bafb-b1b0-418f-a467-49626356ada6
+      - Microsoft-IIS/10.0
+      Request-Id:
+      - 223a3d6a-c089-40c3-9c64-148ffe35cbaf
+      X-Calculatedfetarget:
+      - AM6P194CU001.internal.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=2ec6fd49b35f4f148f1da8ccac197b60; expires=Fri, 11-Oct-2013
-        19:19:45 GMT; path=/; HttpOnly
+      - exchangecookie=22f32b176f044dc1a6762bd00d5ba597; expires=Wed, 07-Apr-2021
+        09:24:52 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - AM6P194CA0017.EURP194.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
+      X-Ewshandler:
+      - FindItem
       X-Aspnet-Version:
-      - 2.0.50727
+      - 4.0.30319
+      X-Besku:
+      - WCS6
+      X-Diaginfo:
+      - AM7PR05MB6693
+      X-Beserver:
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - AM6P194CA0017
+      - HE1PR0101CA0016
       X-Powered-By:
       - ASP.NET
-      X-Diaginfo:
-      - AMSPRD0710CA020
       Date:
-      - Thu, 11 Oct 2012 19:19:44 GMT
+      - Tue, 07 Apr 2020 09:24:51 GMT
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
-        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:FindItemResponse
-        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:FindItemResponseMessage
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:FindItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:FindItemResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:RootFolder
-        TotalItemsInView="8" IncludesLastItemInRange="true"><t:Items><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+1"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
+        TotalItemsInView="5" IncludesLastItemInRange="true"><t:Items><t:Contact><t:ItemId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVinAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U278"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="
         ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject>Edgars
-        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:19:44Z</t:DateTimeReceived><t:Size>569</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:19:44Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:19:44Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
+        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2020-04-07T09:24:52Z</t:DateTimeReceived><t:Size>2158</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2020-04-07T09:24:52Z</t:DateTimeSent><t:DateTimeCreated>2020-04-07T09:24:52Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
         Beigarts</t:DisplayName><t:GivenName>Edgars</t:GivenName><t:Nickname>EBEI</t:Nickname><t:CompleteName><t:FirstName>Edgars</t:FirstName><t:LastName>Beigarts</t:LastName><t:FullName>Edgars
         Beigarts</t:FullName><t:Nickname>EBEI</t:Nickname></t:CompleteName><t:EmailAddresses><t:Entry
         Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry></t:EmailAddresses><t:PhysicalAddresses><t:Entry
         Key="Business"><t:Street>Brivibas iela 1</t:Street><t:City>Riga</t:City></t:Entry><t:Entry
         Key="Home"><t:Street>Brivibas iela 2</t:Street><t:City>Riga</t:City></t:Entry></t:PhysicalAddresses><t:Surname>Beigarts</t:Surname></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4UAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+z"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:19:33Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:19:33Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:19:33Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4MAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+t"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:12:06Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:12:06Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:12:06Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4AAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+i"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:03:22Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:03:22Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:03:22Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa38AAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+g"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:03:21Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:03:21Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:03:21Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa34AAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+e"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T19:01:56Z</t:DateTimeReceived><t:Size>147</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T19:01:56Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T19:01:56Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa3oAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+Q"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject>Edgars
-        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T18:57:35Z</t:DateTimeReceived><t:Size>527</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T18:57:35Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T18:57:35Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
-        Beigarts</t:DisplayName><t:GivenName>Edgars</t:GivenName><t:Nickname>Test</t:Nickname><t:CompleteName><t:FirstName>Edgars</t:FirstName><t:LastName>Beigarts</t:LastName><t:FullName>Edgars
-        Beigarts</t:FullName><t:Nickname>Test</t:Nickname></t:CompleteName><t:EmailAddresses><t:Entry
-        Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry></t:EmailAddresses><t:PhysicalAddresses><t:Entry
-        Key="Business"><t:Street>Brivibas iela 1</t:Street><t:City>Riga</t:City></t:Entry></t:PhysicalAddresses><t:Surname>Beigarts</t:Surname></t:Contact><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa3gAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+J"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2iAAAA"
-        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject>Edgars
-        Beigarts</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2012-10-11T18:57:18Z</t:DateTimeReceived><t:Size>569</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2012-10-11T18:57:18Z</t:DateTimeSent><t:DateTimeCreated>2012-10-11T18:57:18Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName>Edgars
-        Beigarts</t:DisplayName><t:GivenName>Edgars</t:GivenName><t:Nickname>EBEI</t:Nickname><t:CompleteName><t:FirstName>Edgars</t:FirstName><t:LastName>Beigarts</t:LastName><t:FullName>Edgars
-        Beigarts</t:FullName><t:Nickname>EBEI</t:Nickname></t:CompleteName><t:EmailAddresses><t:Entry
-        Key="EmailAddress1">edgars.beigarts@tieto.com</t:Entry></t:EmailAddresses><t:PhysicalAddresses><t:Entry
-        Key="Business"><t:Street>Brivibas iela 1</t:Street><t:City>Riga</t:City></t:Entry><t:Entry
-        Key="Home"><t:Street>Brivibas iela 2</t:Street><t:City>Riga</t:City></t:Entry></t:PhysicalAddresses><t:Surname>Beigarts</t:Surname></t:Contact></t:Items></m:RootFolder></m:FindItemResponseMessage></m:ResponseMessages></m:FindItemResponse></s:Body></s:Envelope>
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVimAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U20q"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2020-04-07T09:17:11Z</t:DateTimeReceived><t:Size>1395</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2020-04-07T09:17:11Z</t:DateTimeSent><t:DateTimeCreated>2020-04-07T09:17:11Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVijAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U2cx"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2020-04-07T07:30:38Z</t:DateTimeReceived><t:Size>1401</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2020-04-07T07:30:38Z</t:DateTimeSent><t:DateTimeCreated>2020-04-07T07:30:38Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVigAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U2bd"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2020-04-07T07:14:19Z</t:DateTimeReceived><t:Size>1394</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2020-04-07T07:14:19Z</t:DateTimeSent><t:DateTimeCreated>2020-04-07T07:14:19Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact><t:Contact><t:ItemId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVidAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U2aC"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAA="
+        ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Contact</t:ItemClass><t:Subject/><t:Sensitivity>Normal</t:Sensitivity><t:DateTimeReceived>2020-04-07T07:04:07Z</t:DateTimeReceived><t:Size>1392</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>true</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2020-04-07T07:04:07Z</t:DateTimeSent><t:DateTimeCreated>2020-04-07T07:04:07Z</t:DateTimeCreated><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>false</t:HasAttachments><t:Culture>en-US</t:Culture><t:FileAs/><t:FileAsMapping>None</t:FileAsMapping><t:DisplayName/></t:Contact></t:Items></m:RootFolder></m:FindItemResponseMessage></m:ResponseMessages></m:FindItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Thu, 11 Oct 2012 19:19:44 GMT
+  recorded_at: Tue, 07 Apr 2020 09:24:52 GMT
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
-        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <soap:Body>\n    <UpdateItem
-        xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\" ConflictResolution=\"AlwaysOverwrite\">\n
-        \     <ItemChanges>\n        <t:ItemChange>\n  <t:ItemId Id=\"AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA==\"
-        ChangeKey=\"EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+1\"/>\n  <t:Updates>\n
-        \   <t:SetItemField>\n      <t:FieldURI FieldURI=\"contacts:Nickname\"/>\n
-        \     <t:Contact>\n        <t:Nickname>Test</t:Nickname>\n      </t:Contact>\n
-        \   </t:SetItemField>\n    <t:SetItemField>\n      <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:Street\"
-        FieldIndex=\"Business\"/>\n      <t:Contact>\n        <t:PhysicalAddresses>\n
-        \         <t:Entry Key=\"Business\">\n            <t:Street>Brivibas iela
-        1</t:Street>\n          </t:Entry>\n        </t:PhysicalAddresses>\n      </t:Contact>\n
-        \   </t:SetItemField>\n    <t:SetItemField>\n      <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:City\"
-        FieldIndex=\"Business\"/>\n      <t:Contact>\n        <t:PhysicalAddresses>\n
-        \         <t:Entry Key=\"Business\">\n            <t:City>Riga</t:City>\n
-        \         </t:Entry>\n        </t:PhysicalAddresses>\n      </t:Contact>\n
-        \   </t:SetItemField>\n    <t:DeleteItemField>\n      <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:State\"
-        FieldIndex=\"Business\"/>\n    </t:DeleteItemField>\n    <t:DeleteItemField>\n
-        \     <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:CountryOrRegion\"
-        FieldIndex=\"Business\"/>\n    </t:DeleteItemField>\n    <t:DeleteItemField>\n
-        \     <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:PostalCode\"
-        FieldIndex=\"Business\"/>\n    </t:DeleteItemField>\n    <t:DeleteItemField>\n
-        \     <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:Street\" FieldIndex=\"Home\"/>\n
-        \   </t:DeleteItemField>\n    <t:DeleteItemField>\n      <t:IndexedFieldURI
-        FieldURI=\"contacts:PhysicalAddress:City\" FieldIndex=\"Home\"/>\n    </t:DeleteItemField>\n
-        \   <t:DeleteItemField>\n      <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:State\"
-        FieldIndex=\"Home\"/>\n    </t:DeleteItemField>\n    <t:DeleteItemField>\n
-        \     <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:CountryOrRegion\"
-        FieldIndex=\"Home\"/>\n    </t:DeleteItemField>\n    <t:DeleteItemField>\n
-        \     <t:IndexedFieldURI FieldURI=\"contacts:PhysicalAddress:PostalCode\"
-        FieldIndex=\"Home\"/>\n    </t:DeleteItemField>\n  </t:Updates>\n</t:ItemChange>\n
-        \     </ItemChanges>\n    </UpdateItem>\n  </soap:Body>\n</soap:Envelope>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <soap:Body>
+            <UpdateItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" ConflictResolution="AlwaysOverwrite">
+              <ItemChanges>
+                <t:ItemChange>
+          <t:ItemId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVinAAA=" ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U278"/>
+          <t:Updates>
+            <t:SetItemField>
+              <t:FieldURI FieldURI="contacts:Nickname"/>
+              <t:Contact>
+                <t:Nickname>Test</t:Nickname>
+              </t:Contact>
+            </t:SetItemField>
+            <t:SetItemField>
+              <t:IndexedFieldURI FieldURI="contacts:PhysicalAddress:Street" FieldIndex="Business"/>
+              <t:Contact>
+                <t:PhysicalAddresses>
+                  <t:Entry Key="Business">
+                    <t:Street>Brivibas iela 1</t:Street>
+                  </t:Entry>
+                </t:PhysicalAddresses>
+              </t:Contact>
+            </t:SetItemField>
+            <t:SetItemField>
+              <t:IndexedFieldURI FieldURI="contacts:PhysicalAddress:City" FieldIndex="Business"/>
+              <t:Contact>
+                <t:PhysicalAddresses>
+                  <t:Entry Key="Business">
+                    <t:City>Riga</t:City>
+                  </t:Entry>
+                </t:PhysicalAddresses>
+              </t:Contact>
+            </t:SetItemField>
+            <t:DeleteItemField>
+              <t:IndexedFieldURI FieldURI="contacts:PhysicalAddress:State" FieldIndex="Business"/>
+            </t:DeleteItemField>
+            <t:DeleteItemField>
+              <t:IndexedFieldURI FieldURI="contacts:PhysicalAddress:CountryOrRegion" FieldIndex="Business"/>
+            </t:DeleteItemField>
+            <t:DeleteItemField>
+              <t:IndexedFieldURI FieldURI="contacts:PhysicalAddress:PostalCode" FieldIndex="Business"/>
+            </t:DeleteItemField>
+            <t:DeleteItemField>
+              <t:IndexedFieldURI FieldURI="contacts:PhysicalAddress:Street" FieldIndex="Home"/>
+            </t:DeleteItemField>
+            <t:DeleteItemField>
+              <t:IndexedFieldURI FieldURI="contacts:PhysicalAddress:City" FieldIndex="Home"/>
+            </t:DeleteItemField>
+            <t:DeleteItemField>
+              <t:IndexedFieldURI FieldURI="contacts:PhysicalAddress:State" FieldIndex="Home"/>
+            </t:DeleteItemField>
+            <t:DeleteItemField>
+              <t:IndexedFieldURI FieldURI="contacts:PhysicalAddress:CountryOrRegion" FieldIndex="Home"/>
+            </t:DeleteItemField>
+            <t:DeleteItemField>
+              <t:IndexedFieldURI FieldURI="contacts:PhysicalAddress:PostalCode" FieldIndex="Home"/>
+            </t:DeleteItemField>
+          </t:Updates>
+        </t:ItemChange>
+              </ItemChanges>
+            </UpdateItem>
+          </soap:Body>
+        </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 09:24:52 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/UpdateItem
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -369,31 +530,55 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/7.5
-      Requestid:
-      - 5f31fafc-ee94-4c3e-8e37-bae9671f7113
+      - Microsoft-IIS/10.0
+      Request-Id:
+      - f7ff6591-52dd-4f82-9f8b-f27d9b768044
+      X-Calculatedfetarget:
+      - AM6P195CU002.internal.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=dddb8818d3374b7ca47706020a9fbfc4; expires=Fri, 11-Oct-2013
-        19:19:45 GMT; path=/; HttpOnly
+      - exchangecookie=f8545f23d78c490abcce7cd7afc23924; expires=Wed, 07-Apr-2021
+        09:24:52 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - AM6P195CA0057.EURP195.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
+      X-Ewshandler:
+      - UpdateItem
       X-Aspnet-Version:
-      - 2.0.50727
+      - 4.0.30319
+      X-Besku:
+      - WCS6
+      X-Diaginfo:
+      - AM7PR05MB6693
+      X-Beserver:
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - AM6P195CA0057
+      - HE1PR0101CA0007
       X-Powered-By:
       - ASP.NET
-      X-Diaginfo:
-      - AMSPRD0710CA016
       Date:
-      - Thu, 11 Oct 2012 19:19:45 GMT
+      - Tue, 07 Apr 2020 09:24:52 GMT
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
-        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:UpdateItemResponse
-        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:UpdateItemResponseMessage
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:UpdateItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:UpdateItemResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:Contact><t:ItemId
-        Id="AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA=="
-        ChangeKey="EQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARm+2"/></t:Contact></m:Items></m:UpdateItemResponseMessage></m:ResponseMessages></m:UpdateItemResponse></s:Body></s:Envelope>
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVinAAA="
+        ChangeKey="EQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U28D"/></t:Contact></m:Items></m:UpdateItemResponseMessage></m:ResponseMessages></m:UpdateItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Thu, 11 Oct 2012 19:19:45 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Tue, 07 Apr 2020 09:24:53 GMT
+recorded_with: VCR 3.0.3

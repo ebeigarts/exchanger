@@ -2,22 +2,33 @@
 http_interactions:
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
-        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <soap:Body>\n    <DeleteItem
-        xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\" DeleteType=\"HardDelete\">\n
-        \     <ItemIds>\n        <t:ItemId Id=\"AAAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAEYAAAAAAFCCRZAuOKtKpGOhX84gI1gHAJoatVMmPNZLthU74SWegbgAAABF7aIAAJoatVMmPNZLthU74SWegbgAAABGa4YAAA==\"/>\n
-        \     </ItemIds>\n    </DeleteItem>\n  </soap:Body>\n</soap:Envelope>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <soap:Body>
+            <DeleteItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" DeleteType="HardDelete">
+              <ItemIds>
+                <t:ItemId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAEXNeC6AAAdX+/tTQhGSJ2g6HFKPliuAAM8LVinAAA="/>
+              </ItemIds>
+            </DeleteItem>
+          </soap:Body>
+        </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 09:24:53 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/DeleteItem
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -30,29 +41,53 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/7.5
-      Requestid:
-      - 66b54450-321d-4ac8-afcc-c4cdb28ee1a9
+      - Microsoft-IIS/10.0
+      Request-Id:
+      - 67f18e2f-fcf7-4810-8add-6ff48793ff30
+      X-Calculatedfetarget:
+      - PR3P192CU002.internal.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=30e152f9fdf94926bb3a8d9d312983b2; expires=Fri, 11-Oct-2013
-        19:19:46 GMT; path=/; HttpOnly
+      - exchangecookie=0ecefad60d5e41028dacbcc0da560c94; expires=Wed, 07-Apr-2021
+        09:24:53 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - PR3P192CA0052.EURP192.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
+      X-Ewshandler:
+      - DeleteItem
       X-Aspnet-Version:
-      - 2.0.50727
+      - 4.0.30319
+      X-Besku:
+      - WCS6
+      X-Diaginfo:
+      - AM7PR05MB6693
+      X-Beserver:
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - HE1PR0101CA0019
+      - PR3P192CA0052
       X-Powered-By:
       - ASP.NET
-      X-Diaginfo:
-      - AMSPRD0710CA004
       Date:
-      - Thu, 11 Oct 2012 19:19:46 GMT
+      - Tue, 07 Apr 2020 09:24:53 GMT
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
-        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:DeleteItemResponse
-        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:DeleteItemResponseMessage
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:DeleteItemResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:DeleteItemResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode></m:DeleteItemResponseMessage></m:ResponseMessages></m:DeleteItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Thu, 11 Oct 2012 19:19:45 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Tue, 07 Apr 2020 09:24:53 GMT
+recorded_with: VCR 3.0.3

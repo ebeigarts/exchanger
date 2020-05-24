@@ -8,7 +8,7 @@ describe Exchanger::CalendarFolder do
   end
 
   it "should return calendar folder" do
-    @folder.class.should == Exchanger::CalendarFolder
+    expect(@folder).to be_kind_of(Exchanger::CalendarFolder)
   end
 
   describe "#user_configuration" do
@@ -16,7 +16,7 @@ describe Exchanger::CalendarFolder do
       VCR.use_cassette("folder/get_user_configuration") do
         # Assumes that the default "Blue category" hasn't been deleted from the calendar
         blue_category = @folder.category_list.detect { |category| category.color == 7 }
-        blue_category.category_color.css_color.should == "rgb(85, 171, 229)"
+        expect(blue_category.category_color.css_color).to eq("rgb(85, 171, 229)")
       end
     end
   end

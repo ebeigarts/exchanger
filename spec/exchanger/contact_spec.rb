@@ -59,7 +59,7 @@ describe Exchanger::Contact do
 
     it "cannot create a contact without a parent_folder" do
       @contact.parent_folder_id = nil
-      @contact.save.should be_false
+      @contact.save.should be_falsey
       @contact.errors.should include("Parent folder can't be blank")
     end
   end
@@ -73,7 +73,7 @@ describe Exchanger::Contact do
 
     it "should destroy contact and return true" do
       VCR.use_cassette("contact/destroy") do
-        @contact.destroy.should be_true
+        @contact.destroy.should be_truthy
       end
     end
   end

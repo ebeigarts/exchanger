@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
       encoding: UTF-8
       string: |
@@ -11,27 +11,36 @@ http_interactions:
           <soap:Body>
             <CreateItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" SendMeetingInvitations="SendToAllAndSaveCopy">
               <SavedItemFolderId>
-                <t:FolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA"/>
+                <t:FolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAA="/>
               </SavedItemFolderId>
               <Items>
                 <t:CalendarItem>
           <t:Subject>Test Calendar Item</t:Subject>
           <t:Body BodyType="Text">Body line 1.
         Body line 2.</t:Body>
-          <t:Start>2016-06-21T09:13:14-05:00</t:Start>
-          <t:End>2016-06-21T09:43:14-05:00</t:End>
+          <t:Categories>
+            <t:String>Green category</t:String>
+          </t:Categories>
+          <t:Start>2020-04-07T12:24:39+02:00</t:Start>
+          <t:End>2020-04-07T12:54:39+02:00</t:End>
         </t:CalendarItem>
               </Items>
             </CreateItem>
           </soap:Body>
         </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 10:24:39 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -44,46 +53,60 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/8.0
+      - Microsoft-IIS/10.0
       Request-Id:
-      - 9d7369a5-0482-43b4-be6a-78f400a31b21
-      X-Calculatedbetarget:
-      - CO2PR0801MB552.namprd08.prod.outlook.com
+      - 174038c4-f656-448b-b3c7-2f33a7821e8c
+      X-Calculatedfetarget:
+      - PR3P192CU001.internal.outlook.com
       X-Backendhttpstatus:
       - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=a0afd69d84e544feafcbccf6d81cf3b1; expires=Wed, 21-Jun-2017
-        14:13:15 GMT; path=/; HttpOnly
+      - exchangecookie=f5a72e4b4cf54bcbb9b931ca09a925ce; expires=Wed, 07-Apr-2021
+        10:24:39 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - PR3P192CA0019.EURP192.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
       X-Ewshandler:
       - CreateItem
       X-Aspnet-Version:
       - 4.0.30319
+      X-Besku:
+      - WCS6
       X-Diaginfo:
-      - CO2PR0801MB552
+      - AM7PR05MB6693
       X-Beserver:
-      - CO2PR0801MB552
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - HE1PR07CA0004
+      - PR3P192CA0019
       X-Powered-By:
       - ASP.NET
-      X-Feserver:
-      - BY1PR19CA0019
       Date:
-      - Tue, 21 Jun 2016 14:13:13 GMT
+      - Tue, 07 Apr 2020 10:24:39 GMT
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="15" MinorVersion="1" MajorBuildNumber="523" MinorBuildNumber="16"
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
         xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:CreateItemResponse
         xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:CreateItemResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:CalendarItem><t:ItemId
-        Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA="
-        ChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAcJize"/></t:CalendarItem></m:Items></m:CreateItemResponseMessage></m:ResponseMessages></m:CreateItemResponse></s:Body></s:Envelope>
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1sAAA="
+        ChangeKey="DwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U3A7"/></t:CalendarItem></m:Items></m:CreateItemResponseMessage></m:ResponseMessages></m:CreateItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Tue, 21 Jun 2016 14:13:14 GMT
+  recorded_at: Tue, 07 Apr 2020 10:24:39 GMT
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
       encoding: UTF-8
       string: |
@@ -91,7 +114,7 @@ http_interactions:
         <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
           <soap:Body>
             <CreateAttachment xmlns="http://schemas.microsoft.com/exchange/services/2006/messages">
-              <ParentItemId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA="/>
+              <ParentItemId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1sAAA="/>
               <Attachments>
                 <t:FileAttachment>
           <t:Name>test.txt</t:Name>
@@ -104,12 +127,18 @@ http_interactions:
           </soap:Body>
         </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 10:24:39 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/CreateAttachment
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -122,47 +151,61 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/8.0
+      - Microsoft-IIS/10.0
       Request-Id:
-      - e3859936-4b38-49cf-8b68-c1de0a8030aa
-      X-Calculatedbetarget:
-      - CO2PR0801MB552.namprd08.prod.outlook.com
+      - 8104046e-54e2-4068-ad77-76cd392a31d2
+      X-Calculatedfetarget:
+      - PR3P193CU001.internal.outlook.com
       X-Backendhttpstatus:
       - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=e494592941624251b0e089f04d054993; expires=Wed, 21-Jun-2017
-        14:13:15 GMT; path=/; HttpOnly
+      - exchangecookie=cefdac8d48e743b8aa10f8637b9f905b; expires=Wed, 07-Apr-2021
+        10:24:39 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - PR3P193CA0018.EURP193.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
       X-Ewshandler:
       - CreateAttachment
       X-Aspnet-Version:
       - 4.0.30319
+      X-Besku:
+      - WCS6
       X-Diaginfo:
-      - CO2PR0801MB552
+      - AM7PR05MB6693
       X-Beserver:
-      - CO2PR0801MB552
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - HE1PR07CA0020
+      - PR3P193CA0018
       X-Powered-By:
       - ASP.NET
-      X-Feserver:
-      - BY1PR10CA0031
       Date:
-      - Tue, 21 Jun 2016 14:13:14 GMT
+      - Tue, 07 Apr 2020 10:24:39 GMT
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="15" MinorVersion="1" MajorBuildNumber="523" MinorBuildNumber="16"
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
         xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:CreateAttachmentResponse
         xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:CreateAttachmentResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Attachments><t:FileAttachment><t:AttachmentId
-        Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAABEgAQAD3x18GLNmVLgCkwN+NmLSk="
-        RootItemId="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA="
-        RootItemChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAcJizf"/><t:LastModifiedTime>2016-06-21T14:13:15</t:LastModifiedTime></t:FileAttachment></m:Attachments></m:CreateAttachmentResponseMessage></m:ResponseMessages></m:CreateAttachmentResponse></s:Body></s:Envelope>
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1sAAABEgAQADLNeHkK9uJGqYugq8GS560="
+        RootItemId="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1sAAA="
+        RootItemChangeKey="DwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U3A+"/><t:LastModifiedTime>2020-04-07T10:24:39</t:LastModifiedTime></t:FileAttachment></m:Attachments></m:CreateAttachmentResponseMessage></m:ResponseMessages></m:CreateAttachmentResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Tue, 21 Jun 2016 14:13:15 GMT
+  recorded_at: Tue, 07 Apr 2020 10:24:39 GMT
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
       encoding: UTF-8
       string: |
@@ -174,18 +217,24 @@ http_interactions:
                 <t:BaseShape>AllProperties</t:BaseShape>
               </ItemShape>
               <ItemIds>
-                <t:ItemId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA="/>
+                <t:ItemId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1sAAA="/>
               </ItemIds>
             </GetItem>
           </soap:Body>
         </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 10:24:39 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/GetItem
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -198,38 +247,54 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/8.0
+      - Microsoft-IIS/10.0
       Request-Id:
-      - fd6f7300-940d-41c5-bedc-dfe56c9939d9
-      X-Calculatedbetarget:
-      - CO2PR0801MB552.namprd08.prod.outlook.com
+      - ef4a3b23-ecbe-4645-a5ef-bddc0b16bdf7
+      X-Calculatedfetarget:
+      - AM6P192CU003.internal.outlook.com
       X-Backendhttpstatus:
       - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=0297fe2cb6344f15a2ecc65eb0a989fb; expires=Wed, 21-Jun-2017
-        14:13:26 GMT; path=/; HttpOnly
+      - exchangecookie=467335c773344263aebb0d7b853e75d0; expires=Wed, 07-Apr-2021
+        10:24:39 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - AM6P192CA0105.EURP192.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
+      X-Ewshandler:
+      - GetItem
       X-Aspnet-Version:
       - 4.0.30319
+      X-Besku:
+      - WCS6
       X-Diaginfo:
-      - CO2PR0801MB552
+      - AM7PR05MB6693
       X-Beserver:
-      - CO2PR0801MB552
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - AM6P192CA0105
+      - HE1PR07CA0015
       X-Powered-By:
       - ASP.NET
-      X-Feserver:
-      - BY1PR19CA0008
       Date:
-      - Tue, 21 Jun 2016 14:13:25 GMT
+      - Tue, 07 Apr 2020 10:24:38 GMT
     body:
       encoding: UTF-8
       string: |-
-        <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo MajorVersion="15" MinorVersion="1" MajorBuildNumber="523" MinorBuildNumber="16" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:GetItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetItemResponseMessage ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:CalendarItem><t:ItemId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA=" ChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAcJizf"/><t:ParentFolderId Id="AQAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb28Aay5jb20ALgAABKlVK7wi0Um5a7NdGSAWsQEATutsxsDoLkiasjWoT1GLIQAAAgENAAAA" ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Appointment</t:ItemClass><t:Subject>Test Calendar Item</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:Body BodyType="Text">Body line 1.
-        Body line 2.</t:Body><t:Attachments><t:FileAttachment><t:AttachmentId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAABEgAQAD3x18GLNmVLgCkwN+NmLSk="/><t:Name>test.txt</t:Name><t:ContentType>text/plain</t:ContentType></t:FileAttachment></t:Attachments><t:DateTimeReceived>2016-06-21T14:13:15Z</t:DateTimeReceived><t:Size>4166</t:Size><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>false</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2016-06-21T14:13:15Z</t:DateTimeSent><t:DateTimeCreated>2016-06-21T14:13:15Z</t:DateTimeCreated><t:ResponseObjects><t:CancelCalendarItem/><t:ForwardItem/></t:ResponseObjects><t:ReminderDueBy>2016-06-21T14:13:14Z</t:ReminderDueBy><t:ReminderIsSet>true</t:ReminderIsSet><t:ReminderMinutesBeforeStart>15</t:ReminderMinutesBeforeStart><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>true</t:HasAttachments><t:Culture>en-US</t:Culture><t:Start>2016-06-21T14:13:14Z</t:Start><t:End>2016-06-21T14:43:14Z</t:End><t:IsAllDayEvent>false</t:IsAllDayEvent><t:LegacyFreeBusyStatus>Busy</t:LegacyFreeBusyStatus><t:IsMeeting>true</t:IsMeeting><t:IsCancelled>false</t:IsCancelled><t:IsRecurring>false</t:IsRecurring><t:MeetingRequestWasSent>false</t:MeetingRequestWasSent><t:IsResponseRequested>true</t:IsResponseRequested><t:CalendarItemType>Single</t:CalendarItemType><t:MyResponseType>Organizer</t:MyResponseType><t:Organizer><t:Mailbox><t:Name>Exchanger SpecTester</t:Name><t:EmailAddress>FILTERED_EMAIL_ADDRESS</t:EmailAddress><t:RoutingType>SMTP</t:RoutingType></t:Mailbox></t:Organizer><t:Duration>PT30M</t:Duration><t:TimeZone>(UTC) Monrovia, Reykjavik</t:TimeZone><t:AppointmentSequenceNumber>0</t:AppointmentSequenceNumber><t:AppointmentState>1</t:AppointmentState><t:IsOnlineMeeting>false</t:IsOnlineMeeting></t:CalendarItem></m:Items></m:GetItemResponseMessage></m:ResponseMessages></m:GetItemResponse></s:Body></s:Envelope>
+        <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:GetItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetItemResponseMessage ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Items><t:CalendarItem><t:ItemId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1sAAA=" ChangeKey="DwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U3A+"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAA=" ChangeKey="AQAAAA=="/><t:ItemClass>IPM.Appointment</t:ItemClass><t:Subject>Test Calendar Item</t:Subject><t:Sensitivity>Normal</t:Sensitivity><t:Body BodyType="Text">Body line 1.
+        Body line 2.</t:Body><t:Attachments><t:FileAttachment><t:AttachmentId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1sAAABEgAQADLNeHkK9uJGqYugq8GS560="/><t:Name>test.txt</t:Name><t:ContentType>text/plain</t:ContentType></t:FileAttachment></t:Attachments><t:DateTimeReceived>2020-04-07T10:24:39Z</t:DateTimeReceived><t:Size>4256</t:Size><t:Categories><t:String>Green category</t:String></t:Categories><t:Importance>Normal</t:Importance><t:IsSubmitted>false</t:IsSubmitted><t:IsDraft>false</t:IsDraft><t:IsFromMe>false</t:IsFromMe><t:IsResend>false</t:IsResend><t:IsUnmodified>false</t:IsUnmodified><t:DateTimeSent>2020-04-07T10:24:39Z</t:DateTimeSent><t:DateTimeCreated>2020-04-07T10:24:39Z</t:DateTimeCreated><t:ResponseObjects><t:CancelCalendarItem/><t:ForwardItem/></t:ResponseObjects><t:ReminderDueBy>2020-04-07T10:24:39Z</t:ReminderDueBy><t:ReminderIsSet>true</t:ReminderIsSet><t:ReminderMinutesBeforeStart>15</t:ReminderMinutesBeforeStart><t:DisplayCc/><t:DisplayTo/><t:HasAttachments>true</t:HasAttachments><t:Culture>en-US</t:Culture><t:Start>2020-04-07T10:24:39Z</t:Start><t:End>2020-04-07T10:54:39Z</t:End><t:IsAllDayEvent>false</t:IsAllDayEvent><t:LegacyFreeBusyStatus>Busy</t:LegacyFreeBusyStatus><t:IsMeeting>true</t:IsMeeting><t:IsCancelled>false</t:IsCancelled><t:IsRecurring>false</t:IsRecurring><t:MeetingRequestWasSent>false</t:MeetingRequestWasSent><t:IsResponseRequested>true</t:IsResponseRequested><t:CalendarItemType>Single</t:CalendarItemType><t:MyResponseType>Organizer</t:MyResponseType><t:Organizer><t:Mailbox><t:Name>Michael Litton</t:Name><t:EmailAddress>outlook_5674535F7A64B201@outlook.com</t:EmailAddress><t:RoutingType>SMTP</t:RoutingType></t:Mailbox></t:Organizer><t:Duration>PT30M</t:Duration><t:TimeZone>(UTC+00:00) Monrovia, Reykjavik</t:TimeZone><t:AppointmentSequenceNumber>0</t:AppointmentSequenceNumber><t:AppointmentState>1</t:AppointmentState><t:IsOnlineMeeting>false</t:IsOnlineMeeting></t:CalendarItem></m:Items></m:GetItemResponseMessage></m:ResponseMessages></m:GetItemResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Tue, 21 Jun 2016 14:13:26 GMT
+  recorded_at: Tue, 07 Apr 2020 10:24:39 GMT
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
       encoding: UTF-8
       string: |
@@ -241,18 +306,24 @@ http_interactions:
                 <t:BaseShape>AllProperties</t:BaseShape>
               </AttachmentShape>
               <AttachmentIds>
-                <t:AttachmentId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAABEgAQAD3x18GLNmVLgCkwN+NmLSk="/>
+                <t:AttachmentId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1sAAABEgAQADLNeHkK9uJGqYugq8GS560="/>
               </AttachmentIds>
             </GetAttachment>
           </soap:Body>
         </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 10:24:39 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/GetAttachment
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -265,43 +336,59 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/8.0
+      - Microsoft-IIS/10.0
       Request-Id:
-      - 57e66672-a146-42f9-9a84-9891ee8d4b6d
-      X-Calculatedbetarget:
-      - CO2PR0801MB552.namprd08.prod.outlook.com
+      - 6a4ffa31-5a6b-476b-bc25-49b903c4e749
+      X-Calculatedfetarget:
+      - AM7PR02CU001.internal.outlook.com
       X-Backendhttpstatus:
       - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=cd0159d4f952418e9e0cd7a2c1edf614; expires=Wed, 21-Jun-2017
-        14:13:27 GMT; path=/; HttpOnly
+      - exchangecookie=afe539dd47b04ee6851b4be0171e0044; expires=Wed, 07-Apr-2021
+        10:24:39 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - AM7PR02CA0010.EURPRD02.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
+      X-Ewshandler:
+      - GetAttachment
       X-Aspnet-Version:
       - 4.0.30319
+      X-Besku:
+      - WCS6
       X-Diaginfo:
-      - CO2PR0801MB552
+      - AM7PR05MB6693
       X-Beserver:
-      - CO2PR0801MB552
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - AM7PR02CA0010
+      - HE1PR07CA0004
       X-Powered-By:
       - ASP.NET
-      X-Feserver:
-      - BY1PR19CA0018
       Date:
-      - Tue, 21 Jun 2016 14:13:26 GMT
+      - Tue, 07 Apr 2020 10:24:39 GMT
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="15" MinorVersion="1" MajorBuildNumber="523" MinorBuildNumber="16"
-        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
-        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:GetAttachmentResponse
-        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetAttachmentResponseMessage
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:GetAttachmentResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:GetAttachmentResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:Attachments><t:FileAttachment><t:AttachmentId
-        Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAABEgAQAD3x18GLNmVLgCkwN+NmLSk="/><t:Name>test.txt</t:Name><t:ContentType>text/plain</t:ContentType><t:Content>VGVzdCBDb250ZW50</t:Content></t:FileAttachment></m:Attachments></m:GetAttachmentResponseMessage></m:ResponseMessages></m:GetAttachmentResponse></s:Body></s:Envelope>
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1sAAABEgAQADLNeHkK9uJGqYugq8GS560="/><t:Name>test.txt</t:Name><t:ContentType>text/plain</t:ContentType><t:Content>VGVzdCBDb250ZW50</t:Content></t:FileAttachment></m:Attachments></m:GetAttachmentResponseMessage></m:ResponseMessages></m:GetAttachmentResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Tue, 21 Jun 2016 14:13:26 GMT
+  recorded_at: Tue, 07 Apr 2020 10:24:39 GMT
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
       encoding: UTF-8
       string: |
@@ -310,18 +397,24 @@ http_interactions:
           <soap:Body>
             <DeleteAttachment xmlns="http://schemas.microsoft.com/exchange/services/2006/messages">
               <AttachmentIds>
-                <t:AttachmentId Id="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAABEgAQAD3x18GLNmVLgCkwN+NmLSk="/>
+                <t:AttachmentId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1sAAABEgAQADLNeHkK9uJGqYugq8GS560="/>
               </AttachmentIds>
             </DeleteAttachment>
           </soap:Body>
         </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 10:24:40 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/DeleteAttachment
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic Y2hhZF9leGNoYW5nZXJ0ZXN0aW5nQG91dGxvb2suY29tOmV4Y2hhbmdlcl9zcGVjMzMzIQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -334,41 +427,55 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/8.0
+      - Microsoft-IIS/10.0
       Request-Id:
-      - 0c5e6934-8122-4ffd-9439-75c3df3700d4
-      X-Calculatedbetarget:
-      - CO2PR0801MB552.namprd08.prod.outlook.com
+      - 5debcdf4-c2f9-4803-b4cb-adaf65f815e2
+      X-Calculatedfetarget:
+      - AM6PR08CU001.internal.outlook.com
       X-Backendhttpstatus:
       - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=6c63f412ce7048b4b96755b17043c82c; expires=Wed, 21-Jun-2017
-        14:13:27 GMT; path=/; HttpOnly
+      - exchangecookie=2da0576569b7494f97a10e5e846fbce0; expires=Wed, 07-Apr-2021
+        10:24:40 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - AM6PR08CA0002.EURPRD08.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
       X-Ewshandler:
       - DeleteAttachment
       X-Aspnet-Version:
       - 4.0.30319
+      X-Besku:
+      - WCS6
       X-Diaginfo:
-      - CO2PR0801MB552
+      - AM7PR05MB6693
       X-Beserver:
-      - CO2PR0801MB552
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - AM6PR08CA0002
+      - HE1PR07CA0013
       X-Powered-By:
       - ASP.NET
-      X-Feserver:
-      - CY1PR21CA0023
       Date:
-      - Tue, 21 Jun 2016 14:13:27 GMT
+      - Tue, 07 Apr 2020 10:24:39 GMT
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="15" MinorVersion="1" MajorBuildNumber="523" MinorBuildNumber="16"
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
         xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:DeleteAttachmentResponse
         xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:DeleteAttachmentResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:RootItemId
-        RootItemId="AAAhAGNoYWRfZXhjaGFuZ2VydGVzdGluZ0BvdXRsb29rLmNvbQBGAAAAAAAAqVUrvCLRSblrs10ZIBaxBwBO62zGwOguSJqyNahPUYshAAAAAAENAABO62zGwOguSJqyNahPUYshAAAcJGi9AAA="
-        RootItemChangeKey="DwAAABYAAABO62zGwOguSJqyNahPUYshAAAcJizg"/></m:DeleteAttachmentResponseMessage></m:ResponseMessages></m:DeleteAttachmentResponse></s:Body></s:Envelope>
+        RootItemId="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQBGAAAAAAC11EXZT+3TSZbZG9cMT+XoBwAdX+/tTQhGSJ2g6HFKPliuAAAAAAENAAAdX+/tTQhGSJ2g6HFKPliuAAM8LS1sAAA="
+        RootItemChangeKey="DwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U3BH"/></m:DeleteAttachmentResponseMessage></m:ResponseMessages></m:DeleteAttachmentResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Tue, 21 Jun 2016 14:13:27 GMT
-recorded_with: VCR 3.0.1
+  recorded_at: Tue, 07 Apr 2020 10:24:40 GMT
+recorded_with: VCR 3.0.3

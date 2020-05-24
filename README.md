@@ -100,10 +100,11 @@ folder.expanded_items(calendar_view_options) # return Exchanger::CalendarItem it
 Running specs with Exchange Server
 ==================================
 
-The easiest way is to sign up for a Microsoft Office 365 free trial.
+The easiest way is to sign up for a Microsoft Office 365 free trial. Please not that this needs to be the "Professional" version in order to be able to access the distribution lists. You also need to finish the setup, including e-mail, to be able to execute the steps below. Provisioning mail boxes can take up to 24 hours.
 
 1. Create a random calendar entry in July 2016
 2. Create a distribution list named 'Test'
+   * This is available under the app "People" > "New group"
 3. Create `spec/config.yml` with your Exchange credentials
 4. Create `spec/fixtures/get_user_availability.yml` with your Exchange email address
 5. Clear the recorded VCR cassettes by removing `spec/cassettes`

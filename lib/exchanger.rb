@@ -79,6 +79,7 @@ require "exchanger/operations/get_attachment"
 require "exchanger/operations/create_attachment"
 require "exchanger/operations/delete_attachment"
 require "exchanger/operations/get_user_configuration"
+require "exchanger/operations/move_item"
 
 module Exchanger
   NS = {

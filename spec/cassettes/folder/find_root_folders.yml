@@ -2,22 +2,36 @@
 http_interactions:
 - request:
     method: post
-    uri: https://FILTERED_USERNAME:FILTERED_PASSWORD@amsprd0710.outlook.com/EWS/Exchange.asmx
+    uri: https://amsprd0710.outlook.com/EWS/Exchange.asmx
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
-        \ <soap:Body>\n    <FindFolder xmlns=\"http://schemas.microsoft.com/exchange/services/2006/messages\"
-        xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" Traversal=\"Shallow\">\n
-        \     <FolderShape>\n        <t:BaseShape>AllProperties</t:BaseShape>\n      </FolderShape>\n
-        \     <ParentFolderIds>\n        <t:FolderId Id=\"AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA\"/>\n
-        \     </ParentFolderIds>\n    </FindFolder>\n  </soap:Body>\n</soap:Envelope>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+          <soap:Body>
+            <FindFolder xmlns="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" Traversal="Shallow">
+              <FolderShape>
+                <t:BaseShape>AllProperties</t:BaseShape>
+              </FolderShape>
+              <ParentFolderIds>
+                <t:FolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="/>
+              </ParentFolderIds>
+            </FindFolder>
+          </soap:Body>
+        </soap:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.7.0 (2019-12-25))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 07 Apr 2020 09:24:55 GMT
       Soapaction:
       - http://schemas.microsoft.com/exchange/services/2006/messages/FindFolder
       Content-Type:
       - text/xml; charset=utf-8
       Authorization:
-      - Basic ZWJlaWdhcnRzQGViZWlnYXJ0cy5vbm1pY3Jvc29mdC5jb206S3k1a2ltUDZTNmlIQQ==
+      - Basic bWljaGFlbEBsaXR0b24uc2U6MTI4MHNhaWw=
   response:
     status:
       code: 200
@@ -30,79 +44,316 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Server:
-      - Microsoft-IIS/7.5
-      Requestid:
-      - 332c92f4-f44d-4667-a091-7d2d95623487
+      - Microsoft-IIS/10.0
+      Request-Id:
+      - c3b1856e-cb26-4f05-b17e-4889e663414c
+      X-Calculatedfetarget:
+      - PR3P189CU002.internal.outlook.com
+      X-Backendhttpstatus:
+      - '200'
+      - '200'
       Set-Cookie:
-      - exchangecookie=5a75e3d2891d4618b640c00a625332d5; expires=Fri, 11-Oct-2013
-        19:33:16 GMT; path=/; HttpOnly
+      - exchangecookie=fc827935c48447baa117657da38e59ea; expires=Wed, 07-Apr-2021
+        09:24:55 GMT; path=/; secure; HttpOnly
+      X-Feproxyinfo:
+      - PR3P189CA0048.EURP189.PROD.OUTLOOK.COM
+      X-Calculatedbetarget:
+      - AM7PR05MB6693.eurprd05.prod.outlook.com
+      X-Rum-Validated:
+      - '1'
+      X-Ewshandler:
+      - FindFolder
       X-Aspnet-Version:
-      - 2.0.50727
+      - 4.0.30319
+      X-Besku:
+      - WCS6
+      X-Diaginfo:
+      - AM7PR05MB6693
+      X-Beserver:
+      - AM7PR05MB6693
+      X-Proxy-Routingcorrectness:
+      - '1'
+      X-Proxy-Backendserverstatus:
+      - '200'
+      X-Feserver:
+      - HE1PR0101CA0023
+      - PR3P189CA0048
       X-Powered-By:
       - ASP.NET
-      X-Diaginfo:
-      - AMSPRD0710CA017
       Date:
-      - Thu, 11 Oct 2012 19:33:16 GMT
+      - Tue, 07 Apr 2020 09:24:55 GMT
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><h:ServerVersionInfo
-        MajorVersion="14" MinorVersion="16" MajorBuildNumber="207" MinorBuildNumber="9"
-        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/></s:Header><s:Body
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><m:FindFolderResponse
-        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:FindFolderResponseMessage
+        MajorVersion="15" MinorVersion="20" MajorBuildNumber="2878" MinorBuildNumber="21"
+        xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></s:Header><s:Body><m:FindFolderResponse
+        xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types"><m:ResponseMessages><m:FindFolderResponseMessage
         ResponseClass="Success"><m:ResponseCode>NoError</m:ResponseCode><m:RootFolder
-        TotalItemsInView="16" IncludesLastItemInRange="true"><t:Folders><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2eAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe21"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        TotalItemsInView="85" IncludesLastItemInRange="true"><t:Folders><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAM8LUD1AAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U2Xh"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>AllCategorizedItems</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAABTvAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAADhxAnU"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>AllContacts</t:DisplayName><t:TotalCount>6</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAit8zRAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAD4P8Z0"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF</t:FolderClass><t:DisplayName>AllItems</t:DisplayName><t:TotalCount>195</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAB2EfvAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACOwgSU"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>AllPersonMetadata</t:DisplayName><t:TotalCount>6</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACrf7S4AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAADoQJua"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>ApplicationDataRoot</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>15</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEqAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAATt"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>BrokerSubscriptions</t:DisplayName><t:TotalCount>7</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAM8LRWsAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U2Xt"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>BulkActions</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEuAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAUJ"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>CalendarItemSnapshots</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACZ+T1AAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACaD4a5"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>CalendarSharingCacheCollection</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEGAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAACuh"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
         ChangeKey="AQAAAA=="/><t:DisplayName>Common Views</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2WAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe24"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
-        ChangeKey="AQAAAA=="/><t:DisplayName>Deferred Action</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRkRfAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARkRh"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
-        ChangeKey="AQAAAA=="/><t:DisplayName>ExchangeSyncData</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2cAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe2z"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
-        ChangeKey="AQAAAA=="/><t:DisplayName>Finder</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>1</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe3MAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe3O"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
-        ChangeKey="AQAAAA=="/><t:DisplayName>Freebusy Data</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe3hAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe3k"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
-        ChangeKey="AQAAAA=="/><t:DisplayName>Recoverable Items</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>4</t:ChildFolderCount><t:ManagedFolderInformation><t:CanDelete>true</t:CanDelete><t:CanRenameOrMove>true</t:CanRenameOrMove><t:MustDisplayComment>false</t:MustDisplayComment><t:HasQuota>false</t:HasQuota><t:IsManagedFoldersRoot>false</t:IsManagedFoldersRoot></t:ManagedFolderInformation><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRkRJAAAA"
-        ChangeKey="BwAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARkRM"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
-        ChangeKey="AQAAAA=="/><t:FolderClass>Outlook.Reminder</t:FolderClass><t:DisplayName>Reminders</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2fAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe22"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAElT+ENAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAEldY4i"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>ComplianceMetadata</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAE+mL7SAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAE+whLY"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>ConferenceRoomPreferences</t:DisplayName><t:TotalCount>1</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAADwtIjlAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAADw1F4u"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>Connectors</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>2</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAKSbCpVAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAKSlBK/"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.StoreItem.CrawlerData</t:FolderClass><t:DisplayName>CrawlerData</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACZ+T0+AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAD4P6M5"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPM.DefaultFolderHistoryItem</t:FolderClass><t:DisplayName>DefaultFoldersChangeHistory</t:DisplayName><t:TotalCount>208</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAECAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAAr"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>Deferred Action</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACrf7SwAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACrmDHy"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>Document
+        Centric Conversations</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAFMAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAACHH"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>ExchangeSyncData</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>4</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAABTwAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAE+weR+"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>Favoriter</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAA9s8StAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAA9vO0Z"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>FileCollectionCache</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEEAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAD7/rkf"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>Finder</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>2</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAE/AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAls"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>Folder Memberships</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEUAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAJ9Zu8T"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>Freebusy Data</t:DisplayName><t:TotalCount>1</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAABNRF8ZAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACaD4bA"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>FreeBusyLocalCache</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>1</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEtAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAUB"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>GraphStore</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>5</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAM1yf+KAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM18G5F"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.GroupLinksFolder</t:FolderClass><t:DisplayName>GroupLinks</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAE0AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAD4P8Zx"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>Inference</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:ContactsFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEOAAA="
+        ChangeKey="AwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAFZRIqD"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Contact</t:FolderClass><t:DisplayName>Kontakter_73b12c3e-2d40-4ead-8f72-157d0e0e5a5f</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>2</t:ChildFolderCount></t:ContactsFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEWAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAABr"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>Location</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEaAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAD4P6FC"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>MailboxAssociations</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAB9q+oVAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAB9voo+"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>MailboxMoveHistory</t:DisplayName><t:TotalCount>5</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACgouqSAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACgufPG"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>MailboxReplicationService Index</t:DisplayName><t:TotalCount>5</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEsAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAT6"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>MeetingSapces</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAk2AAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAE+weR7"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>Mina
+        kontakter</t:DisplayName><t:TotalCount>5</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAB2EfuAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAB2KFb"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>MyContactsExtended</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEfAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAACu"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>O365 Suite Notifications</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEhAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAC9"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>O365 Suite Storage</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACrf7S2AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACrmDK/"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF</t:FolderClass><t:DisplayName>OneDriveRoot</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:TasksFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAE+AAA="
+        ChangeKey="BAAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAll"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Task</t:FolderClass><t:DisplayName>Orion
+        Notes</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:TasksFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAE8AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAlX"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>PACE</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>1</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAElAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAATD"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>ParkedMessages</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEQXKAZAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAEQf/RF"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.StoreItem.PassThroughSearchResults</t:FolderClass><t:DisplayName>Pass-Through
+        Search Results</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAE7AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAlQ"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>PdpProfile</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAbciApAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAADhxAnY"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>PdpProfileV2</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACrf7DFAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACrmC37"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>People
+        I Know</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEYAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAB6"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>PeopleConnect</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEZAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAACB"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>PeopleInsights</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACZ+T09AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAD5XhUa"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>PeoplePublicData</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAM8LQnjAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAM8U2Ub"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>Outlook.Reminder</t:FolderClass><t:DisplayName>Påminnelser
+        </t:DisplayName><t:TotalCount>12</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAALjt9tCAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAALj3zlv"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>QuarantinedEmail</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>1</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEjAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAMBfZgu"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>Recoverable Items</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>5</t:ChildFolderCount><t:ManagedFolderInformation><t:CanDelete>true</t:CanDelete><t:CanRenameOrMove>true</t:CanRenameOrMove><t:MustDisplayComment>false</t:MustDisplayComment><t:HasQuota>false</t:HasQuota><t:IsManagedFoldersRoot>false</t:IsManagedFoldersRoot></t:ManagedFolderInformation><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAB2FOoAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAALzkB0L"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>RelevantContacts</t:DisplayName><t:TotalCount>6</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAFPAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAADPM9Us"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>Reminders Staging</t:DisplayName><t:TotalCount>1</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEHAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAAx"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
         ChangeKey="AQAAAA=="/><t:DisplayName>Schedule</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe3HAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe3K"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
-        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>Sharing</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2gAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe23"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
-        ChangeKey="AQAAAA=="/><t:DisplayName>Shortcuts</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2XAAAA"
-        ChangeKey="BwAAAA=="/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAFBAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAl6"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>ShardRelevancyFolder</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAGor9k9AAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAGo2zOK"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>SharedFilesSearchFolder</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACrf7S3AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACrmDLL"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>SharePointNotifications</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAETAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAGo2zkG"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>Sharing</t:DisplayName><t:TotalCount>1</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEDAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAAt"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>Shortcuts</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:ContactsFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAHk7X5fAAA="
+        ChangeKey="AwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAHlF+vx"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Contact</t:FolderClass><t:DisplayName>Skype-kontakter</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount></t:ContactsFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAEZwn97AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAEZ5wRY"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>SkypeSpacesData</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>3</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEoAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAATd"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.SmsAndChatsSync</t:FolderClass><t:DisplayName>SmsAndChatsSync</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAFkAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAMBYoaU"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
         ChangeKey="AQAAAA=="/><t:DisplayName>Spooler Queue</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe3QAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe3T"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
-        ChangeKey="AQAAAA=="/><t:DisplayName>System</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRhkWAAAA"
-        ChangeKey="BwAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARhkZ"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAGor9FtAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAGo2zOO"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF</t:FolderClass><t:DisplayName>SubstrateFiles</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>3</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAFOAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACdWYFd"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>SuggestedUserGroupAssociations</t:DisplayName><t:TotalCount>1</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEVAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAABk"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>System</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACrf7S1AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAMBfZgx"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF</t:FolderClass><t:DisplayName>TeamChatHistory</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAALXLRFAAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAALXVKsL"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF</t:FolderClass><t:DisplayName>TeamsMessagesData</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEmAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAATN"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>TemporarySaves</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAk1AAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAms"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
         ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Task</t:FolderClass><t:DisplayName>To-Do
-        Search</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2VAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe28"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
-        ChangeKey="AQAAAA=="/><t:DisplayName>Top of Information Store</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>12</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2nAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe26"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
-        ChangeKey="AQAAAA=="/><t:DisplayName>Transport Queue</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
-        Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2dAAAA"
-        ChangeKey="AQAAABYAAACaGrVTJjzWS7YVO+ElnoG4AAAARe20"/><t:ParentFolderId Id="AQAjAGViZWlnYXJ0c0BlYmVpZ2FydHMub25taWNyb3NvZnQuY29tAC4AAANQgkWQLjirSqRjoV/OICNYAQCaGrVTJjzWS7YVO+ElnoG4AAABRe2UAAAA"
-        ChangeKey="AQAAAA=="/><t:DisplayName>Views</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder></t:Folders></m:RootFolder></m:FindFolderResponseMessage></m:ResponseMessages></m:FindFolderResponse></s:Body></s:Envelope>
+        Search</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAJ9PrxoAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAJ9Zu0r"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>UserCuratedContacts</t:DisplayName><t:TotalCount>5</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEbAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAACP"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>UserSocialActivityNotifications</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEFAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAAv"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>Views</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAE4AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAk6"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>XrmActivityClientInstrumentation</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAE3AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAkz"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>XrmActivityServerInstrumentation</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAE2AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAks"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>XrmActivityStream</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACrf7ioAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACrmDKi"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>XrmActivityStreamSearch</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACrf7ifAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACrmDIZ"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>XrmCompanySearch</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACrf7ilAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACrmDJ2"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>XrmDealSearch</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAFAAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAlz"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>XrmDeletedItems</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAExAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAABJXOKp"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>XrmInsights</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAE1AAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAAAAAkk"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>XrmProjects</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:SearchFolder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAACrf7iiAAA="
+        ChangeKey="BwAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAACrmDIl"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:FolderClass>IPF.Note</t:FolderClass><t:DisplayName>XrmSearch</t:DisplayName><t:TotalCount>6</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:SearchFolder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAD4HxgMAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAD4P5ON"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>YammerData</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>0</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder><t:Folder><t:FolderId
+        Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEIAAA="
+        ChangeKey="AQAAABYAAAAdX+/tTQhGSJ2g6HFKPliuAAEWBxvw"/><t:ParentFolderId Id="AAAkAG91dGxvb2tfNTY3NDUzNUY3QTY0QjIwMUBvdXRsb29rLmNvbQAuAAAAAAC11EXZT+3TSZbZG9cMT+XoAQAdX+/tTQhGSJ2g6HFKPliuAAAAAAEBAAA="
+        ChangeKey="AQAAAA=="/><t:DisplayName>Överst i informationsarkivet</t:DisplayName><t:TotalCount>0</t:TotalCount><t:ChildFolderCount>20</t:ChildFolderCount><t:UnreadCount>0</t:UnreadCount></t:Folder></t:Folders></m:RootFolder></m:FindFolderResponseMessage></m:ResponseMessages></m:FindFolderResponse></s:Body></s:Envelope>
     http_version: 
-  recorded_at: Thu, 11 Oct 2012 19:33:17 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Tue, 07 Apr 2020 09:24:55 GMT
+recorded_with: VCR 3.0.3

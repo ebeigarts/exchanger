@@ -76,8 +76,14 @@ module Exchanger
       attachments.select { |attachment| attachment.is_a?(FileAttachment) }
     end
 
+    # TODO The 0.2.1 implementation is depended on the language of the integration. This code
+    # only works if the user have selected English as their language of choice, see c.name
     def categories_with_color
       parent_folder.category_list.select { |c| categories.include?(c.name) }
+    end
+
+    def move_to_folder(folder)
+      Exchanger::MoveItem.run(items: [self], folder_id: folder.id)
     end
 
     private
